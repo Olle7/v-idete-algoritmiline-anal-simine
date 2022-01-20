@@ -371,6 +371,49 @@ Hea on kui Falsele(kõigile üheselt valedele väidetele) vastab 0.
 Hea on kui Truele(kõigile üheselt tõestele väidetele) vastab 1.
 \end_layout
 
+\begin_layout Standard
+lühemad eesmärgid prioriteetsuse järjekorras:
+\end_layout
+
+\begin_layout Enumerate
+koostada algoritm, mis võtaks sisendiks väite ja tagastaks, et kas see on
+ vastuoluline või mitte.
+\end_layout
+
+\begin_layout Enumerate
+implementeerida see algoritm arvutiprogrammina.
+\end_layout
+
+\begin_layout Enumerate
+koostada oma süntax , mida see programm sisendiks võtab, väidete mugavamaks
+ kirjapanemiseks.
+\end_layout
+
+\begin_layout Enumerate
+lisada pogrammile funktsionaalsus väitedete salvestamiseks kujul, mis on:
+ Minimaalse vabadusastmete arvuga ehk mistahes 2 erinevat bittide kombinatsiooni
+ (kui see on binaarkujul esitatud) tähistavad erinevaid loogikalisi lauseid
+ ja universaalne ehk millega saab mingi bittide kombinatsiooniga (kui see
+ on binaarkujul esitatud) iga loogikalise lause kirja panna.
+ Teisisõnu funktsioon väite ja tähistuse vahel on bijektiivne.
+\end_layout
+
+\begin_layout Enumerate
+lisada programmile funktsionaalsus esitada väiteid standartsel ja kergesti
+ käsitsi loetaval kujul.
+\end_layout
+
+\begin_layout Enumerate
+lidsada programmile funktsionaalsu hinnata väite keerukust mingi paameetriga.
+\end_layout
+
+\begin_layout Enumerate
+lisada programmile funktsionaalsus määrata väite parameeter K, ehk ,et kui
+ mitme kvantori sees kõige rohkemate kvantorite sees asuv kvantor on ,kui
+ esitada väisde vormis, kus kõige rohkemate kvantorite sees asuv kvantor
+ on võialikult väheste kvantorite sees.
+\end_layout
+
 \begin_layout Section
 Näited progemmi kasutamisest
 \end_layout
@@ -1403,6 +1446,38 @@ vec{b}$
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+Füüsikalise väite(mudeli) kasulikkus on seda suurem, mida täpsemalt see
+ katseandmetega klapib ja mida lihtsam see on(mida väiksem on selle keerukus).
+ Lihtsus on ilmselt õige hinnata kui füüsikalised suurused on kirjapandud
+ minimaalsel vabadusastmel ja ja võimalikult sümmeetriliselt(ruumiline ja
+ ajaline sümmeetria näiteks).
+\end_layout
+
+\begin_layout Standard
+Eristada selgelt matemaatilised algmõisted (funktsioon, võrdsus, hulk, implikats
+ioon jne.(siin näitena toodud mõisted ei moodusta minimaalset funktsionaalselt
+ täielikku hulka)) ja füüsikalised algmõisted (ruum, aeg, elektromagnetväli,
+ elektrimagnetväli, gravitomagnetväli, gravitimagnetväli, aegruum).
+ Võtta kasutusele ka füüsikalised mõisted, mis ei ole algmõisted (nt.
+ konkreetsed ained, tahke, vedel, gaasiline, aatom).
+\end_layout
+
+\begin_layout Standard
+Ükski tõestamatu väide ei tohi omada füüsikalist tähendust (näiteks ei oma
+ koordinaatide alguspunkti valik füüsikalist tähendust.).
+ Ükski füüsikalise tähenduseta väide ei tohi olla tõestatav.
+ 
+\end_layout
+
+\begin_layout Standard
+Füüsikalise mudeli, mis sisaldab suuruseid(nt.
+ Aeg, kordinaat ja väljatugevus) , mida iseelommustakse reaalarvuga, kirjeldamis
+eks tuleb deineerida vastavad aritmeetilised tehted reaalarvudele.
+ Kas alati tuleb defineerida ka jagamine, et saaks väita nt.
+ ,et üks suurus on teisest 3 korda suurem?
 \end_layout
 
 \begin_layout Subsubsection
@@ -7963,11 +8038,11 @@ status open
 
 $
 \backslash
-exist(
+exists(
 \backslash
-exist(
+exists(
 \backslash
-exist(x_1*x_2+x_3=f(x_3,x_2,x_1,x_2))))$
+exists(x_1*x_2+x_3=f(x_3,x_2,x_1,x_2))))$
 \end_layout
 
 \end_inset
@@ -9217,7 +9292,7 @@ status open
 
 \begin_layout Plain Layout
 
-
+$
 \backslash
 exists(
 \backslash
@@ -9237,7 +9312,7 @@ lor
 \backslash
 exists(A(1,2)
 \backslash
-land A(2,1)))
+land A(2,1)))$
 \end_layout
 
 \end_inset
@@ -9248,7 +9323,7 @@ status open
 
 \begin_layout Plain Layout
 
-
+$
 \backslash
 exists(on
 \backslash
@@ -9274,7 +9349,7 @@ lor
 \backslash
 exists(A(1,2)
 \backslash
-land A(2,1))))
+land A(2,1))))$
 \end_layout
 
 \end_inset
@@ -9289,7 +9364,7 @@ status open
 
 \begin_layout Plain Layout
 
-
+$
 \backslash
 exists(
 \backslash
@@ -9313,7 +9388,7 @@ exists( A(x_2,x_1)
 \backslash
 land A(x_1,x_3)
 \backslash
-land A(x_1,x_1))))
+land A(x_1,x_1))))$
 \end_layout
 
 \end_inset
@@ -9831,6 +9906,630 @@ cdot2)}+N^2}$
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+teisest failist
+\end_layout
+
+\begin_layout Standard
+Uue praktilise töö eesmärgid
+\end_layout
+
+\begin_layout Standard
+Sissejuhatus Käesoleva praktilise töö eesmärk on luua programm, mis suudab
+ etteantud loogikalause põhjal kasutaja küsimustele vastata, loogikalauseid
+ minimaalse vabadusastmega kirja panna, väite keerukust hinnata, loogikalauseid
+ inimkeeles kirja panna, loogikalauseid, mis sisaldavad füüsikalisi algmõisteid
+ illustreerida (nt.
+ Punktmassi koordinaatide sõltuvusest ajast graafiku joonistadades) ja loogikali
+si lauseid elemetaartehete(elementaartehteid omakorda LaTeXi või mõne programmer
+imiskeele sütnaksi) abil estada kui see võimalik on.
+ Programmil on ka kasutaja liides tuntumate „asjade” (füüsikaliste mudelite)
+ omadusi kirjeldavate lausete parameetrite abil moodustamiseks.
+\end_layout
+
+\begin_layout Standard
+Eesmärgid:
+\end_layout
+
+\begin_layout Itemize
+Luua programm O
+\end_layout
+
+\begin_layout Itemize
+Defineerida tähistusviis.
+ O
+\end_layout
+
+\begin_layout Itemize
+Füüsikaline seos on seos füüsikaliste mõistete vahel.
+\end_layout
+
+\begin_layout Itemize
+Juhul kui ühest kujust teise teisendamine ei eelda ühegi füüsikalise suuruse
+ vahelise seose teadmist on tegu tähistuse küsimusega.
+\end_layout
+
+\begin_layout Itemize
+Päris-mõiste on mõiste, mis tähistab midagi, mis on päriselt olemas ja omab
+ füüsikalist tähendust ega sõltu mudelist ega tähistusest, milles seda kirjeldat
+akse.
+\end_layout
+
+\begin_layout Itemize
+Lause keerukus on seda kirjeldava loogikalise lause eelmainitud viisil kirjapand
+ud värgi suurus (juhul kui see on naturaalarvuna kirja pandud).
+\end_layout
+
+\begin_layout Itemize
+Füüsikalise väite(mudeli) kasulikkus on seda suurem, mida täpsemalt see
+ katseandmetega klapib ja mida lihtsam see on(mida väiksem on selle keerukus).
+ Lihtsus on ilmselt õige hinnata kui füüsikalised suurused on kirjapandud
+ minimaalsel vabadusastmel ja ja võimalikult sümmeetriliselt(ruumiline ja
+ ajaline sümmeetria näiteks).
+\end_layout
+
+\begin_layout Itemize
+Kasutajale esitatakse väited ja loogikalaused matemaatiliste mõistee abil
+ (nt.
+ Liitmine, korrutsamine, universaalsuskvantor, loogikalisted tehted(nt.
+ XOR, AND, OR, NAND, NOR)).
+\end_layout
+
+\begin_layout Itemize
+Ka matemaatilisised mõisted tuleb igas väites ja loogikalauses matemaatiliste
+ algmõistete abil defineerida.
+\end_layout
+
+\begin_layout Itemize
+Luua kasutaja liides erinevaid spetsiifilisi olukordi kirjeldavate väidete
+ (Nt.
+ N-keha probleemi põhivõrrandite erinevates lähendustes) mugavaks kirja
+ panemiseks.
+ • Luua programm, mis teisendab sisestatud väiteid erinevate algmõistete
+ vahel.
+\end_layout
+
+\begin_layout Itemize
+Luua programm, mis teisendab väite esitust nii, et sama väide oleks alati
+ samal kujul kirja pandud.
+\end_layout
+
+\begin_layout Itemize
+Eristada selgelt matemaatilised algmõisted (funktsioon, võrdsus, hulk, implikats
+ioon jne.(siin näitena toodud mõisted ei moodusta minimaalset funktsionaalselt
+ täielikku hulka)) ja füüsikalised algmõisted (ruum, aeg, elektromagnetväli,
+ elektrimagnetväli, gravitomagnetväli, gravitimagnetväli, aegruum).
+ Võtta kasutusele ka füüsikalised mõisted, mis ei ole algmõisted (nt.
+ konkreetsed ained, tahke, vedel, gaasiline, aatom).
+\end_layout
+
+\begin_layout Itemize
+Defineerida kõik mõisted (sh.
+ Arvud (sh.
+ Naturaalarvud)) algmõistetes.
+\end_layout
+
+\begin_layout Itemize
+Luua programm, mis teisendab väite esituse, kasutaja valitud algmõistetele.
+ Kui valitud algmõisted ei moodusta funktsionaalselt täielikku rühma, siis
+ annab programm veateate.
+ Kui valitud algmõisted moodustavad funktsionaalselt täieliku, kuid mitte
+ minimaalse, siis teisendab programm väite esitust niimoodi, et saadud esitus
+ oleks võimalikult lihtne.
+\end_layout
+
+\begin_layout Itemize
+Ükski tõestamatu väide ei tohi omada füüsikalist tähendust (näiteks ei oma
+ koordinaatide alguspunkti valik füüsikalist tähendust.).
+ Ükski füüsikalise tähenduseta väide ei tohi olla tõestatav.
+ • Defineerdiaa ainult vastava füüsikalise seose kirjapanemiseks vajalik
+ algebra.
+\end_layout
+
+\begin_layout Itemize
+Füüsikalise mudeli, mis sisaldab suuruseid(nt.
+ Aeg, kordinaat ja väljatugevus) , mida iseelommustakse reaalarvuga, kirjeldamis
+eks tuleb deineerida vastavad aritmeetilised tehted reaalarvudele.
+ Kas alati tuleb defineerida ka jagamine, et saaks väita nt.
+ ,et üks suurus on teisest 3 korda suurem?
+\end_layout
+
+\begin_layout Itemize
+Ainuke asi, mida me otseselt tajuda suudame on meie enese teadvus.
+ Füüsikalist mõtet omavad mõisted (ehk on füüsikalised mõisted), mis kuidagi
+ mõjutavad teadvust.
+ Kuna ei ole olemas piisavalt head füüsikateooriat teadvuse kirjeldamiseks(selle
+ teiste füüsikaliste suurustega „sidumiseks”), siis tuleb füüsikaliste süsteemid
+e kirjeldamiseks kasutada mõisteid, mis ilmselgelt kaudselt(meeleelundite
+ kaudu jõuab info ajju, mis mõjutab teadvust) meie teadvust mõjutavad.
+ Mõistlik on selliseid suurusi, millest ainult intuitiivselt võib aru saada(füüs
+ikalised algmõisted),võimalikult vähe(valida minaalne funktsionaalselt täielik
+ algmõistete hulk) kausutada ja teised mõisted (füüsikalised mitte-alg mõisted)
+ nende kaudu defineerida.
+\end_layout
+
+\begin_layout Itemize
+Gödeli teoreem ütleb, et iga piisava artmeetikaga seoses on vähemalt 1 väide,
+ mida ei saa tõestada, ümberlükata ega tõestada, et seda ei saa tõestada.
+ Kas siis kui teha mingi pikkusega üritus tõestada üritamiseks saab öelda,
+ et mingi tõenäosusega seda tõestada ei saa? Kas kui pikkus on piisav, siis
+ peaaegu kindlasti ei saa seda tõestada? • Kui füüsikalise suuruse(näiteks
+ asukoht) väärtus võib olla null, siis on ka null algmõiste.(vist)
+\end_layout
+
+\begin_layout Itemize
+Korrutamise (ja tesite matemaatiliste mõistete) intuitiivsed omadused tulevad
+ välja alles arvude füüsikaliste algmõistetega(näiteks geomeetriliste(nt.
+ Pikkuse või nurga)) seostamisel.
+ Matemaatika aksioomid peavad looma ainult seoseid matemaatiliste mõistete
+ vahel.
+ Ei pea muretsema selle üle, et matemaatilistest aksioomidest ei järeldu,
+ et arvteljed ei ole „välja venitatud”.
+\end_layout
+
+\begin_layout Itemize
+Sulud on selle genereeritud „tavakeele” süntaksis sees.
+ „(„ hääldatakse SU ja „)” hääldatakse US.
+\end_layout
+
+\begin_layout Itemize
+eelliide(prefix) näitab, et kas sõna on kasutatud ranges või vabas(analoogiana
+ või naljana) tähenduses.
+ 
+\end_layout
+
+\begin_layout Itemize
+Veergude omavahel jaatamisega(konjukteerimisega) ja neile valikuliselt eituse
+ ja jaatuse ette panemisega peab saama ühe viisisl moodustada kõik read.
+ • Read on väited, mille vabalt valitud elementide omavahel võitamisega(disjukte
+erimisega) peab saama ühel viisil moodustada mistahes väite, mida antud
+ N’i(alghulkade arvu) ja K(kvantorite arvu) puhul saab moodustada.
+\end_layout
+
+\begin_layout Itemize
+Rida: [alghulkade vahelised seosed]JA KVANTOR([mis alghulkadesse kvanteeritav
+ kuulub] TO [millistesse alghulkadesse kuulub])JA MITTE KVANTOR([mis alghulkades
+se kvanteeritav kuulub] TO [millistesse alghulkadesse kuulub])
+\end_layout
+
+\begin_layout Itemize
+Tuleb eeldada, et kõik hulgad, mida saab defineerida on olemas, sest muidu
+ ei saa ühegi hulga puhul kindel olla, et kas see on olemas (kui mingis
+ teoorias mingite omadustega hulki ei ole, siis teha eraldi hulk hulkadest,
+ mis selles teoorias olemas on.).
+ PF! Programm peaks selliseid väiteid siiski lugeda oskama, et kasutajale
+ veateade väljastada.
+ • Peaaegu kunagi ei ole K=1 korral veergude arv täisarv.
+ K=0 puhul on alati veerge täisarv.
+\end_layout
+
+\begin_layout Itemize
+Ridasid on vist alati täisarv.
+ Seega on kõik bittide kombinatsiooonid „sisus” lubatud.
+ Ehk kõi võimalused veergude bittididega täitmiseks lubatud.
+\end_layout
+
+\begin_layout Itemize
+K näitab, et kui „sügaval” kvantorite ,sees kõige „sisemine” seos on.
+ O
+\end_layout
+
+\begin_layout Itemize
+N näitab, et kui palju alghulki on.
+\end_layout
+
+\begin_layout Itemize
+NP probleem panna kirajakvantoritega kujul.
+ See seab kvanteeritavale tingimuse, et kas see kuulub (õigete) vastuste
+ hulka.
+ ∀x(TINGIMUS(x) TO x∈VASTUSED).
+ Iga probleem on niimoodi kirjeldatav.
+ Teha uus seos, mis kirjeldab pakutavat.
+ Jaatada probleemi kirjeldavat seost ja pakkumist kirjeldatavat seost.
+ NB.
+ See ainult kontrollib pakutud vasuse tõesust!
+\end_layout
+
+\begin_layout Itemize
+Loenduva hulga puhul saab booleansumma asendada universaalsuskvantoriga
+ ja korrutise eksistentsiaal kvanotriga.
+ (symbolitega seletada)
+\end_layout
+
+\begin_layout Itemize
+NP probleemi paremaks sõnastamiseks tuleks kirja panna, et millistele tingimuste
+le peab (protsessor) ühe sammuga tehtavad operatsioonid vastama, alles siis
+ uurida ,et kas sammude arv on polünoomilises seoses sisendi pikkusega.
+ Need tingumused võiks olla näiteks: 1.
+ võimalikke operante kindel (lõplik) arv (seega on võimalik iga võimaliku
+ operandi mingis kindlas vahemikus olevatele naturaalarvudele bijekteerida.).
+ 2.
+ operatsiooni operande kindel (lõplik) arv.
+\end_layout
+
+\begin_layout Itemize
+Kas K’l on piir? Kas näiteks mingi funktsioon (näiteks ∀f(f∈F↔∀x(f(x))))
+ ei saa asendada kvantoreid?
+\end_layout
+
+\begin_layout Itemize
+Ka arvutiprogramme saab sellisel viisil kirja panna, iga lähtekoodi real
+ on lihtsalt ühe võrra suurem”käsu numbri argument”.
+ See kirjeldaks programmi sisendi ja väljundi vahelist seost.
+ • Kui kirja panna võimalikud „elementaarkäsud”(ja nende täitmiseks kuluva
+ protsessori taktide arvu) saab kirjeldada seose, milles on otsitavaks programm
+ kõige optimiseeritumal kujul.
+\end_layout
+
+\begin_layout Itemize
+Sisendi optimeerimismeetodiks võib kaaluda masinõppe algoritmide kasutamist.
+\end_layout
+
+\begin_layout Itemize
+Kui tõestuses järeldub mingist sammust ka eelmine samm, siis teha kahepoolse
+ noole üks ots halliks.
+ Halliks tagasi suund.
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+Näited:
+\end_layout
+
+\begin_layout Standard
+Siin on mõned näited füüsikalistest süsteemidest ja tähistusviisidest.
+\end_layout
+
+\begin_layout Itemize
+Füüsikaline mudel, mis ütleb, et kui on soe, siis ei ole külm; kui on külm
+ siis ei ole soe; kui on suur, siis ei ole väike; kui on väike, siis ei
+ ole suur.
+ Matemaatilised algmõisted: NAND, sulud Füüsikalised algmõisted: soe; külm;
+ suur; väike Seos: ((soe NAND külm) NAND (suur NAND väike)) NAND ((soe NAND
+ külm) NAND (suur NAND väike))
+\end_layout
+
+\begin_layout Enumerate
+Füüsikaline süsteem, milles on 2 punktkeha, mille omavaheline kaugus on
+ 1 meeter: Matemaatilised algmõisted: Füüsikalised algmõisted: meeter, ruumipunk
+t, punktkeha
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+begin{cases}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+forall(a;
+\backslash
+forall(b;
+\backslash
+forall(c;f(a;b;c)=f(a;b-1;f(a;b;c-1)))))
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+forall(a;
+\backslash
+forall(b;f(a;b;2)=f(a;b-1;a)))
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+forall(a;
+\backslash
+forall(c;f(a;0;c)=(a=c)+c+1))
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{cases}
+\backslash
+
+\backslash
+$
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+$
+\backslash
+begin{cases}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+forall (o;N(o)=0)=0
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+N(a)=N(S(a))
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+N(a) 
+\backslash
+wedge N(b) 
+\backslash
+wedge (F(c)=F(S(c))) = F(b)
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{cases}$%matemaatilised almoisted: võrdsus[=];funktsioon[f];universaalsus
+ kvantor[
+\backslash
+forall];tõde[1];vale[0] %
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Seose standard vorm:
+\end_layout
+
+\begin_layout Standard
+Seose lahendite leidmiseks tuleb leida „sobivuse” lokaalsed maksimumid.
+ B_1(n_1,;n_2) on bijektiivne funktsioon, millel on 2 argumenti.
+ Need argumendid on naturaalarvud.
+ See võrdub mistahes argumentide korral naturaalarvuga.
+ B_2(q) on bijektiivne funktsioon, mille argumendiks on ratsionaalarvud.
+ See võrdub mistahes argumendi korral naturaalarvuga.
+ B_3 on bijektiivne funktsioon, mille argumendiks on füüsikaliste suuruste
+ väärtused.
+ See võrdub mistahes argumendi korral naturaalarvuga.
+ R on seose standardformi funktsioon.
+ See võrdub 1 kui R(B_1(B_3(S_1);B_3(S_2))) S_1 sobib paremini mudeliga
+ kui S_2 .
+ See võrdub 0 kui R(B_1(B_3(S_1);B_3(S_2))) S_2 sobib paremini mudeliga
+ kui S_1 .
+\end_layout
+
+\begin_layout Paragraph*
+Alternatiivslt:
+\end_layout
+
+\begin_layout Standard
+R on seose standardformi funktsioon.
+ See võrdub 1 kui R(B_1(B_3(S_1);B_3(S_2))) S_1 sobib paremini mudeliga
+ kui S_2 ja B_3(S1)>B_3(S2) .
+ See võrdub 0 kui R(B_1(B_3(S_1);B_3(S_2))) S_1 sobib paremini mudeliga
+ kui S_2 ja B_3(S1)<B_3(S2).
+ See võrdub 0 kui R(B_1(B_3(S_1);B_3(S_2))) S_2 sobib paremini mudeliga
+ kui S_1 ja B_3(S1)>B_3(S2) .
+ See võrdub 1 kui R(B_1(B_3(S_1);B_3(S_2))) S_1 sobib paremini mudeliga
+ kui S_2 ja B_3(S1)>B_3(S2) .
+\end_layout
+
+\begin_layout Standard
+Variant 2 (SEOS AND X)=seos on (SEOS TO X) seosest järeldub X
+\end_layout
+
+\begin_layout Standard
+ilm on ilus: ILM 
+\backslash
+in ILUSAD asukohas (0;0) on väljatugevus 0: X 
+\backslash
+in PUNKTID 
+\backslash
+and X 
+\backslash
+in NULISEXGAD 
+\backslash
+and X 
+\backslash
+in NULLISEYIKAD 
+\backslash
+to 
+\backslash
+any_x(0 
+\backslash
+in X 
+\backslash
+to X 
+\backslash
+in X)
+\end_layout
+
+\begin_layout Standard
+Defineerida tehted naturaalarvudele robinsoni aritmeetika või millegi analoogseg
+a ja aksiomeerida, et tehted on lõputult diferentseeritavad.
+ Defineerida tehted naturaalarvudele robinsoni aritmeetika või millegi analoogse
+ga ja panna tehted füüsikaliste suurustega kirja justkui need oleksid naturaalar
+vud (kuigi ei ole).
+ Valida bijektiivne funktsioon ratsioonalarvudest naturaalarvudesse ja defineeri
+da tehted ratsionaalarvudele neile selle funktsiooni abil vastavate naturaalarvu
+de kaudu.
+ Defineerida tehted selle kaudu, et milline füüsikaline olukord oleks sama
+ kui füüsikaline olukord, mille üks parameetritest on saadud tehte tulemusena.
+ Kahes pakkumises bijektiivse funktsiooni abil mappida kõik ratsionaalarvud(või
+ muu pidev hulk) natuaalarvudeks ja anda „seosele” sisendiks.
+ Mappitud ratsionaalarvude järjekord määrab, et milline neist millist füüsikalis
+t suurust tähistab.
+ Seos tagastab, et kumb pakkumine oli parem.
+\end_layout
+
+\begin_layout Standard
+q1*q2=q3 on sama mis f(B(q1);B(q2))=B(q3)
+\end_layout
+
+\begin_layout Standard
+Nii saab ainult reaalarvulisi suuruseid kirjeldavaid seoseid kasutada.
+\end_layout
+
+\begin_layout Standard
+K1Seose kirjeldamine K1seos on seos hulkade vahel, mille, kirjeldamiseks
+ (kvantorite, kuulumisväidete ja booleanide vaheliste tehete abil) ei ole
+ kvantorite sees kvantoreid (näiteks ∀x(x∈A)↮∀x(x∈B) on K1seos, aga ∀x(x∈A→∀y(y∈
+x→y∈y)) ei ole K1 seos).
+ K1 on seos, mille nestedness on 1.
+ K1seose üheseks kirjeldamiseks peab kirjeldama kõigi erineva sisuga kvantorite
+ ja alghulkade omavaheliste kuulumiste vahelisi seoseid.
+ Selle seose kirjeldamiseks läheb vaja _..._ bitti.
+ Kui neid bitte tõlgnedada kahendsüsteemis arvuna saab saab seda seost üheselt
+ kirjeldada naturaalarvuga (valem) ,mis on väiksem kui (2**(valjalike bittide
+ arv)).
+ Kuna erinevate sisudega kvantorid on omavahel sõltuvad, siis piisab kui
+ kirjeldada selliste sisudega kvantorite ja alghulkade kuulumiste vahelist
+ seost, millest saab järeldada mistahes teiste sisudega kvantorite ja alghulkade
+ kuulumiste mistahes booleakombinatsiooni, mis pole sõltumatult kirjeldatavast
+ K1seosest vale.
+ Ükskõik milliste sisudega kvantorid selleks valida, on osad booleankombinatsioo
+nid neist sõltumatult kirjeldatavast K1seosest valed.
+ See järeldub sellest, et nende booleankombinatsioonide arv, mis ei ole
+ kindla väärtusega, ei ole esitatav kujul 2 astmes mingi naturaalarv.
+ Osade sisudega kvantoritest(aga mitte nende eitustest) järeldub ka väiteid
+ alghulkade omavaheliste kuulumiste kohta(näiteks ∀x(x∈A)⇒A∈A), aga alghulkade
+ omavahelistest kuulumistest ei järeldu väiteid kvantorite kohta.
+ Kui mingist kvantorite ja alghulkade vaheliste seoste booleankombinatsioonist
+ järeldub, mingi väide alghulkade kohta ja on samas eitatud, siis on see
+ booleakombinatsioon sõltumatult kirjeldatavast K1seosest vale.
+ Seos ei tohi teha väiteid kõikide hulkade kohta(sest _.._).
+ Teisisõnu ei tohi sellest järelduda, et mingite elementidega hulki ei ole
+ olemas.
+ Kui mingite sisudega kvantorite booleankombinatsioon seda teeb, siis on
+ see booleakombinatsiooni sõltumatult kirjeldatavast K1seosest vale.
+ Näiteks väitest ∀x(A∈x) järelduks, et sellist hulka, mis ei sisalda A’d(näiteks
+ tühi hulk) ei ole olemas, seega on see väide vale.
+\end_layout
+
+\begin_layout Standard
+Hea viis seose K1esitamiseks on luua üksühene vastavus võimalike seoste
+ ja naturaalarvude vahele.
+ Hea on kui sellisel kujul estitatud seoste vahel saab rakendada operaatoreid(AN
+D OR NOR) rakendades neid vastavatele arvule bit kaupa.
+ Hea on kui tavalises notatsioonis lühidalt kirjapandav seos on kaväikese
+ või lihtsasti kirjeldatava naturaalarvuga vastavusse pandud.
+ Konkreetsem näide Üks võimalus K1seose kirjledamiseks on teha DNF tabel(see
+ pole suurema algmõistete arvuga seoste puhul mõistlik, sest võtab palju
+ mälu, aga selle eeliseks on see, et siis saab sama algmõistete arvuga K1seoste
+ vahelisi operatsioone teha lõppveeru vastavaid bittide(booleanide) vahel
+ sama operandi rakendades), mille veergudeks on erineva sisuga kvantorid.
+ Aga kuna erineva sisuga kvantorid on omavahel sõltuvad, siis piisab kui
+ tabeli veergudeks võtta (ükskõik kas eitatud või eitamata) kvantorid sisuga,
+ et P(x) pole mingi kindla väärtusega.
+ Ja väited alghulkade omavahelise kuuluvuse kohta.(täpsemat kirjledust vaja
+ sh.
+ Veergude järjekorra kohta,) • ∀x(¬P(x)=n) ehk ¬∃(P(x)=n) või • ¬∀x(¬P(x)=n)
+ ehk ∃(P(x)=n) Isegi sellise veergude valiku korral on need DNF tabeli read,
+ mis väidavad et kõigil hulkadel on mingi omadus, (näiteks ∀x(x∈x), ∀x(A∈x),
+ või ∀x(x∈x∨A∈x)) kindlalt False väärtusega! P on funktsioon, mis loob bijektiiv
+se seose, argumendiks oleva hulga alghulkade sisaldavuse ja alghulkades
+ sisaldumise, ning 2N*2+1 väiksemaid naturaalarve sisaldava hulga vahele.
+ Üks võimalus P defineerimiseks on teha DNF tabel, mille veergudeks on (ükskõik
+ kas eitatud või eitamata) väited(veergude järjekord on oluline), et kvanteerita
+v kuulub mingisse alghulka, et kvanteeritav on iseenda element ja, et mingi
+ alghulk kuulub kvanteeritavasse.(täpsemat kirjeldust vaja sh.
+ veergude järjekorra kohta,) • P=∑_i=0N^2 (2**i*(Hi∈)+) või • P=∑_i=0N^2
+ (2**i*¬())
+\end_layout
+
+\begin_layout Standard
+(veerust tehtav järeldus(vihikus olemas)) (lõppreast tehtav järeldus(vihikus
+ olemas)) (seosest, mis on on esitatav arvuna tehtav järeldus) Selliselgi
+ juhul on osad lõppread sõltumata kirjeldatavast K1seosest kindlalt valed(vastav
+ boolean peab olema False).
+ Üks võimalus saada minimaalsel vabadusastmel kirjeldus on teha uus numeratsioon
+ lõppridadele, mis jätab need read, mis on sõltumata kirjeldatavast K1seosest
+ valed, vahele.
+ Üheselt valed on need read, mis teevad väiteid kõigi hulkade kohta või
+ on vastuolulised, sest kvantoritega veergudest järeldub alghulkade kohta
+ midagi, mis on vastuolus alghulkade omavahelisi kuulumise kirjeldavate
+ veergudega.
+ Lõppreast tehtav järeldus alghulkade kohta on järmine: (lõppreast tehtav
+ järeldus alghulkade kohta(vihikus olemas)) Kui see on vastuoluline, siis
+ tuleb tuleb vastav lõpprida uues numeratsioonis vahel jätta, sest kvantoritega
+ veergudest järeldub alghulkade kohta midagi, mis on vastuolus alghulkade
+ omavahelisi kuulumise kirjeldavate veergudega..
+ Järgnev seos näitab, et millised read on vastuolulised: (funktsioon ,mis
+ võtab argumendiks täisarvu (lõpprea numbri) ja tagastab booleani(,et kas
+ see on vastuoluline, sest kvantoritega veergudest järeldub alghulkade kohta
+ midagi, mis on vastuolus alghulkade omavahelisi kuulumise kirjeldavate
+ veergudega.))
+\end_layout
+
+\begin_layout Standard
+(funktsioon ,mis võtab argumendiks täisarvu (lõpprea numbri) ja tagastab
+ booleani(,et kas see on vastuoluline, sest teeb kõigi hulkade kohta väite.)(vihi
+kus olemas))
+\end_layout
+
+\begin_layout Standard
+(funktsioon ,mis võtab argumendiks täisarvu (lõpprea numbri) ja tagastab
+ booleani(,et kas see on vastuoluline))
+\end_layout
+
+\begin_layout Standard
+(seosest, mis on on esitatud naturaalarvuna tehtav järeldus, kus on eeldatud
+ uut lõppveergude numeratsiooni.)
 \end_layout
 
 \begin_layout Section*
@@ -10884,7 +11583,7 @@ land A(3, 3))))$
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename puu väitest, mis o-kontolliga vale tulemuse annab.png
+	filename pildid PDFi/puu koostamise näited/puu väitest, mis o-kontolliga vale tulemuse annab.png
 	lyxscale 40
 	scale 55
 	BoundingBox 0bp 0bp 1366bp 726bp
@@ -11090,9 +11789,9 @@ põhjal koostatud puust:
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename Mari puu 2.png
-	lyxscale 40
-	scale 50
+	filename pildid PDFi/puu koostamise näited/Mari puu.png
+	lyxscale 30
+	scale 38
 
 \end_inset
 
@@ -11172,7 +11871,7 @@ land A(3,1,3))))$
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename puu 3.png
+	filename pildid PDFi/puu koostamise näited/puu 3.png
 	lyxscale 40
 	scale 50
 
@@ -11418,7 +12117,7 @@ land A(3, 3))))$
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename laiendatud harude näide.png
+	filename pildid PDFi/laiendatud harude näited/laiendatud harude näide.png
 	lyxscale 40
 	scale 41
 
@@ -11572,7 +12271,7 @@ põhjal koostatud puus, kuhu on lisatud laiendatud harud(sinist värvi):
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename lainedatult harude näide 2.png
+	filename pildid PDFi/laiendatud harude näited/lainedatult harude näide 2.png
 	lyxscale 40
 	scale 55
 
@@ -11712,7 +12411,7 @@ põhjal koostatud puus, kuhu on lisatud laiendatud harud(sinist värvi):
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename puu väitest, mis o-kontolliga vale tulemuse annab lainedatult.png
+	filename pildid PDFi/laiendatud harude näited/puu väitest, mis o-kontolliga vale tulemuse annab lainedatult.png
 	lyxscale 40
 	scale 55
 
@@ -11856,7 +12555,7 @@ põhjal koostatud puus, kuhu on lisatud laiendatud harud(sinist värvi):
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename harudega ÜV puu.png
+	filename pildid PDFi/laiendatud harude näited/harudega ÜV puu.png
 	lyxscale 40
 	scale 53
 
