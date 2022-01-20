@@ -1559,7 +1559,7 @@ näiteid selles syntaxis definitsioonides
 \end_layout
 
 \begin_layout Subsubsection
-piirväärtuse definitsioon
+piirväärtus
 \end_layout
 
 \begin_layout Standard
@@ -1781,6 +1781,20 @@ peano aksioomid
 \end_layout
 
 \begin_layout Standard
+selles näites on kasutatud peatükis 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:operaatorite-(järjekorraga)-sugar"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ kirjeldatud syntaxsugarit.
+\end_layout
+
+\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -1803,7 +1817,7 @@ land
 
 
 \backslash
-forall(=(x_1,x_1))
+forall(x_1=x_1)
 \backslash
 land
 \backslash
@@ -1820,11 +1834,11 @@ forall(
 \backslash
 forall(
 \backslash
-forall(=(x_1,x_2)
+forall(x_1=x_2
 \backslash
-land =(x_2,x_3)
+land x_2=x_3 
 \backslash
-to =(x_3,x_1))))
+to x_3=x_1)))
 \backslash
 land
 \backslash
@@ -1843,7 +1857,7 @@ forall(on
 \backslash
 _naturaalarv(x_1)
 \backslash
-land =(x_1,x_2)
+land x_1=x_2 
 \backslash
 to on
 \backslash
@@ -1953,28 +1967,17 @@ liitmine
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$+(x_1,x_2,x_3)$
-\end_layout
-
-\end_inset
-
- tähendab 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$x_1+x_2=x_3$
-\end_layout
+selles näites on kasutatud peatükis 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:operaatorite-(järjekorraga)-sugar"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
-
+ kirjeldatud syntaxsugarit.
 \end_layout
 
 \begin_layout Standard
@@ -1991,7 +1994,7 @@ _null(x_1)
 \backslash
 land 
 \backslash
-forall(+(x_2,x_1,x_2)))
+forall(x_2+x_1=x_2)))
 \backslash
 land
 \backslash
@@ -2007,32 +2010,16 @@ land
 forall(
 \backslash
 forall(
-\backslash
-forall(
-\backslash
-forall(
-\backslash
-forall(
-\backslash
-forall(
 \end_layout
 
 \begin_layout Plain Layout
 
-S(x_2,x_3) 
-\backslash
-land +(x_1,x_2,x_4) 
-\backslash
-land S(x_4,x_5) 
-\backslash
-land +(x_1,x_3,x_6) 
-\backslash
-leftrightarrow =(x_6,x_5)
+x_1+S(x_2)=S(x_1+x_2)
 \end_layout
 
 \begin_layout Plain Layout
 
-))))))$
+))$
 \end_layout
 
 \end_inset
@@ -2045,28 +2032,17 @@ korrutamine
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$*(x_1,x_2,x_3)$
-\end_layout
-
-\end_inset
-
- tähendab 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$x_1*x_2=x_3$
-\end_layout
+selles näites on kasutatud peatükis 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:operaatorite-(järjekorraga)-sugar"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
-
+ kirjeldatud syntaxsugarit.
 \end_layout
 
 \begin_layout Standard
@@ -2083,7 +2059,7 @@ _null(x_1)
 \backslash
 land 
 \backslash
-forall(*(x_2,x_1,x_1)))
+forall(x_2*x_1=x_1))
 \backslash
 land
 \backslash
@@ -2099,32 +2075,16 @@ land
 forall(
 \backslash
 forall(
-\backslash
-forall(
-\backslash
-forall(
-\backslash
-forall(
-\backslash
-forall(
 \end_layout
 
 \begin_layout Plain Layout
 
-S(x_2,x_3) 
-\backslash
-land *(x_1,x_2,x_4) 
-\backslash
-land +(x_1,x_4,x_5) 
-\backslash
-land  
-\backslash
-leftrightarrow =(x_6,x_5)
+x_1*S(x_2)=x_1+x_1*x_2
 \end_layout
 
 \begin_layout Plain Layout
 
-))))))$
+))$
 \end_layout
 
 \end_inset
@@ -8027,10 +7987,32 @@ land A(x)$
 
 \begin_layout Subsubsection
 operaatorite (järjekorraga) sugar
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:operaatorite-(järjekorraga)-sugar"
+
+\end_inset
+
+
 \end_layout
 
-\begin_layout Standard
-näiteks teisendab 
+\begin_layout Enumerate
+kuni valemis operaatoreid on:
+\end_layout
+
+\begin_layout Enumerate
+: : paneb operaatoritega valemi ümber universaalsuskvantori nt.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$x_{11}+x_{12}*x_{13}=x_{14}$
+\end_layout
+
+\end_inset
+
+ peale seda sammu: 
 \begin_inset ERT
 status open
 
@@ -8038,33 +8020,41 @@ status open
 
 $
 \backslash
-exists(
-\backslash
-exists(
-\backslash
-exists(x_1*x_2+x_3=f(x_3,x_2,x_1,x_2))))$
+forall(x_{11}+x_{12}*x_{13}=x_{14})$
 \end_layout
 
 \end_inset
 
- järgenvaks:
+
 \end_layout
 
-\begin_layout Standard
+\begin_layout Enumerate
+: : jaatab olemasolevale väite uus kvanteeritav on võrdne kõige esimesena
+ tehtava operatsiooni tulemusega.
+ näteks 
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-$*(x_1,x_2,x_4) 
+$
 \backslash
-land +(x_4,x_3,x_5) 
+forall(x_{11}+x_{12}*x_{13}=x_{14})$
+\end_layout
+
+\end_inset
+
+ peale seda sammu on: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
 \backslash
-land on
+forall(*(x_{12},x_{13},x_{15}) 
 \backslash
-_f(x_6) 
-\backslash
-land CALL(x_6,x_3,x_2,x_1,x_2,x_7)$
+land x_{11}+x_{12}*x_{13}=x_{14})$
 \end_layout
 
 \end_inset
@@ -8072,12 +8062,45 @@ land CALL(x_6,x_3,x_2,x_1,x_2,x_7)$
 
 \end_layout
 
-\begin_layout Standard
--
-\begin_inset space ~
+\begin_layout Enumerate
+: : asendab kõige esimesena tehtava operatsiooni uue kvanteeritavaga, et
+ selle tehte tulemus on võrdne uue kvanteeritavaga.
+ nt.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+forall(*(x_{12},x_{13},x_{15}) 
+\backslash
+land x_{11}+x_{12}*x_{13}=x_{14})$
+\end_layout
+
+\end_inset
+
+ peale seda sammu: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+forall(*(x_{12},x_{13},x_{15}) 
+\backslash
+land x_{11}+x_{15}=x_{14})$
+\end_layout
+
 \end_inset
 
 
+\end_layout
+
+\begin_layout Paragraph
+näited:
 \end_layout
 
 \begin_layout Standard
@@ -8169,6 +8192,583 @@ $x_n$
 
 \begin_layout Standard
 operaatorite järjekord: **,[*,/],[+,-]
+\end_layout
+
+\begin_layout Subparagraph
+näide
+\end_layout
+
+\begin_layout Standard
+näiteks teisendab 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+exists(
+\backslash
+exists(
+\backslash
+exists(x_1*x_2+x_3=f(x_3,x_2,x_1,x_2))))$
+\end_layout
+
+\end_inset
+
+ järgenvaks:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$*(x_1,x_2,x_4) 
+\backslash
+land +(x_4,x_3,x_5) 
+\backslash
+land on
+\backslash
+_f(x_6) 
+\backslash
+land CALL(x_6,x_3,x_2,x_1,x_2,x_7)$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subparagraph
+näide
+\end_layout
+
+\begin_layout Standard
+näiteks teisendab valemi:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+exists(on
+\backslash
+_null(x_1))
+\backslash
+land
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+forall(x_1=x_1)
+\backslash
+land
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+forall(
+\backslash
+forall(
+\backslash
+forall(x_1=x_2
+\backslash
+land x_2=x_3 
+\backslash
+to x_3=x_1)))
+\backslash
+land
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+forall(
+\backslash
+forall(on
+\backslash
+_naturaalarv(x_1)
+\backslash
+land x_1=x_2 
+\backslash
+to on
+\backslash
+_naturaalarv(x_2)))
+\backslash
+land
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+forall(
+\backslash
+forall(on
+\backslash
+_naturaalarv(x_1)
+\backslash
+land S(x_1,x_2)
+\backslash
+to on
+\backslash
+_naturaalarv(x_2)))
+\backslash
+land
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+forall(on
+\backslash
+_null(x_1)
+\backslash
+to 
+\backslash
+neg 
+\backslash
+exists( S(x_2,x_1)
+\backslash
+land on
+\backslash
+_naturaalarv(x_2)))
+\backslash
+land
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+exists(on
+\backslash
+_null(x_1) 
+\backslash
+land x_1 
+\backslash
+in K)
+\backslash
+land 
+\backslash
+forall(
+\backslash
+forall(x_1 
+\backslash
+in K 
+\backslash
+land S(x_1,x_2) 
+\backslash
+to x_2 
+\backslash
+in K)) 
+\backslash
+to 
+\backslash
+forall(x_1 
+\backslash
+in K)%edasi liitmise definitsioon
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+forall(on
+\backslash
+_null(x_1)
+\backslash
+land 
+\backslash
+forall(x_2+x_1=x_2)))
+\backslash
+land
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+forall(
+\backslash
+forall(
+\end_layout
+
+\begin_layout Plain Layout
+
+x_1+S(x_2)=S(x_1+x_2)
+\end_layout
+
+\begin_layout Plain Layout
+
+))%edasi korrutamise definitsioon
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+forall(on
+\backslash
+_null(x_1)
+\backslash
+land 
+\backslash
+forall(x_2*x_1=x_1))
+\backslash
+land
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+forall(
+\backslash
+forall(
+\end_layout
+
+\begin_layout Plain Layout
+
+x_1*S(x_2)=x_1+x_1*x_2
+\end_layout
+
+\begin_layout Plain Layout
+
+))
+\end_layout
+
+\begin_layout Plain Layout
+
+$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+kujule:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+exists(on
+\backslash
+_null(x_1))
+\backslash
+land
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+forall(=(x_1,x_1))
+\backslash
+land
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+forall(
+\backslash
+forall(
+\backslash
+forall(=(x_1,x_2)
+\backslash
+land =(x_2,x_3)
+\backslash
+to =(x_3,x_1))))
+\backslash
+land
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+forall(
+\backslash
+forall(on
+\backslash
+_naturaalarv(x_1)
+\backslash
+land =(x_1,x_2)
+\backslash
+to on
+\backslash
+_naturaalarv(x_2)))
+\backslash
+land
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+forall(
+\backslash
+forall(on
+\backslash
+_naturaalarv(x_1)
+\backslash
+land S(x_1,x_2)
+\backslash
+to on
+\backslash
+_naturaalarv(x_2)))
+\backslash
+land
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+forall(on
+\backslash
+_null(x_1)
+\backslash
+to 
+\backslash
+neg 
+\backslash
+exists( S(x_2,x_1)
+\backslash
+land on
+\backslash
+_naturaalarv(x_2)))
+\backslash
+land
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+exists(on
+\backslash
+_null(x_1) 
+\backslash
+land x_1 
+\backslash
+in K)
+\backslash
+land 
+\backslash
+forall(
+\backslash
+forall(x_1 
+\backslash
+in K 
+\backslash
+land S(x_1,x_2) 
+\backslash
+to x_2 
+\backslash
+in K)) 
+\backslash
+to 
+\backslash
+forall(x_1 
+\backslash
+in K)
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+forall(on
+\backslash
+_null(x_1)
+\backslash
+land 
+\backslash
+forall(+(x_2,x_1,x_2)))
+\backslash
+land
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+forall(
+\backslash
+forall(
+\backslash
+forall(
+\backslash
+forall(
+\backslash
+forall(
+\backslash
+forall(
+\end_layout
+
+\begin_layout Plain Layout
+
+S(x_2,x_3) 
+\backslash
+land +(x_1,x_2,x_4) 
+\backslash
+land S(x_4,x_5) 
+\backslash
+land +(x_1,x_3,x_6) 
+\backslash
+leftrightarrow =(x_6,x_5)
+\end_layout
+
+\begin_layout Plain Layout
+
+))))))
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+forall(on
+\backslash
+_null(x_1)
+\backslash
+land 
+\backslash
+forall(*(x_2,x_1,x_1)))
+\backslash
+land
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+forall(
+\backslash
+forall(
+\backslash
+forall(
+\backslash
+forall(
+\backslash
+forall(
+\backslash
+forall(
+\end_layout
+
+\begin_layout Plain Layout
+
+S(x_2,x_3) 
+\backslash
+land *(x_1,x_2,x_4) 
+\backslash
+land +(x_1,x_4,x_5) 
+\backslash
+land  
+\backslash
+leftrightarrow =(x_6,x_5)
+\end_layout
+
+\begin_layout Plain Layout
+
+))))))
+\end_layout
+
+\begin_layout Plain Layout
+
+$
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
