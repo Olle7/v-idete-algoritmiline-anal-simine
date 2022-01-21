@@ -484,8 +484,8 @@ land B(x_1))$
 \end_inset
 
 , sest on väidetud et eksisteerib miski, mis rahuldab predikaati A aga,
- ei eksisteeri midagi, mis rahuldaks nii predikaate A kui B.
- Vastuolu ei ole.
+ ei eksisteeri midagi, mis rahuldaks nii predikaate A kui B ning vastuolu
+ ei ole.
  Sellest on lihtsam aru saada kui panna predikaatidele mingit intuitiivselt
  lihtsamini mõistetavamad nimed.
  nt.: 
@@ -601,9 +601,9 @@ $x_2$
 \end_layout
 
 \begin_layout Standard
-Eelnevalt näiteks toodud väidete vastuolulisust on kerge intuitiivselt(ilma
- algoritmita) ilma arvuti abita kontrollida, aga pikkade ja keerukate väidete
- vastuolulisust on niimoodi väga raske kontrollida.
+Eelnevalt näiteks toodud väidete vastuolulisust on kerge intuitiivselt,
+ ilma arvuti abita, kontrollida, aga pikkade ja keerukate väidete vastuolulisust
+ on niimoodi väga raske kontrollida.
  Siis ongi mu programm kasulik.
  Järgnevalt toon mõned näited keerukamatest väidetest, mille vastuolulisust
  on raske kontrollida:
@@ -1394,17 +1394,17 @@ Füüsikalise mudeli kirjeldamiseks
 \end_layout
 
 \begin_layout Standard
-Oluline on ka näidaya, et milliste erinevate väärtuste korral on süsteemid
+Oluline on ka näidata, et milliste erinevate väärtuste korral on süsteemid
  füüsikaliselt identsed.
  Näiteks ei ole oluline potentsiaali 0-nivoo ja koordinaatide alguspunkt.
 \end_layout
 
 \begin_layout Standard
-Oluliseks pointiks nii tõenäosuste kui gemeetrilise ruumi(intuitiivsetst
+Oluliseks pointiks nii tõenäosuste kui geomeetrilise ruumi(intuitiivsetst
  vektoritest) on, et intuitiivse tähendusega aja korrutis arvuga on samuti
  intuitiivne.
  See on vist kuidagi taustsüsteemiga seotud.
- taust spsteemi, mille algus on kohas 
+ taust süsteemi, mille algus on kohas 
 \begin_inset ERT
 status open
 
@@ -1450,32 +1450,29 @@ vec{b}$
 
 \begin_layout Standard
 Füüsikalise väite(mudeli) kasulikkus on seda suurem, mida täpsemalt see
- katseandmetega klapib ja mida lihtsam see on(mida väiksem on selle keerukus).
- Lihtsus on ilmselt õige hinnata kui füüsikalised suurused on kirjapandud
- minimaalsel vabadusastmel ja ja võimalikult sümmeetriliselt(ruumiline ja
- ajaline sümmeetria näiteks).
-\end_layout
-
-\begin_layout Standard
-Eristada selgelt matemaatilised algmõisted (funktsioon, võrdsus, hulk, implikats
-ioon jne.(siin näitena toodud mõisted ei moodusta minimaalset funktsionaalselt
- täielikku hulka)) ja füüsikalised algmõisted (ruum, aeg, elektromagnetväli,
- elektrimagnetväli, gravitomagnetväli, gravitimagnetväli, aegruum).
+ katseandmetega klapib ja lihtsam on(mida väiksem on selle keerukus).
+ Lihtsust on ilmselt õige hinnata kui füüsikalised suurused on kirjapandud
+ minimaalsel vabadusastmel ja võimalikult sümmeetriliselt(näiteks ruumiline
+ ja ajaline sümmeetria), et selgelt eristada matemaatilisi algmõisted (funktsioo
+n, võrdsus, hulk, implikatsioon jne(siin näitena toodud mõisted ei moodusta
+ minimaalset funktsionaalselt täielikku hulka)) ja füüsilisi algmõisted
+ (ruum, aeg, elektromagnetväli, elektrimagnetväli, gravitomagnetväli, gravitimag
+netväli, aegruum).
  Võtta kasutusele ka füüsikalised mõisted, mis ei ole algmõisted (nt.
  konkreetsed ained, tahke, vedel, gaasiline, aatom).
 \end_layout
 
 \begin_layout Standard
-Ükski tõestamatu väide ei tohi omada füüsikalist tähendust (näiteks ei oma
- koordinaatide alguspunkti valik füüsikalist tähendust.).
- Ükski füüsikalise tähenduseta väide ei tohi olla tõestatav.
+Ükski tõestamatu väide ei tohi omada füüsikalist tähendust(näiteks ei oma
+ koordinaatide alguspunkti valik füüsikalist tähendust.) ja ükski füüsikalise
+ tähenduseta väide ei tohi olla tõestatav.
  
 \end_layout
 
 \begin_layout Standard
 Füüsikalise mudeli, mis sisaldab suuruseid(nt.
- Aeg, kordinaat ja väljatugevus) , mida iseelommustakse reaalarvuga, kirjeldamis
-eks tuleb deineerida vastavad aritmeetilised tehted reaalarvudele.
+ Aeg, kordinaat ja väljatugevus) ja iseelommustakse reaalarvuga, kirjeldamiseks
+ tuleb deineerida vastavad aritmeetilised tehted reaalarvudele.
  Kas alati tuleb defineerida ka jagamine, et saaks väita nt.
  ,et üks suurus on teisest 3 korda suurem?
 \end_layout
@@ -1487,7 +1484,11 @@ mudeli lihtsus
 \begin_layout Standard
 Katseadnmetega paremini kokku sobiv mudel on tõenäolisem.
  Lihtsam mudel tõenäolisem.
- Mudelite lihtsuse võrdelmiseks peavad neil olema samad elementaarseosed.
+ ##tekstist on informatsioon puudu, vajab täiendamist
+\end_layout
+
+\begin_layout Standard
+Mudelite lihtsuse võrdelmiseks peavad neil olema samad elementaarseosed.
  Kui ühel mudelil on rohkem predikaate või algasju kui teisel tuleb need
  eksistentsiaalsuskvantori abil eemaldada(näiteks ühes on ainult punktkehad
  ja teises ka väli, mille väärtus määra, et kui suure tõenäosusega punktkeha
