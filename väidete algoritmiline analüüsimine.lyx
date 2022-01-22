@@ -195,24 +195,7 @@ $n_S$
  lihtsustatud.
  Võimalik, et ei saa ka kunagi kindel olla kas antud väide on üheselt vale,
  üheselt tõene või mitte kumbagi.
- Kuigi Gödeli teoreemi kohaselt pole võimalik kogu täisarvude matemaatika
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-kas mõtled 
-\begin_inset Quotes eld
-\end_inset
-
-matemaatikat
-\begin_inset Quotes erd
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
+ Kuigi Gödeli teoreemi kohaselt pole võimalik kogu täisarvude matemaatikat
  aksiomaatiliselt kirjeldada(???), saab arvutile etteantavasse väiteesse
  alati uusi aksioome juurde lisada ja tõestada, et teatud arvust 
 \begin_inset ERT
@@ -352,17 +335,8 @@ Hea on kui tavalises notatsioonis lühidalt kirjapandav väide on ka väikese
 \end_layout
 
 \begin_layout Itemize
-Hea on kui võimalikud jäävad väärtused
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-jäävad, väärtused tagurdpidi
-\end_layout
-
-\end_inset
-
- 0 ja mingi arvu vahele(mis muide on 
+Hea on kui võimalikud väärtused jäävad 0 ja mingi arvu vahele (mis muide
+ on 
 \begin_inset ERT
 status open
 
@@ -386,17 +360,7 @@ $n_S$
 
  ülmist piiri) nii, et igale nende vahel olevale naturaalarvule vastab erinev
  väide.
- Seega on funktsioon F objektiivne
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-(alguses)bijektiivne
-\end_layout
-
-\end_inset
-
-.
+ Seega on funktsioon F bijektiivne.
 \end_layout
 
 \begin_layout Itemize
@@ -431,17 +395,7 @@ lisada pogrammile funktsionaalsus, väitedete salvestamiseks, kujul, mis
 ooni (kui see on binaarkujul esitatud) tähistavad erinevaid loogikalisi
  lauseid ja universaalne ehk millega saab mingi bittide kombinatsiooniga
  (kui see on binaarkujul esitatud) iga loogikalise lause kirja panna.
- Teisisõnu funktsioon väite ja tähistuse vahel on bijektiivne
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-kas bijektiivne
-\end_layout
-
-\end_inset
-
-.
+ Teisisõnu funktsioon väite ja tähistuse vahel on bijektiivne.
 \end_layout
 
 \begin_layout Enumerate
@@ -455,15 +409,6 @@ lidsada programmile funktsionaalsus hinnata väite keerukust mingi paameetriga.
 
 \begin_layout Enumerate
 lisada programmile funktsionaalsus määrata väite parameeter K, ehk ,et kui
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-ehk, et, kui järjest
-\end_layout
-
-\end_inset
-
  mitme kvantori sees kõige rohkemate kvantorite sees asuv kvantor on ,kui
  esitada väide vormis, kus kõige rohkemate kvantorite sees asuv kvantor
  on võimalikult väheste kvantorite sees.
@@ -9383,62 +9328,7 @@ võib olla mitu sama nime, aga erineva argumentide arvuga, predikaati.
  - sellel et nimi on sama pole mingit tähtsust.
 \end_layout
 
-\begin_layout Subsection
-importimine
-\end_layout
-
-\begin_layout Standard
-
-\backslash
-uri
-\begin_inset Quotes erd
-\end_inset
-
-...
-\begin_inset Quotes erd
-\end_inset
-
- on uril ...
- olev väide.
-\end_layout
-
-\begin_layout Standard
-
-\backslash
-standarlibari
-\begin_inset Quotes erd
-\end_inset
-
-...
-\begin_inset Quotes erd
-\end_inset
-
- on stadardses kohas kus palju kasulikke väiteid on olev väide.
-\end_layout
-
-\begin_layout Standard
-imporditud väidetel on võivad olla viimased sulud puudu, sest need ütleva,
- et midagi eksisteerib, aga lasevad kasutajal sama kvantori (mille lähtekood
- on teises failis) väiteid juurde kirjutada.
-\begin_inset Newline newline
-\end_inset
-
-Moodulid on eelnevalt 
-\begin_inset Quotes eld
-\end_inset
-
-kompileeritud
-\begin_inset Quotes eld
-\end_inset
-
-.
- Imortimisel nende väitenumbrit muudetakse nii , et see sobiks kokku ülejäänud
- predikaatide ja K'ga.
- Nii on efektiivsus suurem.
- Moodulite lähtekood ei pea kõigi moodulite puhul avalik olema.
-\end_layout
-
-\begin_layout Subsection
+\begin_layout Subsubsection
 väited predikaatide argumentidena
 \end_layout
 
@@ -9502,6 +9392,61 @@ land "elementaatseos"(x_1)))$
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
+importimine
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+uri
+\begin_inset Quotes erd
+\end_inset
+
+...
+\begin_inset Quotes erd
+\end_inset
+
+ on uril ...
+ olev väide.
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+standarlibari
+\begin_inset Quotes erd
+\end_inset
+
+...
+\begin_inset Quotes erd
+\end_inset
+
+ on stadardses kohas kus palju kasulikke väiteid on olev väide.
+\end_layout
+
+\begin_layout Standard
+imporditud väidetel on võivad olla viimased sulud puudu, sest need ütleva,
+ et midagi eksisteerib, aga lasevad kasutajal sama kvantori (mille lähtekood
+ on teises failis) väiteid juurde kirjutada.
+\begin_inset Newline newline
+\end_inset
+
+Moodulid on eelnevalt 
+\begin_inset Quotes eld
+\end_inset
+
+kompileeritud
+\begin_inset Quotes eld
+\end_inset
+
+.
+ Imortimisel nende väitenumbrit muudetakse nii , et see sobiks kokku ülejäänud
+ predikaatide ja K'ga.
+ Nii on efektiivsus suurem.
+ Moodulite lähtekood ei pea kõigi moodulite puhul avalik olema.
 \end_layout
 
 \begin_layout Section

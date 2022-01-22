@@ -1162,6 +1162,89 @@ _reaalarv(x_2)))$
  ühtegi teist reaalarvu, mis sellest suurem oleks.
 \end_layout
 
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$STANDARD 
+\backslash
+land 
+\backslash
+neg 
+\backslash
+exists(on
+\backslash
+_kompleksarv(x_1)
+\backslash
+land 
+\backslash
+exists(x_1<x_2 
+\backslash
+land on
+\backslash
+_kompleksarv(x_2) 
+\backslash
+land x_1^2=x_2^2))$
+\end_layout
+
+\end_inset
+
+ ei leidu kahte kompleksarvu, mille ruut oleks sama ja millest esimene oleks
+ teisest suurem.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$STANDARD 
+\backslash
+land 
+\backslash
+neg 
+\backslash
+exists(on
+\backslash
+_kompleksarv(x_1)
+\backslash
+land 
+\backslash
+exists(on
+\backslash
+_kompleksarv(x_2) 
+\backslash
+land 
+\backslash
+exists(on
+\backslash
+_kompleksarv(x_3) 
+\backslash
+land x_1^5=x_2^5 
+\backslash
+land x_2^5=x_3^5 
+\backslash
+land x_1 
+\backslash
+neq x_2 
+\backslash
+land x_2 
+\backslash
+neq x_3 
+\backslash
+land x_1 
+\backslash
+neq x_3)))$
+\end_layout
+
+\end_inset
+
+ ei leidu 3e erinevat kompleksarvu, mille 5 aste oleks sama.
+\end_layout
+
 \begin_layout Standard
 Saaks kontrollida ka, et kas mingi hüpotees(teoreem) järeldub aksioomidest(ehk
  standard libarist).
@@ -2993,6 +3076,72 @@ predikaatide overloading
 võib olla mitu sama nime, aga erineva argumentide arvuga, predikaati.
  kui argumentide arv on erinev, aga siis on tegemist erinevate predikaatidega
  - sellel et nimi on sama pole mingit tähtsust.
+\end_layout
+
+\begin_layout Subsubsection
+väited predikaatide argumentidena
+\end_layout
+
+\begin_layout Standard
+Elementaarseoste argumentideks saavad olla väited kui eelenvalt on defineeritud
+ True ja False.
+ Et nende tähendus olks sama, mis intuitiivne tähendus peab lisama ka nendega
+ seotud väited 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+forall(
+\backslash
+forall(("onTrue"(x_1)
+\backslash
+land "onTrue"(x_2)
+\backslash
+to "="(x_1,x_2)) 
+\backslash
+land ("onTrue"(x_1)
+\backslash
+land "onFalse"(x_2)
+\backslash
+to 
+\backslash
+neg "="(x_1,x_2))))$
+\end_layout
+
+\end_inset
+
+.
+ Elementeersesos(väide) tähendab: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$(väide 
+\backslash
+to 
+\backslash
+exists("onTrue(x_1) 
+\backslash
+land "elementaatseos"(x_1)) 
+\backslash
+land (
+\backslash
+neg väide 
+\backslash
+to 
+\backslash
+exists("onFalse"(x_1) 
+\backslash
+land "elementaatseos"(x_1)))$
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
