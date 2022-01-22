@@ -1811,7 +1811,7 @@ land
 \backslash
 
 \backslash
-
+%peano 1
 \end_layout
 
 \begin_layout Plain Layout
@@ -1824,7 +1824,7 @@ land
 \backslash
 
 \backslash
-
+%peano 2
 \end_layout
 
 \begin_layout Plain Layout
@@ -1845,7 +1845,7 @@ land
 \backslash
 
 \backslash
-
+%võrduse peano 3,4
 \end_layout
 
 \begin_layout Plain Layout
@@ -1868,7 +1868,7 @@ land
 \backslash
 
 \backslash
-
+%võduse peano 5
 \end_layout
 
 \begin_layout Plain Layout
@@ -1891,7 +1891,18 @@ land
 \backslash
 
 \backslash
+%peano 6
+\end_layout
 
+\begin_layout Plain Layout
+
+
+\backslash
+forall(
+\backslash
+forall(x_1=x_2 
+\backslash
+leftrightarrow S(x_1)=S(x_2)))%peano 7
 \end_layout
 
 \begin_layout Plain Layout
@@ -1916,7 +1927,7 @@ land
 \backslash
 
 \backslash
-
+%peano 8
 \end_layout
 
 \begin_layout Plain Layout
@@ -1949,7 +1960,7 @@ to
 \backslash
 forall(x_1 
 \backslash
-in K)$
+in K)$%peano 9
 \end_layout
 
 \end_inset
@@ -7160,11 +7171,210 @@ näitevorm
 \end_layout
 
 \begin_layout Part
-väite vastuolulisust kontolliva programmi kasutamine
+standard libary
+\end_layout
+
+\begin_layout Standard
+seal on igasugu kasulikke väiteid, mida kasutaja saab enda omadega jaatada,
+ et enda omade tõesust kontrollida.
+\end_layout
+
+\begin_layout Paragraph
+robinsoni aritmeetika'
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+forall(on
+\backslash
+_null(x_1) 
+\backslash
+neg 
+\backslash
+exists(S(x_1,x_2)))
+\backslash
+land
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+forall(
+\backslash
+forall(
+\backslash
+forall(
+\backslash
+forall( x_1=x_2 
+\backslash
+land S(x_1,x_3)
+\backslash
+land S(x_2,x_4) 
+\backslash
+to x_3=x_4))))
+\end_layout
+
+\begin_layout Plain Layout
+
+on
+\backslash
+_null(x_1)
+\backslash
+lor 
+\backslash
+exists(S(x_2,x_1))
+\end_layout
+
+\begin_layout Plain Layout
+
+%edasi liitmise definitsioon
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+forall(on
+\backslash
+_null(x_1)
+\backslash
+land 
+\backslash
+forall(x_2+x_1=x_2)))
+\backslash
+land
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+forall(
+\backslash
+forall(
+\end_layout
+
+\begin_layout Plain Layout
+
+x_1+S(x_2)=S(x_1+x_2)
+\end_layout
+
+\begin_layout Plain Layout
+
+))%edasi korrutamise definitsioon
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+forall(on
+\backslash
+_null(x_1)
+\backslash
+land 
+\backslash
+forall(x_2*x_1=x_1))
+\backslash
+land
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+forall(
+\backslash
+forall(
+\end_layout
+
+\begin_layout Plain Layout
+
+x_1*S(x_2)=x_1+x_1*x_2
+\end_layout
+
+\begin_layout Plain Layout
+
+))
+\end_layout
+
+\begin_layout Plain Layout
+
+$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+peano viimane naturaalarvude hulga võimsuse aksioom
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+exists(on
+\backslash
+_null(x_1) 
+\backslash
+land x_1 
+\backslash
+in K)
+\backslash
+land 
+\backslash
+forall(
+\backslash
+forall(x_1 
+\backslash
+in K 
+\backslash
+land S(x_1,x_2) 
+\backslash
+to x_2 
+\backslash
+in K)) 
+\backslash
+to 
+\backslash
+forall(x_1 
+\backslash
+in K)$
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Part
-Programm
+väite vastuolulisust kontolliva programmi kasutamine
 \end_layout
 
 \begin_layout Section
@@ -8353,6 +8563,31 @@ land
 
 
 \backslash
+forall(
+\backslash
+forall(
+\backslash
+forall(
+\backslash
+forall(=(x_1,x_2) 
+\backslash
+land S(x_1,x_3) 
+\backslash
+land S(x_2,x_4) 
+\backslash
+leftrightarrow =(x_3,x_4))) 
+\backslash
+land 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
 forall(on
 \backslash
 _null(x_1)
@@ -8590,6 +8825,23 @@ to on
 _naturaalarv(x_2)))
 \backslash
 land
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+forall(
+\backslash
+forall(x_1=x_2 
+\backslash
+leftrightarrow S(x_1)=S(x_2))) 
+\backslash
+land 
 \backslash
 
 \backslash
@@ -10553,15 +10805,6 @@ imiskeele sütnaksi) abil estada kui see võimalik on.
 
 \begin_layout Standard
 Eesmärgid:
-\end_layout
-
-\begin_layout Itemize
-Luua programm O
-\end_layout
-
-\begin_layout Itemize
-Defineerida tähistusviis.
- O
 \end_layout
 
 \begin_layout Itemize
@@ -12719,7 +12962,7 @@ land A(3, 3))))$
 \begin_layout Standard
 \begin_inset Graphics
 	filename pildid PDFi/laiendatud harude näited/laiendatud harude näide.png
-	lyxscale 40
+	lyxscale 28
 	scale 41
 
 \end_inset
