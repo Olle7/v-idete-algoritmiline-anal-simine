@@ -10363,168 +10363,6 @@ xists[x,Exists[y,A[x,y]]] && !Exists[x,Exists[y,A[y,x]]])]
 \end_layout
 
 \begin_layout Subsection*
-ÜVsusese seletus
-\end_layout
-
-\begin_layout Standard
-mingi väide V on ÜV kui väide, mis saadakse lisades väite ette eksistentsiaalsus
-kvantorid, nende sisse et need kvanteeritavad on booleanfinktsioonid ja
- asendades predikaadid V's nende kvantorite kvanteeritavatega.
-\end_layout
-
-\begin_layout Standard
-näiteks väide 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$
-\backslash
-exists(
-\backslash
-exists(A(1,2)
-\backslash
-land 
-\backslash
-exists(A(2,3))))
-\backslash
-land 
-\backslash
-neg 
-\backslash
-exists(A(1,1) 
-\backslash
-lor 
-\backslash
-exists(A(1,2)
-\backslash
-land A(2,1)))$
-\end_layout
-
-\end_inset
-
- ei ole vastuoluline, sest väide 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$
-\backslash
-exists(on
-\backslash
-_booleanfunktsioon(x_1) 
-\backslash
-land ( 
-\backslash
-exists(
-\backslash
-exists(A(1,2)
-\backslash
-land 
-\backslash
-exists(A(2,3))))
-\backslash
-land 
-\backslash
-neg 
-\backslash
-exists(A(1,1) 
-\backslash
-lor 
-\backslash
-exists(A(1,2)
-\backslash
-land A(2,1))))$
-\end_layout
-
-\end_inset
-
- ei ole vale.
-\end_layout
-
-\begin_layout Standard
-näiteks väide 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$
-\backslash
-exists(
-\backslash
-exists(A(x_1,x_2)
-\backslash
-land 
-\backslash
-exists(A(x_2,x_3)
-\backslash
-land A(x_2,x_2))))
-\backslash
-land 
-\backslash
-neg 
-\backslash
-exists(
-\backslash
-exists(
-\backslash
-exists( A(x_2,x_1)
-\backslash
-land A(x_1,x_3)
-\backslash
-land A(x_1,x_1))))$
-\end_layout
-
-\end_inset
-
- on vastuoluline, sest väide 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$
-\backslash
-exists(on
-\backslash
-_booleanfunktsioon(x_1) 
-\backslash
-land 
-\backslash
-exists(
-\backslash
-exists(A(x_2,x_3)
-\backslash
-land 
-\backslash
-exists(A(x_3,x_4)
-\backslash
-land A(x_3,x_3))))
-\backslash
-land 
-\backslash
-neg 
-\backslash
-exists(
-\backslash
-exists(
-\backslash
-exists( A(x_3,x_2)
-\backslash
-land A(x_2,x_4)
-\backslash
-land A(x_2,x_2)))))$
-\end_layout
-
-\end_inset
-
- on vale.
-\end_layout
-
-\begin_layout Subsection*
 Lineaarne esitusviis.
 \end_layout
 
@@ -11011,6 +10849,420 @@ cdot2)}+N^2}$
 
 \begin_layout Standard
 \begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+KOGU_INFO on väide, mis sisaldab kogu tõest infot kige kohta.
+ Loomulikult seda KOGU_INFOT ei ole mul kuhugi salvestatud.
+ See on lihtsalt abstraktne mõiste.
+\end_layout
+
+\begin_layout Subsubsection*
+vastuolulisuse valesususe erinevus
+\end_layout
+
+\begin_layout Paragraph*
+vastuolulisus(ehk üheselt valesus)
+\end_layout
+
+\begin_layout Standard
+Mingi väide V on ÜV kui väide, mis saadakse lisades väite ette eksistentsiaalsus
+kvantorid, nende sisse et need kvanteeritavad on booleanfinktsioonid ja
+ asendades predikaadid V's nende kvantorite kvanteeritavatega.
+\end_layout
+
+\begin_layout Standard
+näiteks väide 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+exists(
+\backslash
+exists(A(1,2)
+\backslash
+land 
+\backslash
+exists(A(2,3))))
+\backslash
+land 
+\backslash
+neg 
+\backslash
+exists(A(1,1) 
+\backslash
+lor 
+\backslash
+exists(A(1,2)
+\backslash
+land A(2,1)))$
+\end_layout
+
+\end_inset
+
+ ei ole vastuoluline, sest väide 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+exists(on
+\backslash
+_booleanfunktsioon(x_1) 
+\backslash
+land ( 
+\backslash
+exists(
+\backslash
+exists(x_1(1,2)
+\backslash
+land 
+\backslash
+exists(x_1(2,3))))
+\backslash
+land 
+\backslash
+neg 
+\backslash
+exists(x_1(1,1) 
+\backslash
+lor 
+\backslash
+exists(x_1(1,2)
+\backslash
+land x_1(2,1))))$
+\end_layout
+
+\end_inset
+
+ ei ole vale.
+\end_layout
+
+\begin_layout Standard
+näiteks väide 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+exists(
+\backslash
+exists(A(x_1,x_2)
+\backslash
+land 
+\backslash
+exists(A(x_2,x_3)
+\backslash
+land A(x_2,x_2))))
+\backslash
+land 
+\backslash
+neg 
+\backslash
+exists(
+\backslash
+exists(
+\backslash
+exists( A(x_2,x_1)
+\backslash
+land A(x_1,x_3)
+\backslash
+land A(x_1,x_1))))$
+\end_layout
+
+\end_inset
+
+ on vastuoluline, sest väide 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+exists(on
+\backslash
+_booleanfunktsioon(x_1) 
+\backslash
+land 
+\backslash
+exists(
+\backslash
+exists(x_1(x_2,x_3)
+\backslash
+land 
+\backslash
+exists(x_1(x_3,x_4)
+\backslash
+land x_1(x_3,x_3))))
+\backslash
+land 
+\backslash
+neg 
+\backslash
+exists(
+\backslash
+exists(
+\backslash
+exists(x_1(x_3,x_2)
+\backslash
+land x_1(x_2,x_4)
+\backslash
+land x_1(x_2,x_2)))))$
+\end_layout
+
+\end_inset
+
+ on vale.
+\end_layout
+
+\begin_layout Paragraph*
+valesus
+\end_layout
+
+\begin_layout Standard
+Väide on vale kui selle jaatus 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$KOGU
+\backslash
+_INFO$
+\end_layout
+
+\end_inset
+
+'ga on vastuoluline.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$VALE(VÄIDE) 
+\backslash
+leftrightarrow ÜV(VÄIDE 
+\backslash
+land KOGU
+\backslash
+_INFO)$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+üheselt tõesus
+\end_layout
+
+\begin_layout Standard
+Mingi väide V on ÜT kui väide, mis saadakse lisades väite ette univrsaalsuskvant
+orid, nende sisse et need kvanteeritavad on booleanfinktsioonid ja asendades
+ predikaadid V's nende kvantorite kvanteeritavatega.
+\end_layout
+
+\begin_layout Standard
+näiteks väide 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+exists(
+\backslash
+exists(A(1,2)
+\backslash
+land 
+\backslash
+exists(A(2,3))))
+\backslash
+land 
+\backslash
+neg 
+\backslash
+exists(A(1,1) 
+\backslash
+lor 
+\backslash
+exists(A(1,2)
+\backslash
+land A(2,1)))$
+\end_layout
+
+\end_inset
+
+ ei ole vastuoluline, sest väide 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+forall(on
+\backslash
+_booleanfunktsioon(x_1) 
+\backslash
+land ( 
+\backslash
+exists(
+\backslash
+exists(x_1(1,2)
+\backslash
+land 
+\backslash
+exists(x_1(2,3))))
+\backslash
+land 
+\backslash
+neg 
+\backslash
+exists(x_1(1,1) 
+\backslash
+lor 
+\backslash
+exists(x_1(1,2)
+\backslash
+land x_1(2,1))))$
+\end_layout
+
+\end_inset
+
+ ei ole vale.
+\end_layout
+
+\begin_layout Standard
+näiteks väide 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+exists(
+\backslash
+exists(A(x_1,x_2)
+\backslash
+land 
+\backslash
+exists(A(x_2,x_3)
+\backslash
+land A(x_2,x_2))))
+\backslash
+land 
+\backslash
+neg 
+\backslash
+exists(
+\backslash
+exists(
+\backslash
+exists( A(x_2,x_1)
+\backslash
+land A(x_1,x_3)
+\backslash
+land A(x_1,x_1))))$
+\end_layout
+
+\end_inset
+
+ on vastuoluline, sest väide 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+forall(on
+\backslash
+_booleanfunktsioon(x_1) 
+\backslash
+land 
+\backslash
+exists(
+\backslash
+exists(x_1(x_2,x_3)
+\backslash
+land 
+\backslash
+exists(x_1(x_3,x_4)
+\backslash
+land x_1(x_3,x_3))))
+\backslash
+land 
+\backslash
+neg 
+\backslash
+exists(
+\backslash
+exists(
+\backslash
+exists(x_1(x_3,x_2)
+\backslash
+land x_1(x_2,x_4)
+\backslash
+land x_1(x_2,x_2)))))$
+\end_layout
+
+\end_inset
+
+ on vale.
+\end_layout
+
+\begin_layout Paragraph*
+tõesus
+\end_layout
+
+\begin_layout Standard
+Väide on tõene kui selle jaatus 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$KOGU
+\backslash
+_INFO$
+\end_layout
+
+\end_inset
+
+'ga ei ole vastuoluline.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$TÕENE(VÄIDE) 
+\backslash
+leftrightarrow 
+\backslash
+neg ÜV(VÄIDE 
+\backslash
+land KOGU
+\backslash
+_INFO)$
+\end_layout
+
 \end_inset
 
 
