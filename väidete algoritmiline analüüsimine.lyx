@@ -11944,89 +11944,6 @@ teksti lõppveeruks teisendamine
 \end_layout
 
 \begin_layout Subsubsection
-See variant on juba sympy ja rekusiivsefunktsiooniga alustatud.
-\end_layout
-
-\begin_layout Enumerate
-Kvantorite sisud alates kõige sisemisest seosfunktsioonide väärtuste vahelisteks
- booleanfunktsioonideks.
-\end_layout
-
-\begin_layout Enumerate
-Kui vaja lisada elementidele omased väited.
- Näiteks hulkade puhul, et kuuluvus ja sisalduvus on üksüheses seoses.
-\end_layout
-
-\begin_layout Enumerate
-asendab kõik eksistentsiaalsuskvantorid universaalsuskvantoritega kasutades
- seost: 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$
-\backslash
-forall_x(f(x))=
-\backslash
-neg 
-\backslash
-exists_x(
-\backslash
-neg A(x))$
-\end_layout
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Enumerate
-viib kõige sisemiste kvantorite sisud DNF vormi (igas jaatuses on kõik p(k)
- elemendid kas võiatud või jaatatud.).
-\end_layout
-
-\begin_layout Enumerate
-viib kõige sisemiste kvantorite sisust seosefunktsioonide väited kõige välimiste
- võimalike kvantorite sisse.
- Ehk võimalikest madalamiale tasemele.
-\end_layout
-
-\begin_layout Enumerate
-nüüd sisaldavad tasemel k olevad kvantorid ainult p(k) elemente.
-\end_layout
-
-\begin_layout Enumerate
-toob kõige sisemiste kvantorite sisesed võitused kvantorite seest välja.
- Kasutades reeglit 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$
-\backslash
-exists(f_1(x)
-\backslash
-lor f_2(x))=
-\backslash
-exists(f_1(x))
-\backslash
-lor 
-\backslash
-exists(f_1(x))$
-\end_layout
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Enumerate
-läheb tagasi punkti 4.
-\end_layout
-
-\begin_layout Subsubsection
 v2:
 \end_layout
 
@@ -12199,7 +12116,7 @@ eitatud_EK
 \end_layout
 
 \begin_layout Enumerate
-: : : :kui 
+: : : : kui 
 \series bold
 laiendatud_EK
 \series default
@@ -12219,27 +12136,35 @@ laiendatud_EK
 \series bold
 eitatud_EK
 \series default
- sisu 
+ sisu (
 \series bold
-(eitatud_EK
+eitatud_EK
 \series default
- on täpsem kui 
+ sisu on täpsem kui 
 \series bold
 laiendatud_EK
 \series default
- (ja need on kooskõlas)):
+ sisu (ja need on kooskõlas)):
 \end_layout
 
 \begin_layout Enumerate
-: : : : : : 
-\series bold
-LR
-\series default
- 
+: : : : : : kustutab 
 \series bold
 LV
 \series default
-'st eemaldada
+st 
+\series bold
+LR
+\series default
+i.
+\end_layout
+
+\begin_layout Enumerate
+: : : : : : läheb punkti 4 ja võtab uue 
+\series bold
+LR
+\series default
+i.
 \end_layout
 
 \begin_layout Enumerate
@@ -12326,7 +12251,19 @@ eitatud_EK
 \end_layout
 
 \begin_layout Enumerate
-: : : : : : : lisab 
+: : : : : : : kui 
+\series bold
+tipp
+\series default
+us pole 
+\series bold
+laiendatud_EK
+\series default
+st täpsema sisuga jaatatud haru:
+\end_layout
+
+\begin_layout Enumerate
+: : : : : : : : lisab 
 \series bold
 uus_LR
 \series default
@@ -12335,18 +12272,6 @@ i
 LV
 \series default
 sse.
-\end_layout
-
-\begin_layout Enumerate
-: : : : : : kustutab 
-\series bold
-LV
-\series default
-st 
-\series bold
-LR
-\series default
-i.
 \end_layout
 
 \begin_layout Enumerate
@@ -12370,11 +12295,23 @@ ga kooskõlas:
 \end_layout
 
 \begin_layout Enumerate
-: : siis 
+: : siis tagastab, et 
 \series bold
 sisend
 \series default
  ei ole ÜV.
+\end_layout
+
+\begin_layout Enumerate
+: kustutab 
+\series bold
+LV
+\series default
+st 
+\series bold
+LR
+\series default
+i.
 \end_layout
 
 \begin_layout Enumerate
@@ -12881,6 +12818,59 @@ tagastatakse
 tipp
 \series default
 .
+\end_layout
+
+\begin_layout Standard
+seletus2 funktsioon 
+\series bold
+moodusta_puu
+\series default
+:
+\end_layout
+
+\begin_layout Enumerate
+viib kõige sisemiste kvantorite sisud DNF vormi (igas jaatuses on kõik p(k)
+ elemendid kas võiatud või jaatatud.).
+\end_layout
+
+\begin_layout Enumerate
+viib kõige sisemiste kvantorite sisust seosefunktsioonide väited kõige välimiste
+ võimalike kvantorite sisse.
+ Ehk võimalikest madalamiale tasemele.
+\end_layout
+
+\begin_layout Enumerate
+nüüd sisaldavad tasemel k olevad kvantorid ainult p(k) elemente.
+\end_layout
+
+\begin_layout Enumerate
+toob kõige sisemiste kvantorite sisesed võitused kvantorite seest välja.
+ Kasutades reeglit 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+exists(f_1(x)
+\backslash
+lor f_2(x))=
+\backslash
+exists(f_1(x))
+\backslash
+lor 
+\backslash
+exists(f_1(x))$
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+läheb tagasi punkti 1.
 \end_layout
 
 \begin_layout Standard
