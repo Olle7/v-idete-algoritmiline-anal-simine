@@ -12273,9 +12273,9 @@ laiendatud_EK
 \series bold
 eitatud_EK
 \series default
- haru 
+ haru ja predikaatväite 
 \series bold
-eitatud_EK_haru
+eitatud_EK_omadus
 \series default
  kohta:
 \end_layout
@@ -12303,9 +12303,9 @@ tipp
 \series default
 'u 
 \series bold
-eitatud_EK_haru
+eitatud_EK_omadus
 \series default
-, aga vastasmärgiga kui see 
+'e, aga vastasmärgiga kui see 
 \series bold
 eitatud_EK
 \series default
