@@ -12072,8 +12072,12 @@ v5
 \end_layout
 
 \begin_layout Enumerate
-asendab kõik universaalsuskvantorid eksistentsiaalsuskvantoritega kasutades
- seost: 
+asendab 
+\series bold
+sisend
+\series default
+is kõik universaalsuskvantorid eksistentsiaalsuskvantoritega kasutades seost:
+ 
 \begin_inset ERT
 status open
 
@@ -12239,7 +12243,7 @@ LV
 \end_layout
 
 \begin_layout Enumerate
-: : : : : 
+: : : : : kui 
 \series bold
 eitatud_EK
 \series default
@@ -12299,9 +12303,9 @@ uus_LR
 \series default
 is 
 \series bold
-tipp
+laiendatud_EK
 \series default
-'u 
+'sse 
 \series bold
 eitatud_EK_omadus
 \series default
@@ -12346,7 +12350,43 @@ i.
 \end_layout
 
 \begin_layout Enumerate
-kui lõppveergu jääb vähemalt 1 plato, siis see väide pole üheselt vale.
+: kui 
+\series bold
+LR
+\series default
+i ühegi 
+\series bold
+tipp
+\series default
+u ükski 
+\series bold
+laiendatud_EK
+\series default
+ ei olnud ühegi 
+\series bold
+eitatud_EK
+\series default
+ga kooskõlas:
+\end_layout
+
+\begin_layout Enumerate
+: : siis 
+\series bold
+sisend
+\series default
+ ei ole ÜV.
+\end_layout
+
+\begin_layout Enumerate
+kui 
+\series bold
+LV
+\series default
+s enam ühtegi haru ei ole, siis on 
+\series bold
+sisend
+\series default
+ ÜV.
 \end_layout
 
 \begin_layout Standard
