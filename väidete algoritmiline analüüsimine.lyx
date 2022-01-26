@@ -12315,9 +12315,9 @@ kui
 \series bold
 LV
 \series default
-s enam ühtegi haru ei ole, siis on 
+s enam ühtegi haru ei ole, siis tagastab, et 
 \series bold
-sisend
+sisend on
 \series default
  ÜV.
 \end_layout
