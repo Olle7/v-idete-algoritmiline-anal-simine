@@ -872,6 +872,7 @@ if __name__=="__main__":
 
         Test(E(A(1))&E(A(1)|B(1)),"∃(A(1)) & ∃(A(1)) | ∃(A(1)) & ∃(B(1))",None),
         ]
+
     for test in tests:
         test.puu_str_test()
         test.bool_test()

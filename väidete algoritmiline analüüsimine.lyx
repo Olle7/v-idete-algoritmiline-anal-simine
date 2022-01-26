@@ -12259,19 +12259,58 @@ ga:
 \end_layout
 
 \begin_layout Enumerate
-: : : : : : Luua uusi 
+: : : : : : lisab 
 \series bold
-LV
+tipp
 \series default
-'sse 
+u 
 \series bold
-LR
-\series default
-e, EKsse on lisatud vastasmärgiga 
+laiendatud_EK
+\end_layout
+
+\begin_layout Enumerate
+: : : : : : iga 
 \series bold
 eitatud_EK
 \series default
- harusid, et 
+ haru 
+\series bold
+eitatud_EK_haru
+\series default
+ kohta:
+\end_layout
+
+\begin_layout Enumerate
+: : : : : : : teeb 
+\series bold
+LR
+\series default
+ist koopia 
+\series bold
+uus_LR
+\series default
+.
+\end_layout
+
+\begin_layout Enumerate
+: : : : : : : lisab 
+\series bold
+uus_LR
+\series default
+is 
+\series bold
+tipp
+\series default
+'u 
+\series bold
+eitatud_EK_haru
+\series default
+, aga vastasmärgiga kui see 
+\series bold
+eitatud_EK
+\series default
+'s oli.
+ Peale seda enam 
 \series bold
 laiendatud_EK
 \series default
@@ -12279,11 +12318,31 @@ laiendatud_EK
 \series bold
 eitatud_EK
 \series default
- sisud ei oleks kooskõlas.
+ sisud kooskõlas ei ole.
 \end_layout
 
 \begin_layout Enumerate
-_..._
+: : : : : : : lisab 
+\series bold
+uus_LR
+\series default
+i 
+\series bold
+LV
+\series default
+sse.
+\end_layout
+
+\begin_layout Enumerate
+: : : : : : kustutab 
+\series bold
+LV
+\series default
+st 
+\series bold
+LR
+\series default
+i.
 \end_layout
 
 \begin_layout Enumerate
