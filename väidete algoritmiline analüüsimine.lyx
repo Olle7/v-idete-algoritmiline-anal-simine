@@ -12116,19 +12116,7 @@ eitatud_EK
 \end_layout
 
 \begin_layout Enumerate
-: : : : kui 
-\series bold
-laiendatud_EK
-\series default
- sisu ja 
-\series bold
-eitatud_EK
-\series default
- sisu on kooskõlas:
-\end_layout
-
-\begin_layout Enumerate
-: : : : : kui 
+: : : :kui 
 \series bold
 laiendatud_EK
 \series default
@@ -12148,7 +12136,7 @@ laiendatud_EK
 \end_layout
 
 \begin_layout Enumerate
-: : : : : : kustutab 
+: : : : :kustutab 
 \series bold
 LV
 \series default
@@ -12160,7 +12148,7 @@ i.
 \end_layout
 
 \begin_layout Enumerate
-: : : : : : läheb punkti 4 ja võtab uue 
+: : : : :läheb punkti 4 ja võtab uue 
 \series bold
 LR
 \series default
@@ -12168,7 +12156,19 @@ i.
 \end_layout
 
 \begin_layout Enumerate
-: : : : : kui 
+: : : :kui 
+\series bold
+laiendatud_EK
+\series default
+ sisu ja 
+\series bold
+eitatud_EK
+\series default
+ sisu on kooskõlas:
+\end_layout
+
+\begin_layout Enumerate
+: : : : :(sel juhul kindlasti 
 \series bold
 eitatud_EK
 \series default
@@ -12184,11 +12184,11 @@ eitatud_EK
 \series bold
 laiendatud_EK
 \series default
-ga:
-\end_layout
+ga)
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout Enumerate
-: : : : : : lisab 
+: : : : :lisab 
 \series bold
 tipp
 \series default
@@ -12198,7 +12198,7 @@ laiendatud_EK
 \end_layout
 
 \begin_layout Enumerate
-: : : : : : iga 
+: : : : :iga 
 \series bold
 eitatud_EK
 \series default
@@ -12210,7 +12210,7 @@ eitatud_EK_omadus
 \end_layout
 
 \begin_layout Enumerate
-: : : : : : : teeb 
+: : : : : :teeb 
 \series bold
 LR
 \series default
@@ -12222,7 +12222,7 @@ uus_LR
 \end_layout
 
 \begin_layout Enumerate
-: : : : : : : lisab 
+: : : : : :lisab 
 \series bold
 uus_LR
 \series default
@@ -12251,7 +12251,7 @@ eitatud_EK
 \end_layout
 
 \begin_layout Enumerate
-: : : : : : : kui 
+: : : : : :kui 
 \series bold
 tipp
 \series default
@@ -12263,7 +12263,7 @@ st täpsema sisuga jaatatud haru:
 \end_layout
 
 \begin_layout Enumerate
-: : : : : : : : lisab 
+: : : : : : :lisab 
 \series bold
 uus_LR
 \series default
