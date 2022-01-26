@@ -11940,11 +11940,7 @@ programmi töö
 \end_layout
 
 \begin_layout Subsection
-teksti lõppveeruks teisendamine
-\end_layout
-
-\begin_layout Subsubsection
-v2:
+versioon2:
 \end_layout
 
 \begin_layout Enumerate
@@ -11984,8 +11980,8 @@ Muutes funktsioone h ja harumärk konvertida väide kujule, milles ühegi numbri
  tehtud.
 \end_layout
 
-\begin_layout Subsubsection
-v5
+\begin_layout Subsection
+versioon5:
 \end_layout
 
 \begin_layout Enumerate
@@ -12326,7 +12322,7 @@ sisend
  ÜV.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subsubsection
 funktsioon 
 \series bold
 moodusta_puu
@@ -12820,7 +12816,7 @@ tipp
 .
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subsubsection
 seletus2 funktsioon 
 \series bold
 moodusta_puu
@@ -13299,7 +13295,7 @@ land A(3,1,3))))$
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subsubsection
 funktsioon 
 \series bold
 laiendatud_EKd
