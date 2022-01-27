@@ -11936,7 +11936,11 @@ veerg on väite argumendst sõltumatult vale kui see sisaldab seos-funktsioonide
 \end_layout
 
 \begin_layout Section
-programmi töö
+algoritm
+\end_layout
+
+\begin_layout Standard
+algoritmi pseudokoodis.
 \end_layout
 
 \begin_layout Subsection
