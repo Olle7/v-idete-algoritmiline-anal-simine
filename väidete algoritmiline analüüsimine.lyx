@@ -12077,7 +12077,7 @@ tipp
 \end_layout
 
 \begin_layout Enumerate
-: : iga funktsiooni 
+: : iga funktsioonikutse 
 \series bold
 laiendatud_EKd
 \series default
@@ -12099,7 +12099,7 @@ laiendatud_EK
 \begin_layout Enumerate
 
 \color red
-kui laiendatud_EKsse tuleb eitatud kvanto poolikult(kõrgemad oksad puudu),
+kui laiendatud_EKsse tuleb eitatud kvantor poolikult(kõrgemad oksad puudu),
  siis see tugvendab eitatud_EKd, ja muudab algoritmi valeks.
 \end_layout
 
@@ -12116,7 +12116,27 @@ eitatud_EK
 \end_layout
 
 \begin_layout Enumerate
-: : : :kui 
+: : : :kui funktsioonikutse 
+\series bold
+täpsem_kui
+\series default
+(
+\series bold
+laiendatud_EK
+\series default
+, 
+\series bold
+eitatud_EK
+\series default
+) tagastab, et 
+\series bold
+laiendatud_EK
+\series default
+ sisu on täpsem kui 
+\series bold
+eitatud_EK
+\series default
+ sisu (ja need on kooskõlas) ehk, et 
 \series bold
 laiendatud_EK
 \series default
@@ -12124,15 +12144,7 @@ laiendatud_EK
 \series bold
 eitatud_EK
 \series default
- sisu (
-\series bold
-eitatud_EK
-\series default
- sisu on täpsem kui 
-\series bold
-laiendatud_EK
-\series default
- sisu (ja need on kooskõlas)):
+ sisu ehk kui:
 \end_layout
 
 \begin_layout Enumerate
@@ -13981,6 +13993,12 @@ põhjal koostatud puus, kuhu on lisatud laiendatud harud(sinist värvi):
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsubsection
+
+\series bold
+funktsioon täpsem_kui
 \end_layout
 
 \end_body
