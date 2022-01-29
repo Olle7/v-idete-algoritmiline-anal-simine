@@ -12069,7 +12069,7 @@ LR
 \series bold
 LR
 \series default
-ile alluva tipu 
+ile rekusiivselt (ei pruugi otseselt alluda) alluva tipu 
 \series bold
 tipp
 \series default
@@ -12168,7 +12168,19 @@ i.
 \end_layout
 
 \begin_layout Enumerate
-: : : :kui 
+: : : :kui funktsioonikutse 
+\series bold
+sisud_kooskõlas
+\series default
+(
+\series bold
+laiendatud_EK
+\series default
+, 
+\series bold
+eitatud_EK
+\series default
+) tagastab, et 
 \series bold
 laiendatud_EK
 \series default
@@ -12177,29 +12189,29 @@ laiendatud_EK
 eitatud_EK
 \series default
  sisu on kooskõlas:
-\end_layout
-
-\begin_layout Enumerate
-: : : : :(sel juhul kindlasti 
-\series bold
-eitatud_EK
-\series default
- täpsem kui 
-\series bold
-laiendatud_EK
-\series default
- või 
-\series bold
-eitatud_EK
-\series default
- on täpsuselt võrreldamatu 
-\series bold
-laiendatud_EK
-\series default
-ga)
 \begin_inset Newline newline
 \end_inset
 
+: : : : :(sel juhul on kindlasti 
+\series bold
+eitatud_EK
+\series default
+ sisu täpsem kui 
+\series bold
+laiendatud_EK
+\series default
+ sisu või 
+\series bold
+eitatud_EK
+\series default
+ sisu on täpsuselt võrreldamatu 
+\series bold
+laiendatud_EK
+\series default
+ sisuga)
+\end_layout
+
+\begin_layout Enumerate
 : : : : :lisab 
 \series bold
 tipp
@@ -12295,15 +12307,15 @@ i ühegi
 \series bold
 tipp
 \series default
-u ükski 
+u ühegi 
 \series bold
 laiendatud_EK
 \series default
- ei olnud ühegi 
+ sisu ei olnud ühegi 
 \series bold
 eitatud_EK
 \series default
-ga kooskõlas:
+ sisuga kooskõlas:
 \end_layout
 
 \begin_layout Enumerate
@@ -13999,6 +14011,12 @@ põhjal koostatud puus, kuhu on lisatud laiendatud harud(sinist värvi):
 
 \series bold
 funktsioon täpsem_kui
+\end_layout
+
+\begin_layout Subsubsection
+
+\series bold
+funktsioon sisud_kooskõlas
 \end_layout
 
 \end_body
