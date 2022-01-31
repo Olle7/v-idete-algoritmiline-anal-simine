@@ -12118,7 +12118,7 @@ eitatud_EK
 \begin_layout Enumerate
 : : : :kui funktsioonikutse 
 \series bold
-täpsem_kui
+sisu_täpsem_kui
 \series default
 (
 \series bold
@@ -12672,7 +12672,7 @@ i ümber eksistentsiaalsuskvantori.
 \series bold
 jaatatud_asi
 \series default
- on eitatud eksistentsiaalsuskvantor(eksistentsiaals uskvantor, mille ees
+ on eitatud eksistentsiaalsuskvantor(eksistentsiaalsuskvantor, mille ees
  on eitus):
 \end_layout
 
@@ -14010,13 +14010,159 @@ põhjal koostatud puus, kuhu on lisatud laiendatud harud(sinist värvi):
 \begin_layout Subsubsection
 
 \series bold
-funktsioon täpsem_kui
+funktsioon sisu_täpsem_kui
 \end_layout
 
 \begin_layout Subsubsection
 
 \series bold
 funktsioon sisud_kooskõlas
+\end_layout
+
+\begin_layout Subsubsection
+funktsioon lihtsusta_puud
+\end_layout
+
+\begin_layout Enumerate
+kui kutsutakse välja funktsioon 
+\series bold
+lihtsusta_puud
+\series default
+ argumendiga 
+\series bold
+LV
+\series default
+, ehk 
+\series bold
+lihtsusta_puud
+\series default
+(
+\series bold
+LV
+\series default
+), siis:
+\begin_inset Newline newline
+\end_inset
+
+koostab 
+\series bold
+LV
+\series default
+e põhjal 
+\series bold
+abi_graaf
+\series default
+i, kus ,mis on muidu nagu 
+\series bold
+LV
+\series default
+, aga on lisatud servad kõikide tippude vahele, mille kvanteeritavate vahel
+ on mingi predikaatväide kirjas.
+\end_layout
+
+\begin_layout Subsubsection
+funktsioon lihtsusta_rek
+\end_layout
+
+\begin_layout Enumerate
+kui kutsutakse välja funktsioon 
+\series bold
+lihtsusta_LR
+\series default
+ argumendiga 
+\series bold
+tipp1
+\series default
+, ehk 
+\series bold
+lihtsusta_LR
+\series default
+(
+\series bold
+tipp1
+\series default
+), siis:
+\begin_inset Newline newline
+\end_inset
+
+iga 
+\series bold
+tipp1
+\series default
+e haru 
+\series bold
+tipp2
+\series default
+ puhul:
+\end_layout
+
+\begin_layout Enumerate
+: koostab 
+\series bold
+tipp1
+\series default
+e põhjal 
+\series bold
+abi_tipp1
+\series default
+e, kus ,mis on muidu nagu 
+\series bold
+tipp1
+\series default
+, aga on lisatud servad kõikide tippude vahele, mille kvanteeritavate vahel
+ on mingi predikaatväide kirjas.
+\end_layout
+
+\begin_layout Enumerate
+: võtab uue tipu 
+\series bold
+uus_tipp1
+\end_layout
+
+\begin_layout Enumerate
+: lisab 
+\series bold
+uus_tipp1
+\series default
+ harudeks kõik 
+\series bold
+abi_LR
+\series default
+ sidususkomponendid
+\end_layout
+
+\begin_layout Enumerate
+: leiab funktsiooni kutse 
+\series bold
+lühimapikimateegatipp
+\series default
+(
+\series bold
+abi_LR
+\series default
+) abil tipu 
+\series bold
+tipp
+\end_layout
+
+\begin_layout Enumerate
+: teeb 
+\series bold
+tipp
+\series default
+u uue puugraafi 
+\series bold
+uusLR
+\series default
+ juurtipuks.
+\end_layout
+
+\begin_layout Enumerate
+: eemaldab tippu 
+\series bold
+abi_LR
+\series default
+ist
 \end_layout
 
 \end_body
