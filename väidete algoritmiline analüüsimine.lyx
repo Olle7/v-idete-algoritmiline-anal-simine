@@ -12188,7 +12188,17 @@ laiendatud_EK
 \series bold
 eitatud_EK
 \series default
- sisu on kooskõlas:
+ sisu on kooskõlas: 
+\color red
+(seda punkti pole vaja kui hiljem nagunii hiljem nagunii need LRid, millest
+ täpsem variant olemas on, kustutatakse.
+ Jääb ainult alles ainult see uus LR, millesse lisati see 
+\series bold
+eitatud_EK_omadus
+\series default
+, mis seal juba olemas oli)
+\color inherit
+
 \begin_inset Newline newline
 \end_inset
 
@@ -14013,6 +14023,254 @@ põhjal koostatud puus, kuhu on lisatud laiendatud harud(sinist värvi):
 funktsioon sisu_täpsem_kui
 \end_layout
 
+\begin_layout Standard
+tagastab, et kas 1.
+ argumendiks oleva tipu sisust järeldub 2.
+ argumendiks oleva tipu sisu.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$tipp1.sisu 
+\backslash
+to tipp2.sisu$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+kui kutsutakse välja funktsioon 
+\series bold
+sisu_täpsem_kui
+\series default
+ argumentidega 
+\series bold
+tipp1
+\series default
+ ja 
+\series bold
+tipp2
+\series default
+, ehk 
+\series bold
+sisu_täpsem_kui
+\series default
+(
+\series bold
+tipp1
+\series default
+,
+\series bold
+tipp2
+\series default
+), siis:
+\end_layout
+
+\begin_layout Enumerate
+iga 
+\series bold
+tipp2
+\series default
+ sees oleva omaduse 
+\series bold
+omadus2
+\series default
+ kohta:
+\end_layout
+
+\begin_layout Enumerate
+: kui 
+\series bold
+omadus2
+\series default
+ on predikaatväide:
+\end_layout
+
+\begin_layout Enumerate
+: : iga 
+\series bold
+tipp1
+\series default
+ sees oleva omaduse 
+\series bold
+omadus1
+\series default
+ kohta:
+\end_layout
+
+\begin_layout Enumerate
+: : : kui (
+\series bold
+omadus1
+\series default
+ on predikaatväide) ja 
+\series bold
+omadus1
+\series default
+==
+\series bold
+omadus2:
+\end_layout
+
+\begin_layout Enumerate
+: : : : läheb punkti 3 ja võtab uue 
+\series bold
+omadus2
+\series default
+'e
+\end_layout
+
+\begin_layout Enumerate
+: : tagastab False ehk, et 1.
+ argumendiks oleva tipu 
+\series bold
+tipp1
+\series default
+ sisust ei järeldu 2.
+ argumendiks oleva tipu 
+\series bold
+tipp2
+\series default
+ sisu
+\end_layout
+
+\begin_layout Enumerate
+: kui 
+\series bold
+omadus2
+\series default
+ on eitatud eksistentsiaalsuskvantor:
+\end_layout
+
+\begin_layout Enumerate
+: : iga 
+\series bold
+tipp1
+\series default
+ sees oleva omaduse 
+\series bold
+omadus1
+\series default
+ kohta:
+\end_layout
+
+\begin_layout Enumerate
+: : : kui (
+\series bold
+omadus1
+\series default
+ on eitatud kvantor) ja 
+\series bold
+sisu_täpsem_kui
+\series default
+(
+\series bold
+omadus2
+\series default
+,
+\series bold
+omadus1
+\series default
+)
+\series bold
+:
+\end_layout
+
+\begin_layout Enumerate
+: : : : läheb punkti 3 ja võtab uue 
+\series bold
+omadus2
+\series default
+'e
+\end_layout
+
+\begin_layout Enumerate
+: : tagastab False ehk, et 1.
+ argumendiks oleva tipu 
+\series bold
+tipp1
+\series default
+ sisust ei järeldu 2.
+ argumendiks oleva tipu 
+\series bold
+tipp2
+\series default
+ sisu
+\end_layout
+
+\begin_layout Enumerate
+: kui 
+\series bold
+omadus2
+\series default
+ on eitamata eksistentsiaalsuskvantor:
+\end_layout
+
+\begin_layout Enumerate
+: : iga 
+\series bold
+laiendatud_EKd
+\series default
+(
+\series bold
+tipp1
+\series default
+) sees oleva omaduse 
+\series bold
+omadus1
+\series default
+ kohta:
+\end_layout
+
+\begin_layout Enumerate
+: : : kui (
+\series bold
+omadus1
+\series default
+ on eitamata kvantor) ja 
+\series bold
+sisu_täpsem_kui
+\series default
+(
+\series bold
+omadus1
+\series default
+,
+\series bold
+omadus2
+\series default
+)
+\series bold
+:
+\end_layout
+
+\begin_layout Enumerate
+: : : : läheb punkti 3 ja võtab uue 
+\series bold
+omadus2
+\series default
+'e
+\end_layout
+
+\begin_layout Enumerate
+: : tagastab False ehk, et 1.
+ argumendiks oleva tipu 
+\series bold
+tipp1
+\series default
+ sisust ei järeldu 2.
+ argumendiks oleva tipu 
+\series bold
+tipp2
+\series default
+ sisu
+\end_layout
+
 \begin_layout Subsubsection
 
 \series bold
@@ -14044,30 +14302,39 @@ LV
 \begin_inset Newline newline
 \end_inset
 
-koostab 
+lisab kõigile 
 \series bold
 LV
 \series default
-e põhjal 
-\series bold
-abi_graaf
-\series default
-i, kus ,mis on muidu nagu 
+ga kaudselt ühenduses olevatele tippude, mille kvanteeritavate vahel on
+ mingi predikaatväide kirjas, suunata servad(eelnavad servad olid suunatud
+ juurtipust 
 \series bold
 LV
 \series default
-, aga on lisatud servad kõikide tippude vahele, mille kvanteeritavate vahel
- on mingi predikaatväide kirjas.
+ eemale.).
+\end_layout
+
+\begin_layout Enumerate
+tagastab 
+\series bold
+lihtsusta_tipp
+\series default
+(
+\series bold
+LV
+\series default
+)
 \end_layout
 
 \begin_layout Subsubsection
-funktsioon lihtsusta_rek
+funktsioon lihtsusta_tipp
 \end_layout
 
 \begin_layout Enumerate
 kui kutsutakse välja funktsioon 
 \series bold
-lihtsusta_LR
+lihtsusta_tipp
 \series default
  argumendiga 
 \series bold
@@ -14075,7 +14342,7 @@ tipp1
 \series default
 , ehk 
 \series bold
-lihtsusta_LR
+lihtsusta_tipp
 \series default
 (
 \series bold
