@@ -14271,6 +14271,20 @@ tipp2
  sisu
 \end_layout
 
+\begin_layout Enumerate
+tagastab True ehk, et 1.
+ argumendiks oleva tipu 
+\series bold
+tipp1
+\series default
+ sisust järeldub 2.
+ argumendiks oleva tipu 
+\series bold
+tipp2
+\series default
+ sisu
+\end_layout
+
 \begin_layout Subsubsection
 
 \series bold
@@ -14398,12 +14412,12 @@ omadus2
 \series bold
 tipp1
 \series default
- sisust ei järeldu 2.
+ sisu ja 2.
  argumendiks oleva tipu 
 \series bold
 tipp2
 \series default
- sisu
+ sisud ei ole kooskõlas.
 \end_layout
 
 \begin_layout Enumerate
@@ -14462,12 +14476,12 @@ omadus2
 \series bold
 tipp1
 \series default
- sisust ei järeldu 2.
+ sisu ja 2.
  argumendiks oleva tipu 
 \series bold
 tipp2
 \series default
- sisu
+ sisud ei ole kooskõlas.
 \end_layout
 
 \begin_layout Enumerate
@@ -14505,11 +14519,11 @@ sisu_täpsem_kui
 \series default
 (
 \series bold
-omadus1
+omadus2
 \series default
 ,
 \series bold
-omadus2
+omadus1
 \series default
 )
 \series bold
@@ -14530,12 +14544,26 @@ omadus2
 \series bold
 tipp1
 \series default
- sisust ei järeldu 2.
+ sisu ja 2.
  argumendiks oleva tipu 
 \series bold
 tipp2
 \series default
- sisu
+ sisud ei ole kooskõlas.
+\end_layout
+
+\begin_layout Enumerate
+tagastab True ehk, et 1.
+ argumendiks oleva tipu 
+\series bold
+tipp1
+\series default
+ sisu ja 2.
+ argumendiks oleva tipu 
+\series bold
+tipp2
+\series default
+ sisud on kooskõlas.
 \end_layout
 
 \begin_layout Subsubsection
