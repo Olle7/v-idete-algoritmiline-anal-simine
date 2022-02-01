@@ -14024,7 +14024,7 @@ funktsioon sisu_täpsem_kui
 \end_layout
 
 \begin_layout Standard
-tagastab, et kas 1.
+Tagastab, et kas 1.
  argumendiks oleva tipu sisust järeldub 2.
  argumendiks oleva tipu sisu.
  
@@ -14043,7 +14043,7 @@ to tipp2.sisu$
 
 \end_layout
 
-\begin_layout Enumerate
+\begin_layout Standard
 kui kutsutakse välja funktsioon 
 \series bold
 sisu_täpsem_kui
@@ -14275,6 +14275,267 @@ tipp2
 
 \series bold
 funktsioon sisud_kooskõlas
+\end_layout
+
+\begin_layout Standard
+tagastab, et kas 1.
+ argumendiks oleva tipu sisust järeldub 2.
+ argumendiks oleva tipu sisu.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$tipp1.sisu 
+\backslash
+to tipp2.sisu$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+kui kutsutakse välja funktsioon 
+\series bold
+sisud_kooskõlas
+\series default
+ argumentidega 
+\series bold
+tipp1
+\series default
+ ja 
+\series bold
+tipp2
+\series default
+, ehk 
+\series bold
+sisud_kooskõlas
+\series default
+(
+\series bold
+tipp1
+\series default
+,
+\series bold
+tipp2
+\series default
+), siis:
+\end_layout
+
+\begin_layout Enumerate
+iga 
+\series bold
+tipp2
+\series default
+ sees oleva omaduse 
+\series bold
+omadus2
+\series default
+ kohta:
+\end_layout
+
+\begin_layout Enumerate
+: kui 
+\series bold
+omadus2
+\series default
+ on predikaatväide:
+\end_layout
+
+\begin_layout Enumerate
+: : iga 
+\series bold
+tipp1
+\series default
+ sees oleva omaduse 
+\series bold
+omadus1
+\series default
+ kohta:
+\end_layout
+
+\begin_layout Enumerate
+: : : kui (
+\series bold
+omadus1
+\series default
+ on predikaatväide) ja 
+\series bold
+omadus1
+\series default
+==
+\series bold
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+neg$
+\end_layout
+
+\end_inset
+
+ omadus2:
+\end_layout
+
+\begin_layout Enumerate
+: : : : läheb punkti 3 ja võtab uue 
+\series bold
+omadus2
+\series default
+'e
+\end_layout
+
+\begin_layout Enumerate
+: : tagastab False ehk, et 1.
+ argumendiks oleva tipu 
+\series bold
+tipp1
+\series default
+ sisust ei järeldu 2.
+ argumendiks oleva tipu 
+\series bold
+tipp2
+\series default
+ sisu
+\end_layout
+
+\begin_layout Enumerate
+: kui 
+\series bold
+omadus2
+\series default
+ on eitatud eksistentsiaalsuskvantor:
+\end_layout
+
+\begin_layout Enumerate
+: : iga 
+\series bold
+tipp1
+\series default
+ sees oleva omaduse 
+\series bold
+omadus1
+\series default
+ kohta:
+\end_layout
+
+\begin_layout Enumerate
+: : : kui (
+\series bold
+omadus1
+\series default
+ on eitamata eksistentsiaalsuskvantor) ja 
+\series bold
+sisu_täpsem_kui
+\series default
+(
+\series bold
+omadus1
+\series default
+,
+\series bold
+omadus2
+\series default
+)
+\series bold
+:
+\end_layout
+
+\begin_layout Enumerate
+: : : : läheb punkti 3 ja võtab uue 
+\series bold
+omadus2
+\series default
+'e
+\end_layout
+
+\begin_layout Enumerate
+: : tagastab False ehk, et 1.
+ argumendiks oleva tipu 
+\series bold
+tipp1
+\series default
+ sisust ei järeldu 2.
+ argumendiks oleva tipu 
+\series bold
+tipp2
+\series default
+ sisu
+\end_layout
+
+\begin_layout Enumerate
+: kui 
+\series bold
+omadus2
+\series default
+ on eitamata eksistentsiaalsuskvantor:
+\end_layout
+
+\begin_layout Enumerate
+: : iga 
+\series bold
+laiendatud_EKd
+\series default
+(
+\series bold
+tipp1
+\series default
+) sees oleva omaduse 
+\series bold
+omadus1
+\series default
+ kohta:
+\end_layout
+
+\begin_layout Enumerate
+: : : kui (
+\series bold
+omadus1
+\series default
+ on eitamata kvantor) ja 
+\series bold
+sisu_täpsem_kui
+\series default
+(
+\series bold
+omadus1
+\series default
+,
+\series bold
+omadus2
+\series default
+)
+\series bold
+:
+\end_layout
+
+\begin_layout Enumerate
+: : : : läheb punkti 3 ja võtab uue 
+\series bold
+omadus2
+\series default
+'e
+\end_layout
+
+\begin_layout Enumerate
+: : tagastab False ehk, et 1.
+ argumendiks oleva tipu 
+\series bold
+tipp1
+\series default
+ sisust ei järeldu 2.
+ argumendiks oleva tipu 
+\series bold
+tipp2
+\series default
+ sisu
 \end_layout
 
 \begin_layout Subsubsection
