@@ -519,24 +519,26 @@ class Tipp:
             kaadrid.append(deepcopy(kaader))
     @staticmethod
     def täpsem_kui(EK1,EK2):
-        for EK_o in EK2.predikaadid:
-            for EK_s in EK1.predikaadid:
-                if EK_s==EK_o:
+        for EK2_pv in EK2.predikaadid:
+            for EK1_pv in EK1.predikaadid:
+                if EK1_pv==EK2_pv:
                     break
             else:
                 return False
-        for EK_o in EK2.EKd:
-            for EK_s in EK1.laiendatud_EKd():
-                if EK_s>>EK_o:
-                    break
-            else:
-                return False
-        for EK_o in EK2.eitatud_EKd:
-            for EK_s in EK1.eitatud_EKd:
-                if EK_o>>EK_s:
-                    break
-            else:
-                return False
+        for EK2_jaatatud_EK in EK2.EKd:
+            if EK2_jaatatud_EK.märk:
+                for EK1_pv in EK1.laiendatud_EKd():
+                    if Tipp.täpsem_kui(EK1_pv,EK2_pv):
+                        break
+                else:
+                    return False
+        for EK2_eitatud_EK in EK2.eitatud_EKd:
+            if not EK2_eitatud_EK.märk:
+                for EK1_pv in EK1.eitatud_EKd:
+                    if EK2_pv>>EK1_pv:
+                        break
+                else:
+                    return False
         return True
     @staticmethod
     def sisud_kooskõlas(tipp1,tipp2):
@@ -552,20 +554,22 @@ class Tipp:
             for l_EK in self.laiendatud_EKd(tipp_sabaga):
                 for eitatud_EK in self.EKd:
                     if not eitatud_EK.märk:
+                        if Tipp.täpsem_kui(l_EK, eitatud_EK):  # l_EK täpsem või võrdne kui eitatud_EK(ja kooskõlas).
+                            # self.EKd.pop(0)
+                            print("laiendatud haru",l_EK,"on täpsem kui eitatud haru",eitatud_EK)
+                            tipp_ÜV = True
+                            break  # LR on ÜV
                         if Tipp.sisud_kooskõlas(eitatud_EK,l_EK):#kui pole kindel, et asjal, mille eksisteerimist l_EK väidab ei pea selleks, et selle eksisteerimine eitatud l_EK poolt keelatud poleks, olema omadusi, mida l_EK sisus pole kirjeldatud ja selleks ei pea sellega seoses uusi asju eksisteerima või mitte eksisteerima.
+                            print("laiendatud haru", l_EK, "ja eitatud haru", eitatud_EK,"sisud on kooskõlas.")
                             #sellest, mis l_EK sees otseselt kirjas on ei piisa, et järeldada, et l_EK poolt kirjeldatu eksisteerimine pole eitatud l_EK poolt keelatud.
-                            if Tipp.täpsem_kui(l_EK,eitatud_EK):#l_EK täpsem või võrdne kui eitatud_EK(ja kooskõlas).
-                                #self.EKd.pop(0)
-                                tipp_ÜV=True
-                                break#LR on ÜV
-                            else:#eitatud_EK täpsem kui l_EK või eitatud_EK on täpsuselt võrreldamatu EKga.
-                                # kui l_EK kirjeldatud:
-                                #    asjal peavad olema mingid predikaat väited,
-                                #    asjaga seoses peavad muud asjad eksisteerima või
-                                #    muud asjad ei tohi selle asjaga mingil viisil seotud olles eksisteerida
-                                # et l_EK kirjeldatud asja eksiteerimine poleks eitatud l_EK poolt eitatud
-                                # ja seda pole l_EK sees otseselt kirjas.
-                                pass#Luua uusi LRe, EKsse on lisatud vastasmärgiga eitatud_EK harusid, et l_EK ja eitatud_EK sisud ei oleks kooskõlas.
+                            #eitatud_EK täpsem kui l_EK või eitatud_EK on täpsuselt võrreldamatu EKga.
+                            # kui l_EK kirjeldatud:
+                            #    asjal peavad olema mingid predikaat väited,
+                            #    asjaga seoses peavad muud asjad eksisteerima või
+                            #    muud asjad ei tohi selle asjaga mingil viisil seotud olles eksisteerida
+                            # et l_EK kirjeldatud asja eksiteerimine poleks eitatud l_EK poolt eitatud
+                            # ja seda pole l_EK sees otseselt kirjas.
+                            pass#Luua uusi LRe, EKsse on lisatud vastasmärgiga eitatud_EK harusid, et l_EK ja eitatud_EK sisud ei oleks kooskõlas.
     #                    else:
     #                        pass#sellest, mis l_EK sees otseselt kirjas on piisab, et järeldada, et see pole eitatud l_EK poolt keelatud.
                 if tipp_ÜV:
