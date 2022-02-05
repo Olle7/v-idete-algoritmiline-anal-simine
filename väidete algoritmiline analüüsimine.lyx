@@ -12118,13 +12118,26 @@ eitatud_EK
 \begin_layout Enumerate
 : : : :kui funktsioonikutse 
 \series bold
-sisu_täpsem_kui
+täpsem_kui
 \series default
 (
 \series bold
 laiendatud_EK
 \series default
 , 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+neg$
+\end_layout
+
+\end_inset
+
+
 \series bold
 eitatud_EK
 \series default
@@ -12132,11 +12145,11 @@ eitatud_EK
 \series bold
 laiendatud_EK
 \series default
- sisu on täpsem kui 
+ on täpsem kui haru, mis on saadud 
 \series bold
-eitatud_EK
+eitatud_EK'lt
 \series default
- sisu (ja need on kooskõlas) ehk, et 
+ eituse eest ära võttes (ja need on kooskõlas) ehk, et 
 \series bold
 laiendatud_EK
 \series default
@@ -14020,22 +14033,22 @@ põhjal koostatud puus, kuhu on lisatud laiendatud harud(sinist värvi):
 \begin_layout Subsubsection
 
 \series bold
-funktsioon sisu_täpsem_kui
+funktsioon täpsem_kui
 \end_layout
 
 \begin_layout Standard
-Tagastab, et kas 1.
- argumendiks oleva tipu sisust järeldub 2.
- argumendiks oleva tipu sisu.
+Tagastab True, et kas 1.
+ argumendiks olevast harust kindlasti järeldub 2.
+ argumendiks olev haru.
  
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-$tipp1.sisu 
+$haru1 
 \backslash
-to tipp2.sisu$
+to haru2$
 \end_layout
 
 \end_inset
@@ -14044,37 +14057,79 @@ to tipp2.sisu$
 \end_layout
 
 \begin_layout Standard
-kui kutsutakse välja funktsioon 
+Kui kutsutakse välja funktsioon 
 \series bold
-sisu_täpsem_kui
+täpsem_kui
 \series default
  argumentidega 
 \series bold
-tipp1
+haru1
 \series default
  ja 
 \series bold
-tipp2
+haru2
 \series default
 , ehk 
 \series bold
-sisu_täpsem_kui
+täpsem_kui
 \series default
 (
 \series bold
-tipp1
+haru1
 \series default
 ,
 \series bold
-tipp2
+haru2
 \series default
 ), siis:
 \end_layout
 
 \begin_layout Enumerate
-iga 
+Kui 
 \series bold
-tipp2
+haru1
+\series default
+.märk
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+$
+\backslash
+neq$
+\end_layout
+
+\end_inset
+
+
+\series bold
+haru2
+\series default
+.märk:
+\end_layout
+
+\begin_layout Enumerate
+: tagastab False
+\end_layout
+
+\begin_layout Enumerate
+kui 
+\series bold
+haru1
+\series default
+.märk=True (ja seega 
+\series bold
+haru2
+\series default
+.märk=True):
+\end_layout
+
+\begin_layout Enumerate
+: iga 
+\series bold
+haru2
 \series default
  sees oleva predikaatväite 
 \series bold
@@ -14084,9 +14139,9 @@ pv2
 \end_layout
 
 \begin_layout Enumerate
-: iga 
+: : iga 
 \series bold
-tipp1
+haru1
 \series default
  sees oleva predikaatväite 
 \series bold
@@ -14096,7 +14151,7 @@ pv1
 \end_layout
 
 \begin_layout Enumerate
-: : kui ja 
+: : : kui ja 
 \series bold
 pv1
 \series default
@@ -14106,7 +14161,7 @@ pv2:
 \end_layout
 
 \begin_layout Enumerate
-: : :läheb punkti 1 ja võtab uue 
+: : : : läheb punkti 1 ja võtab uue 
 \series bold
 pv2
 \series default
@@ -14114,7 +14169,7 @@ pv2
 \end_layout
 
 \begin_layout Enumerate
-: tagastab False ehk, et 1.
+: : tagastab False ehk, et 1.
  argumendiks oleva tipu 
 \series bold
 tipp1
@@ -14122,7 +14177,7 @@ tipp1
  sisust ei järeldu 2.
  argumendiks oleva tipu 
 \series bold
-tipp2
+haru2
 \series default
  sisu (ükski 
 \series bold
@@ -14136,63 +14191,63 @@ pv2
 \end_layout
 
 \begin_layout Enumerate
-iga 
+: iga 
 \series bold
-tipp2
+haru2
 \series default
- sees oleva eitatud eksistentsiaalsuskvantori 
+ sees oleva eitatud haru 
 \series bold
-eitatud_EK2
+haru2_eitatud_haru
 \series default
  kohta:
 \end_layout
 
 \begin_layout Enumerate
-: iga 
+: : iga 
 \series bold
-tipp1
+haru1
 \series default
  sees oleva eitatud eksistentsiaalsuskvantori
 \series bold
- eitatud_EK1
+ haru1_eitatud_haru
 \series default
  kohta: 
 \color red
 (siin probleem kui 
 \series bold
-eitatud_EK2
+haru2_eitatud_haru
 \series default
  on täpsem, aga teisel kujul.)
 \end_layout
 
 \begin_layout Enumerate
-: : iga funktsioonikutse 
+: : : iga funktsioonikutse 
 \series bold
 eitatud_haru_laiendatud_vormid
 \series default
 (
 \series bold
-eitatud_EK1
+haru1_eitatud_haru
 \series default
 ) poolt tagastatud listi elemendi 
 \series bold
-laiendatud_eitatud_EK1 
+laiendatud_haru1_eitatud_haru 
 \series default
 kohta:
 \end_layout
 
 \begin_layout Enumerate
-: : : kui 
+: : : : kui 
 \series bold
 sisu_täpsem_kui
 \series default
 (
 \series bold
-eitatud_EK2
+haru2_eitatud_haru
 \series default
 ,
 \series bold
-laiendatud_eitatud_EK1
+laiendatud_haru1_eitatud_haru
 \series default
 )
 \series bold
@@ -14200,67 +14255,67 @@ laiendatud_eitatud_EK1
 \end_layout
 
 \begin_layout Enumerate
-: : : : läheb punkti 6 ja võtab uue 
+: : : : : läheb punkti 6 ja võtab uue 
 \series bold
-eitatud_EK2
+haru2_eitatud_haru
 \series default
 'e
 \end_layout
 
 \begin_layout Enumerate
-: : tagastab False ehk, et 1.
+: : : tagastab False ehk, et 1.
  argumendiks oleva tipu 
 \series bold
-tipp1
+haru1
 \series default
  sisust ei järeldu 2.
  argumendiks oleva tipu 
 \series bold
-tipp2
+haru2
 \series default
  sisu
-\end_layout
-
-\begin_layout Enumerate
-iga 
-\series bold
-tipp2
-\series default
- sees oleva jaatatud eksistentsiaalsuskvantori 
-\series bold
-EK2
-\series default
- kohta:
 \end_layout
 
 \begin_layout Enumerate
 : iga 
 \series bold
-laiendatud_EKd
+haru2
 \series default
-(
+ sees oleva jaatatud haru 
 \series bold
-tipp1
-\series default
-) sees oleva eksistentsiaalsuskvantori 
-\series bold
-EK1
+haru2_jaatatud_haru
 \series default
  kohta:
 \end_layout
 
 \begin_layout Enumerate
-: : kui 
+: : iga 
 \series bold
-sisu_täpsem_kui
+laiendatud_EKd
 \series default
 (
 \series bold
-EK1
+haru1
+\series default
+) sees oleva eksistentsiaalsuskvantori 
+\series bold
+haru1_laiendatud_jaatatud_haru
+\series default
+ kohta:
+\end_layout
+
+\begin_layout Enumerate
+: : : kui 
+\series bold
+täpsem_kui
+\series default
+(
+\series bold
+haru1_laiendatud_jaatatud_haru
 \series default
 ,
 \series bold
-EK2
+haru2_jaatatud_haru
 \series default
 )
 \series bold
@@ -14268,53 +14323,49 @@ EK2
 \end_layout
 
 \begin_layout Enumerate
-: : :läheb punkti 11 ja võtab uue 
+: : : : läheb punkti 15 ja võtab uue 
 \series bold
-EK2
-\series default
-'e
+haru2_jaatatud_haru
 \end_layout
 
 \begin_layout Enumerate
-: : tagastab False ehk, et 1.
- argumendiks oleva tipu 
+: : : tagastab False ehk, et 1.
+ argumendiks olev haru 
 \series bold
-tipp1
+haru1
 \series default
- sisust ei järeldu 2.
- argumendiks oleva tipu 
+ ei ole täpsem kui 2.
+ argumendiks olev haru 
 \series bold
-tipp2
+haru2
 \series default
- sisu
+.
 \end_layout
 
 \begin_layout Enumerate
-tagastab True ehk, et 1.
+: tagastab True ehk, et 1.
  argumendiks oleva tipu 
 \series bold
-tipp1
+haru1
 \series default
  sisust järeldub 2.
  argumendiks oleva tipu 
 \series bold
-tipp2
+haru2
 \series default
  sisu
 \end_layout
 
-\begin_layout Subsubsection
-
+\begin_layout Enumerate
+kui 
 \series bold
-laiendatud_eitatud_EK1
-\end_layout
-
-\begin_layout Standard
-kas vaja?
-\end_layout
-
-\begin_layout Standard
-loob eitatud harust mitu varianti, kus 
+haru1
+\series default
+.märk=False (ja seega 
+\series bold
+haru2
+\series default
+.märk=False):
 \end_layout
 
 \begin_layout Subsubsection
