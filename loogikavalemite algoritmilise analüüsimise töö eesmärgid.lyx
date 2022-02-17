@@ -87,14 +87,14 @@ Olger Männik
 Sissejuhatus
 \end_layout
 
-\begin_layout Paragraph
-DEFINITSIOON:
-\end_layout
-
 \begin_layout Standard
 Selles failis on kirjeldatud ainult töö eesmärgid.
  Mul on teine pikem fail, kus on eesmärkide saavutamist alustatud ja sellega
  üsna kaugele jõutud.
+\end_layout
+
+\begin_layout Paragraph
+DEFINITSIOON:
 \end_layout
 
 \begin_layout Standard
@@ -128,6 +128,8 @@ ta.
  Seda saaks kasutada näiteks kõige üldisemate matemaatiliste probeemide
  (mis võivad olla võrranditena esitatud) lihtsustamiseks, lahendamiseks
  ja lahendite kontrollimiseks.
+ Näiteks Wolfram ei suuda sarnaseid ja väga lihtsaid ülesandeid öahendada:
+ https://community.wolfram.com/groups/-/m/t/2416379 .
 \end_layout
 
 \begin_layout Standard
