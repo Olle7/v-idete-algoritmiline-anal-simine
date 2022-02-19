@@ -79,17 +79,13 @@
 väidete algoritmilise analüüsimise töö eesmärgid
 \end_layout
 
-\begin_layout Author
-Olger Männik
-\end_layout
-
 \begin_layout Part
 Sissejuhatus
 \end_layout
 
 \begin_layout Standard
-Selles failis on kirjeldatud ainult töö eesmärgid.
- Mul on teine pikem fail, kus on eesmärkide saavutamist alustatud ja sellega
+Selles failis on kirjeldatud ainult eesmärgid.
+ Mul on rohkem faile, kus on eesmärkide saavutamist alustatud ja sellega
  üsna kaugele jõutud.
 \end_layout
 
@@ -98,17 +94,11 @@ DEFINITSIOON:
 \end_layout
 
 \begin_layout Standard
-
-\color yellow
-(võibolla on ka üldisem definitsioon kus kvantorid asendatakse, millegagi,
- mis tagsatavad midagi muud kui booleane)
-\end_layout
-
-\begin_layout Standard
-Sõna väide on siin töös tavalakeelses tähenduses, ehk see on miski, mille
- tõele vastamisest järeldub mingi tõsiasi.
- Siin töös kasutan ühte kindlaid syntaxeid väidete kirja panemiseks.
- Selles syntaxis tohivad väited sisaldada booleanalgebra, kvantoreid ja
+Sõna väide on selles failis formaalloogika tähenduses, aga see on väga sarnane
+ selle sõna tavakeelsele tähendusele, ehk see on miski, mille tõele vastamisest
+ järeldub mingi tõsiasi.
+ Selles failis kasutan väidete kirja panemiseks kindlat syntaxit, kus väiteid
+ kirjeldavad tekstilõigud, võivad sisaldada booleanalgebra, kvantoreid ja
  predikaate(või elementaarseoseid või algasju predikaatide asemel).
 \end_layout
 
@@ -117,18 +107,25 @@ eesmärgid
 \end_layout
 
 \begin_layout Standard
-Töö eesmärk on koostada algoritm ja implementeerida see arvutiprogrammina,
- mille abil saaks väiteid minimaalsel vabadusastmel salvestada.
+Eesmärk on koostada algoritm ja implementeerida see arvutiprogrammina, mille
+ abil saaks väiteid minimaalsel vabadusastmel salvestada.
  Minimaalsel vabadusastmel salvestatud väiteid saaks kergesti analüüsida.
- Kui minimaalsel vabadusastmel salvaestamine on liiga raskesti implementeeritav,
- liiga keerukas või liiga palju mälu nõudev, siis võib selle asemel teha
- algoritmi, mis väiteid analüüsib ilma neid minimaalsel vabadusastmel salvestama
-ta.
- Kasutaja sisestaks väited kergesti loetavas syntaxis.
+ Kasutaja sisestaks väited kergesti loetavas syntaxis(seda on kirjeldatud
+ peatükis 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:süntax"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
  Seda saaks kasutada näiteks kõige üldisemate matemaatiliste probeemide
  (mis võivad olla võrranditena esitatud) lihtsustamiseks, lahendamiseks
  ja lahendite kontrollimiseks.
- Näiteks Wolfram ei suuda sarnaseid ja väga lihtsaid ülesandeid öahendada:
+ Näiteks Wolfram ei suuda sarnaseid ja väga lihtsaid ülesandeid lahendada:
  https://community.wolfram.com/groups/-/m/t/2416379 .
 \end_layout
 
@@ -151,7 +148,7 @@ to väide$
 
 \end_inset
 
- on üheselt vale üheselt õige või mitte kumbagi (
+ on üheselt vale, üheselt õige või mitte kumbagi (
 \begin_inset ERT
 status open
 
@@ -168,62 +165,28 @@ to väide)$
 \end_layout
 
 \begin_layout Standard
-Kui sellise programmi tegemine pole Gödeli teoreemi kohaselt võimalik, siis
- teha programm mis seni kuni kasutaja stopp paneb kontrollimist jätkab ja
- järjest täpsemaks läheb.
- arv 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$n_S$
+Kui minimaalsel vabadusastmel salvestamine on liiga raskesti implementeeritav,
+ liiga keerukas või liiga palju mälu nõudev, siis on alternatiivseks eesmärgiks
+ teha algoritmi, mis väiteid analüüsib ilma neid minimaalsel vabadusastmel
+ salvestamata.
 \end_layout
 
-\end_inset
-
- peab siis sisaldama infot, et kui palju on selle poolt kirjeldatud väidet
- lihtsustatud.
- Võimalik et ei saa ka kunagi kindel olla kas antud väide on üheselt vale,
- üheselt tõene või mitte kumbagi.
- Kuigi Gödeli teoreemi kohaselt pole võimalik kogu täisarvude matemaatika
- aksiomaatiliselt kirjeldada(???) saab arvutile etteantavasse väideesse
- alati uusi aksioome juurde lisada ja tõestada, et teatud arvust 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$K_{max}$
-\end_layout
-
-\end_inset
-
- väiksemate K parameetritega väidete abil kirjeldatavad aksioomid on lisatud.
- Kasutaja ei peaks iga kord uuesti kõiki (näiteks reaalarvude kohta käivaid)
- aksioome sisestama, vaid saaks need moodulina 
-\begin_inset Quotes eld
-\end_inset
-
-importida
-\begin_inset Quotes erd
-\end_inset
-
-(
-\begin_inset Quotes eld
-\end_inset
-
-includida
-\begin_inset Quotes erd
-\end_inset
-
-).
+\begin_layout Standard
+Kui ka sellise programmi tegemine pole võimalik (mõned inimesed on väitnus,
+ et see pole kas Gödeli 2.
+ ebatäielikkuse teoreemi või predikaatarvutuse mittelahenduvuse teoreemi
+ kohaselt võimalik), siis on järgmiseks alternatiivseks eesmärgiks teha
+ programm mis seni kuni kasutaja stopp paneb kontrollimist jätkab ja järjest
+ täpsemaks läheb.
+ Kuigi see programm ei pruugiks tagastada, et väide on kindlalt vastuoluline
+ või mitte, võiks see tagastada, et peale kui mitut tsüklit ei leidnud see
+ algoritm, et väide on vastuoliline.
 \end_layout
 
 \begin_layout Standard
 Hea oleks käsitleda minimaalsel vabadusastmel kirjeldatud väiteid naturaalarvude
 na.
- Tähistame naturaalarvu, mis kirjeldab väidet 
+ Tähistan naturaalarvu, mis kirjeldab väidet 
 \begin_inset ERT
 status open
 
@@ -246,11 +209,12 @@ $n_S$
 \end_inset
 
 .
- Selleks tuleb defineerida injektiivne vastavus võimalike väidete(võimalik
+ Selleks tuleb defineerida bijektiivne vastavus võimalike väidete(võimalik
  vist ainult kindlas notatsioonis olevate väidete korral) ja naturaalarvude
  vahele.
- On võimalik defineerida mitmeid sarnaseid vastavusi.
- Tähistame funktsiooni, mis seab väite 
+ Juhul kui selline vastavus defineerimine on võimalik, on võimalik defineerida
+ lõpmatult erinevaid selliseid vastavusi.
+ Tähistan funktsiooni, mis seab väite 
 \begin_inset ERT
 status open
 
@@ -272,7 +236,18 @@ $n_S$
 
 \end_inset
 
- F'iga.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$F$
+\end_layout
+
+\end_inset
+
+'iga.
  Seega 
 \begin_inset ERT
 status open
@@ -285,7 +260,18 @@ $F(S)=n_S$
 \end_inset
 
 .
- Selle pöördfunktsiooni tähistan f'iga.
+ Selle pöördfunktsiooni tähistan 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$f$
+\end_layout
+
+\end_inset
+
+'iga.
  Seega 
 \begin_inset ERT
 status open
@@ -298,15 +284,24 @@ $f(n_S)=S$
 \end_inset
 
 .
- Järgnevalt loetlen omadusi, mis vastavusel (ja funktsioonil F) võiks olla,
- et sellisel kujul olevat väidet praktikas mugav kasutada oleks:
+ Järgnevalt loetlen omadusi, mis vastavusel (ja funktsioonil 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$F$
+\end_layout
+
+\end_inset
+
+) võiks olla, et sellisel kujul olevat väidet praktikas mugav kasutada oleks:
 \end_layout
 
 \begin_layout Itemize
-Hea on kui sellisel kujul estitatud väidete vahel saab rakendada sagedasti
- kasututatavaid operaatoreid(näiteks AND, NAND, OR, NOR ja XOR) rakendades
- neile vastavaid lihtsasti arvutatavaid funktsioone väidet kirjeldavale
- arvule 
+Hea on kui sellisel kujul estitatud väidete vahelisi loogikatehteid (näiteks
+ AND, NAND, OR, NOR ja XOR) saab kergesti arvutada rakendades väiteid kirjeldava
+tele naturaalarvudele (
 \begin_inset ERT
 status open
 
@@ -317,41 +312,12 @@ $n_S$
 
 \end_inset
 
-.
+) loogikatehele vastavaid lihtsasti arvutatavaid funktsioone.
 \end_layout
 
 \begin_layout Itemize
 Hea on kui tavalises notatsioonis lühidalt kirjapandav väide on ka väikese
  või lihtsasti kirjeldatava naturaalarvuga vastavusse pandud.
-\end_layout
-
-\begin_layout Itemize
-Hea on kui võimalikud jäävad väärtused 0 ja mingi arvu vahele(mis muide
- on 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-(max $n_S$ väärtus)
-\end_layout
-
-\end_inset
-
-)(kui K pole määratud, siis ei ole 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$n_S$
-\end_layout
-
-\end_inset
-
- ülmist piiri) nii, et igale nende vahel olevale naturaalarvule vastab erinev
- väide.
- Seega on funktsioon F bijektiivne.
 \end_layout
 
 \begin_layout Itemize
@@ -362,17 +328,107 @@ Hea on kui Falsele(kõigile üheselt valedele väidetele) vastab 0.
 Hea on kui Truele(kõigile üheselt tõestele väidetele) vastab 1.
 \end_layout
 
+\begin_layout Standard
+lühemad eesmärgid prioriteetsuse järjekorras:
+\end_layout
+
+\begin_layout Enumerate
+koostada algoritm, mis võtaks sisendiks väite ja tagastaks, et kas see on
+ vastuoluline või mitte.
+\end_layout
+
+\begin_layout Enumerate
+implementeerida see algoritm arvutiprogrammina.
+\end_layout
+
+\begin_layout Enumerate
+koostada oma süntax , mida see programm sisendiks võtab, väidete mugavamaks
+ kirjapanemiseks.
+\end_layout
+
+\begin_layout Enumerate
+lisada pogrammile funktsionaalsus, väitedete salvestamiseks, kujul, mis
+ on: Minimaalse vabadusastmete arvuga ehk mistahes 2 erinevat bittide kombinatsi
+ooni (kui see on binaarkujul esitatud) tähistavad erinevaid loogikalisi
+ lauseid ja universaalne ehk millega saab mingi bittide kombinatsiooniga
+ (kui see on binaarkujul esitatud) iga loogikalise lause kirja panna.
+ Teisisõnu funktsioon väite ja tähistuse vahel on bijektiivne.
+\end_layout
+
+\begin_layout Enumerate
+lisada programmile funktsionaalsus esitada väiteid standartsel ja kergesti
+ käsitsi loetaval kujul.
+\end_layout
+
+\begin_layout Enumerate
+lidsada programmile funktsionaalsus hinnata väite keerukust mingi paameetriga.
+\end_layout
+
+\begin_layout Enumerate
+lisada programmile funktsionaalsus määrata väite parameeter K, ehk ,et kui
+ mitme kvantori sees kõige rohkemate kvantorite sees asuv kvantor on ,kui
+ esitada väide vormis, kus kõige rohkemate kvantorite sees asuv kvantor
+ on võimalikult väheste kvantorite sees.
+\end_layout
+
 \begin_layout Section
-Näited progemmi kasutamisest
+Näited programmi kasutamisest
 \end_layout
 
 \begin_layout Subsection
 lihtsamad näited
 \end_layout
 
+\begin_layout Standard
+Järgnevates näidetes on kasutatud peatükis 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:kvanteeritavate-nimede-sugar"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ kirjeldatud syntaxsugarit.
+\end_layout
+
 \begin_layout Itemize
 Sellise väite korral programm tagastab, et väide on üheselt vale (lühendatult
- ÜV): 
+ 
+\series bold
+ÜV
+\series default
+): 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+exists(A(x_1))
+\backslash
+land 
+\backslash
+neg 
+\backslash
+exists(A(x_1))$
+\end_layout
+
+\end_inset
+
+ (sama väide ilma peatükis 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:kvanteeritavate-nimede-sugar"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ kirjeldatud syntaxsugarit kasutamata 
 \begin_inset ERT
 status open
 
@@ -391,12 +447,43 @@ exists_{x_1}(A(x_1))$
 
 \end_inset
 
-, sest on väidetud et miski, mis rahuldab predikaati A eksisteerib ning
+), sest on väidetud, et miski, mis rahuldab predikaati A eksisteerib, ning
  samuti on väidetud, et seda ei eksisteeri.
 \end_layout
 
 \begin_layout Itemize
 Sellise väite korral programm tagastab, et väide pole üheselt vale: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+exists(A(x_1))
+\backslash
+land 
+\backslash
+neg 
+\backslash
+exists(A(x_1)
+\backslash
+land B(x_1))$
+\end_layout
+
+\end_inset
+
+ (sama väide ilma peatükis 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:kvanteeritavate-nimede-sugar"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ kirjeldatud syntaxsugarit kasutamata 
 \begin_inset ERT
 status open
 
@@ -417,11 +504,11 @@ land B(x_1))$
 
 \end_inset
 
-, sest on väidetud et eksisteerib miski, mis rahuldab predikaati A aga,
- ei eksisteeri midagi, mis rahuldaks nii predikaate A kui B.
- Vastuolu ei ole.
- Sellest on lihtsam aru saada kui panna predikaatidele mingit intuitiivselt
- lihtsamini mõistetavamad nimed.
+), sest on väidetud, et eksisteerib miski, mis rahuldab predikaati A, aga
+ ei eksisteeri midagi, mis rahuldaks nii predikaati A kui ka predikaati
+ B ning vastuolu ei ole.
+ Sellest on lihtsam aru saada kui panna predikaatidele mingid intuitiivselt
+ lihtsamini mõistetavad nimed.
  nt.: 
 \begin_inset ERT
 status open
@@ -430,7 +517,7 @@ status open
 
 $
 \backslash
-exists_{x_1}(on
+exists(on
 \backslash
 _loom(x_1))
 \backslash
@@ -438,7 +525,7 @@ land
 \backslash
 neg 
 \backslash
-exists_{x_1}(on
+exists(on
 \backslash
 _loom(x_1)
 \backslash
@@ -451,7 +538,7 @@ _auto(x_1))$
 
 .
  Ehk on väidetud, et eksisteerib mingi asi, mis on loom(eksisteerib mingi
- loom), aga ei eksisteeri midagi, mis oleks nii loom kui auto.
+ loom), aga ei eksisteeri midagi, mis oleks nii loom kui ka auto.
 \end_layout
 
 \begin_layout Itemize
@@ -463,7 +550,7 @@ status open
 
 $
 \backslash
-exists_{x_1}(A(x_1)
+exists(A(x_1)
 \backslash
 land B(x_1))
 \backslash
@@ -471,7 +558,7 @@ land
 \backslash
 neg 
 \backslash
-exists_{x_1}(A(x_1))$
+exists(A(x_1))$
 \end_layout
 
 \end_inset
@@ -490,13 +577,13 @@ status open
 
 $
 \backslash
-exists_{x_1}(
+exists(
 \backslash
-exists_{x_2}(A(x_1,x_2)
+exists(A(x_1,x_2)
 \backslash
 land 
 \backslash
-exists_{x_3}(A(x_2,x_3)
+exists(A(x_2,x_3)
 \backslash
 land A(x_2,x_2))))
 \backslash
@@ -504,11 +591,11 @@ land
 \backslash
 neg 
 \backslash
-exists_{x_1}(
+exists(
 \backslash
-exists_{x_2}(
+exists(
 \backslash
-exists_{x_3}( A(x_2,x_1)
+exists( A(x_2,x_1)
 \backslash
 land A(x_1,x_3)
 \backslash
@@ -535,10 +622,10 @@ $x_2$
 \end_layout
 
 \begin_layout Standard
-Eelnevalt näiteks toodud väidete vastuolulisust on kerge intuitiivselt(ilma
- algoritmita) ilma arvuti abita kontrollida, aga pikkade ja keerukate väidete
- vastuolulisust on niimoodi väga raske kontrollida.
- Siis ongi mu programm kasulik.
+Eelnevalt näiteks toodud väidete vastuolulisust on kerge intuitiivselt,
+ ilma arvuti abita kontrollida, aga pikkade ja keerukate väidete vastuolulisust
+ on niimoodi väga raske kontrollida.
+ Selliste valemita analüüsimiseks olekski see programm kasulik.
  Järgnevalt toon mõned näited keerukamatest väidetest, mille vastuolulisust
  on raske kontrollida:
 \end_layout
@@ -552,7 +639,7 @@ status open
 
 $
 \backslash
-exists_{x_1}(on
+exists(on
 \backslash
 _mari(x_1) 
 \backslash
@@ -560,11 +647,11 @@ land
 \backslash
 neg
 \backslash
-exists_{x_2}(M(x_1, x_2) 
+exists(M(x_1, x_2) 
 \backslash
 land  
 \backslash
-exists_{x_3}(M(x_1, x_3) 
+exists(M(x_1, x_3) 
 \backslash
 land  
 \backslash
@@ -574,7 +661,7 @@ land  M(x_3, x_1))
 \backslash
 land  
 \backslash
-exists_{x_3}(M(x_1, x_3) 
+exists(M(x_1, x_3) 
 \backslash
 land  M(x_2, x_3)) 
 \backslash
@@ -582,15 +669,15 @@ land
 \backslash
 neg 
 \backslash
-exists_{x_3}(M(x_2, x_3) 
+exists(M(x_2, x_3) 
 \backslash
 land  M(x_3, x_3))))
 \backslash
 land             
 \backslash
-exists_{x_1}(
+exists(
 \backslash
-exists_{x_2}(on
+exists(on
 \backslash
 _mari(x_2)
 \backslash
@@ -598,13 +685,13 @@ land M(x_2,x_1)
 \backslash
 land 
 \backslash
-exists_{x_3}(M(x_1,x_3)
+exists(M(x_1,x_3)
 \backslash
 land M(x_2,x_3))
 \backslash
 land 
 \backslash
-exists_{x_3}(M(x_2,x_3)
+exists(M(x_2,x_3)
 \backslash
 land M(x_3,x_2)
 \backslash
@@ -616,19 +703,19 @@ land
 \backslash
 neg 
 \backslash
-exists_{x_2}(M(x_2,x_1)
+exists(M(x_2,x_1)
 \backslash
 land M(x_2,x_2)))
 \backslash
 lor
 \backslash
-exists_{x_1}(M(x_1,x_1)
+exists(M(x_1,x_1)
 \backslash
 land 
 \backslash
 neg 
 \backslash
-exists_{x_2}(M(x_1,x_2)
+exists(M(x_1,x_2)
 \backslash
 land M(x_2,x_2)
 \backslash
@@ -710,12 +797,12 @@ $x_2$
  Siis on väidetud , et: [kõigil, kes Marile meeldivad,[ei ole kedagi kes
  Marile meeldiks, aga temale mitte ja kellele meeldiks Mari] või [ei ole
  kedagi, kes nii talle kui Marile meeldiks] või [on keegi, kes neile meeldib
- ja kes iseendale meeldib]] ja ja leidub keegi, kes meeldib marile, nii,
- et eksisteerib [keegi, kes meeldib nii marile kui talle] ja [keegi, kes
- meeldib marile, kellele mari meeldib ja kelle ei meeldi talle] ja ei leidu
- kedagi, kes nii iseendale kui ka talle ta meeldiks või [on keegi(x_1) kes
- endale meeldib, aga [kellel pole kedagi kes nii talle kui iseendale meeldiks
- ja kellele meeldiks tema(x_1)]].
+ ja kes iseendale meeldib]] ja leidub keegi, kes meeldib marile, nii, et
+ eksisteerib [keegi, kes meeldib nii marile kui talle] ja [keegi, kes meeldib
+ marile, kellele mari meeldib ja kelle ei meeldi talle] ja ei leidu kedagi,
+ kes nii iseendale kui ka talle ta meeldiks või [on keegi(x_1) kes endale
+ meeldib, aga [kellel pole kedagi kes nii talle kui iseendale meeldiks ja
+ kellele meeldiks tema(x_1)]].
 \end_layout
 
 \begin_layout Itemize
@@ -727,11 +814,11 @@ status open
 
 $
 \backslash
-exists_{x_1}(A(x_1,x_1)
+exists(A(x_1,x_1)
 \backslash
 land 
 \backslash
-exists_{x_2}(A(x_2,x_2) 
+exists(A(x_2,x_2) 
 \backslash
 land A(x_2,x_1) 
 \backslash
@@ -739,7 +826,7 @@ land A(x_1,x_2))
 \backslash
 land 
 \backslash
-exists_{x_2}(
+exists(
 \backslash
 neg A(x_2,x_2) 
 \backslash
@@ -753,7 +840,7 @@ land
 \backslash
 neg 
 \backslash
-exists_{x_3}(
+exists(
 \backslash
 neg A(x_3,x_3) 
 \backslash
@@ -776,11 +863,11 @@ land
 \backslash
 neg 
 \backslash
-exists_{x_1}(
+exists(
 \backslash
-exists_{x_2}(
+exists(
 \backslash
-exists_{x_3}(
+exists(
 \backslash
 neg A(x_1,x_1)
 \backslash
@@ -820,7 +907,7 @@ lor A(x_1,x_1)
 \backslash
 land 
 \backslash
-exists_{x_2}(A(x_2,x_2) 
+exists(A(x_2,x_2) 
 \backslash
 land 
 \backslash
@@ -830,7 +917,7 @@ land A(x_1,x_2)
 \backslash
 neg 
 \backslash
-exists_{x_3}(
+exists(
 \backslash
 neg A(x_3,x_3) 
 \backslash
@@ -882,7 +969,7 @@ $STANDARD
 \backslash
 land 
 \backslash
-exists_{x_1}(x_1+3=7 
+exists(x_1+3=7 
 \backslash
 land on
 \backslash
@@ -906,7 +993,7 @@ land
 \backslash
 neg 
 \backslash
-exists_{x_1}(0*x_1=3 
+exists(0*x_1=3 
 \backslash
 land on
 \backslash
@@ -930,7 +1017,7 @@ land
 \backslash
 neg 
 \backslash
-exists_{x_1}((on
+exists((on
 \backslash
 _naturaalarv(x_1) 
 \backslash
@@ -954,13 +1041,13 @@ $STANDARD
 \backslash
 land 
 \backslash
-exists_{x_1}(on
+exists(on
 \backslash
 _reaalarv(x_1)
 \backslash
 land 
 \backslash
-exists_{x_2}(x_1+x_2=23
+exists(x_1+x_2=23
 \backslash
 land x_1+2*x_2=37 
 \backslash
@@ -990,11 +1077,11 @@ land
 \backslash
 neg 
 \backslash
-exists_{x_1} (
+exists (
 \backslash
 neg 
 \backslash
-exists_{x_2} (x_1>x_2 
+exists (x_1>x_2 
 \backslash
 land on
 \backslash
@@ -1022,15 +1109,15 @@ land
 \backslash
 neg 
 \backslash
-exists_{x_1} (
+exists (
 \backslash
-exists_{x_2} (x_1>x_2
+exists (x_1>x_2
 \backslash
 land x_1<x_2 
 \backslash
 land on
 \backslash
-_reaalarv(x_1)  
+_reaalarv(x_1) 
 \backslash
 land on
 \backslash
@@ -1052,11 +1139,11 @@ $STANDARD
 \backslash
 land 
 \backslash
-exists_{x_1} (
+exists (
 \backslash
 neg 
 \backslash
-exists_{x_2} (x_1*x_2 
+exists (x_1*x_2 
 \backslash
 not = 0 
 \backslash
@@ -1085,9 +1172,9 @@ $STANDARD
 \backslash
 land 
 \backslash
-exists_{x_1} (
+exists (
 \backslash
-exists_{x_2} (x_1+x_2=9
+exists (x_1+x_2=9
 \backslash
 land x_1*x_2=20
 \backslash
@@ -1121,9 +1208,9 @@ $STANDARD
 \backslash
 land 
 \backslash
-exists_{x_1}(
+exists(
 \backslash
-exists_{x_2}(x_1^3-4*x_1^2+6*x_1-24-x_2^4+3*x_2=0 
+exists({x_1}^3-4*{x_1}^2+6*x_1-24-{x_2}^4+3*x_2=0 
 \backslash
 land x_2>1))$
 \end_layout
@@ -1143,7 +1230,7 @@ $STANDARD
 \backslash
 land 
 \backslash
-exists_{x_1}(on
+exists(on
 \backslash
 _reaalarv(x_1)
 \backslash
@@ -1151,7 +1238,7 @@ land
 \backslash
 neg 
 \backslash
-exists_{x_2}(x_1<x_2 
+exists(x_1<x_2 
 \backslash
 land on
 \backslash
@@ -1160,8 +1247,8 @@ _reaalarv(x_2)))$
 
 \end_inset
 
-, sest see väide ütleb, et eksiseerib selline reaalarv, nii et ei leidu
- ühtegi teist reaalarvu, mis sellest suurem oleks.
+eksiseerib selline reaalarv, nii et ei leidu ühtegi teist reaalarvu, mis
+ sellest suurem oleks.
 \end_layout
 
 \begin_layout Itemize
@@ -1268,6 +1355,63 @@ to
 \backslash
 neg 
 \backslash
+exists(on
+\backslash
+_naturaalarv(x_1) 
+\backslash
+land 
+\backslash
+exists(on
+\backslash
+_naturaalarv(x_2) 
+\backslash
+land 
+\backslash
+exists( on
+\backslash
+_naturaalarv(x_3) 
+\backslash
+land 
+\backslash
+exists(x_1^{x_4}+x_2^{x_4}=x_3^{x_4} 
+\backslash
+land x_4>2 
+\backslash
+land on
+\backslash
+_naturaalarv(x_4))))))$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+(sama väide ilma peatükis 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:kvanteeritavate-nimede-sugar"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ kirjeldatud syntaxsugarit kasutamata 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+neg (STANDARD 
+\backslash
+to 
+\backslash
+neg 
+\backslash
 exists_{x_1}(on
 \backslash
 _naturaalarv(x_1) 
@@ -1297,89 +1441,32 @@ _naturaalarv(x_4))))))$
 
 \end_inset
 
+)
+\end_layout
+
+\begin_layout Section
+süntax
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:süntax"
+
+\end_inset
+
 
 \end_layout
 
 \begin_layout Subsection
-Matemaatiliste mõistete vahelise väite kirjeldamine.
+pythoni moodulina
+\end_layout
+
+\begin_layout Standard
+Predikaadid ja kvantorid on vastavate klasside objektid.
+ Loogikatehted on ka objektid ja lisaks python ülelaaditavad operaatorid.
+ On meetodid: __bool__ ja kas_min_nested.
 \end_layout
 
 \begin_layout Subsection
-algoritmi või arvutiprogrammi analüüsimiseks
-\end_layout
-
-\begin_layout Standard
-igal pool asendada käsk x:=y väitega 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$x(t+1)=y(t)$
-\end_layout
-
-\end_inset
-
-, kus t on prgrammi samm.
-\end_layout
-
-\begin_layout Subsection
-Füüsikalise mudeli kirjeldamiseks
-\end_layout
-
-\begin_layout Standard
-Oluline on ka näidaya, et milliste erinevate väärtuste korral on süsteemid
- füüsikaliselt identsed.
- Näiteks ei ole oluline potentsiaali 0-nivoo ja koordinaatide alguspunkt.
-\end_layout
-
-\begin_layout Standard
-Oluliseks pointiks nii tõenäosuste kui gemeetrilise ruumi(intuitiivsetst
- vektoritest) on, et intuitiivse tähendusega aja korrutis arvuga on samuti
- intuitiivne.
- See on vist kuidagi taustsüsteemiga seotud.
- taust spsteemi, mille algus on kohas 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$
-\backslash
-vec{a}$
-\end_layout
-
-\end_inset
-
- olev vektor 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$
-\backslash
-vec{b}$
-\end_layout
-
-\end_inset
-
- asub kohas 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$
-\backslash
-vec{a}+
-\backslash
-vec{b}$
-\end_layout
-
-\end_inset
-
-.
+eraldi fail
 \end_layout
 
 \begin_layout Subsubsection
@@ -3011,7 +3098,7 @@ $
 \end_layout
 
 \begin_layout Subsubsection
-transistiivsete operaatorite sug ar
+transistiivsete operaatorite sugar
 \end_layout
 
 \begin_layout Standard
@@ -3151,32 +3238,38 @@ importimine
 \end_layout
 
 \begin_layout Standard
+Kasutaja ei peaks iga kord uuesti kõiki (näiteks reaalarvude kohta käivaid)
+ aksioome sisestama, vaid peaks saama neid moodulina 
+\begin_inset Quotes eld
+\end_inset
 
+importida
+\begin_inset Quotes erd
+\end_inset
+
+(
+\begin_inset Quotes eld
+\end_inset
+
+includida
+\begin_inset Quotes erd
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+pannes sisendisse 
 \backslash
-uri
-\begin_inset Quotes erd
-\end_inset
-
-...
-\begin_inset Quotes erd
-\end_inset
-
- on uril ...
- olev väide.
+include_from_URI(foo) asendatakse sisendis see käsk URIl foo olevaga.
+ 
 \end_layout
 
 \begin_layout Standard
 
 \backslash
-standarlibari
-\begin_inset Quotes erd
-\end_inset
-
-...
-\begin_inset Quotes erd
-\end_inset
-
- on stadardses kohas kus palju kasulikke väiteid on olev väide.
+include_from_standarlibari(bar) asendatakse sisendis see käsk standarlibaris
+ kohal bar olevaga.
 \end_layout
 
 \begin_layout Standard
@@ -3206,7 +3299,7 @@ näiteid selles syntaxis definitsioonides
 \end_layout
 
 \begin_layout Subsubsection
-piirväärtuse definitsioon
+piirväärtus
 \end_layout
 
 \begin_layout Standard
@@ -3389,7 +3482,7 @@ epsilon$
 \end_layout
 
 \begin_layout Standard
-ehk: 
+Minu süntaksis on see definitsioon: 
 \begin_inset ERT
 status open
 
@@ -3428,6 +3521,20 @@ peano aksioomid
 \end_layout
 
 \begin_layout Standard
+selles näites on kasutatud peatükis 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:operaatorite-(järjekorraga)-sugar"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ kirjeldatud syntaxsugarit.
+\end_layout
+
+\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -3435,7 +3542,7 @@ status open
 
 $
 \backslash
-exists_{x_1}(on
+exists(on
 \backslash
 _null(x_1))
 \backslash
@@ -3443,54 +3550,54 @@ land
 \backslash
 
 \backslash
-
+%peano 1
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-forall_{x_1}(=(x_1,x_1))
+forall(x_1=x_1)
 \backslash
 land
 \backslash
 
 \backslash
-
+%peano 2
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-forall_{x_1}(
+forall(
 \backslash
-forall_{x_2}(
+forall(
 \backslash
-forall(=(x_1,x_2)
+forall(x_1=x_2
 \backslash
-land =(x_2,x_3)
+land x_2=x_3 
 \backslash
-to =(x_3,x_1))))
+to x_3=x_1)))
 \backslash
 land
 \backslash
 
 \backslash
-
+%võrduse peano 3,4
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-forall_{x_1}(
+forall(
 \backslash
-forall_{x_2}(on
+forall(on
 \backslash
 _naturaalarv(x_1)
 \backslash
-land =(x_1,x_2)
+land x_1=x_2 
 \backslash
 to on
 \backslash
@@ -3500,16 +3607,16 @@ land
 \backslash
 
 \backslash
-
+%võduse peano 5
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-forall_{x_1}(
+forall(
 \backslash
-forall_{x_2}(on
+forall(on
 \backslash
 _naturaalarv(x_1)
 \backslash
@@ -3523,14 +3630,25 @@ land
 \backslash
 
 \backslash
-
+%peano 6
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-forall_{x_1}(on
+forall(
+\backslash
+forall(x_1=x_2 
+\backslash
+leftrightarrow S(x_1)=S(x_2)))%peano 7
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+forall(on
 \backslash
 _null(x_1)
 \backslash
@@ -3538,11 +3656,96 @@ to
 \backslash
 neg 
 \backslash
-exists_{x_2}( S(x_2,x_1)
+exists( S(x_2,x_1)
 \backslash
 land on
 \backslash
 _naturaalarv(x_2)))
+\backslash
+land
+\backslash
+
+\backslash
+%peano 8
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+exists(on
+\backslash
+_null(x_1) 
+\backslash
+land x_1 
+\backslash
+in K)
+\backslash
+land 
+\backslash
+forall(
+\backslash
+forall(x_1 
+\backslash
+in K 
+\backslash
+land S(x_1,x_2) 
+\backslash
+to x_2 
+\backslash
+in K)) 
+\backslash
+to 
+\backslash
+forall(x_1 
+\backslash
+in K)$%peano 9
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+7.
+ aksioom ilma väiteta, et kõik naturaalarvude alamhulgad eksisteerivad on
+ kasutu.
+\end_layout
+
+\begin_layout Subsubsection
+liitmine
+\end_layout
+
+\begin_layout Standard
+selles näites on kasutatud peatükis 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:operaatorite-(järjekorraga)-sugar"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ kirjeldatud syntaxsugarit.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+forall(on
+\backslash
+_null(x_1)
+\backslash
+land 
+\backslash
+forall(x_2+x_1=x_2)))
 \backslash
 land
 \backslash
@@ -3555,35 +3758,19 @@ land
 
 
 \backslash
-forall_K(
+forall(
 \backslash
-exists_{x_1}(on
-\backslash
-_null(x_1) 
-\backslash
-land x_1 
-\backslash
-in K)
-\backslash
-land 
-\backslash
-forall_{x_1}(
-\backslash
-forall_{x_2}(x_1 
-\backslash
-in K 
-\backslash
-land S(x_1,x_2) 
-\backslash
-to x_2 
-\backslash
-in K)) 
-\backslash
-to 
-\backslash
-forall_{x_1}(x_1 
-\backslash
-in K))$
+forall(
+\end_layout
+
+\begin_layout Plain Layout
+
+x_1+S(x_2)=S(x_1+x_2)
+\end_layout
+
+\begin_layout Plain Layout
+
+))$
 \end_layout
 
 \end_inset
@@ -3591,10 +3778,69 @@ in K))$
 
 \end_layout
 
+\begin_layout Subsubsection
+korrutamine
+\end_layout
+
 \begin_layout Standard
-7.
- aksioom ilma väiteta, et kõik naturaalarvude alamhulgad eksisteerivad on
- kasutu.
+selles näites on kasutatud peatükis 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:operaatorite-(järjekorraga)-sugar"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ kirjeldatud syntaxsugarit.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+forall(on
+\backslash
+_null(x_1)
+\backslash
+land 
+\backslash
+forall(x_2*x_1=x_1))
+\backslash
+land
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+forall(
+\backslash
+forall(
+\end_layout
+
+\begin_layout Plain Layout
+
+x_1*S(x_2)=x_1+x_1*x_2
+\end_layout
+
+\begin_layout Plain Layout
+
+))$
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Part
@@ -4023,6 +4269,163 @@ _naturaalarv(x_2)
 land on
 \backslash
 _täisarv(x_1*x_2)))$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+sünonüümidest
+\end_layout
+
+\begin_layout Standard
+Kuna erinevates allikates kasutatakse samade asjade kohta erinevaid nimetusi,
+ toon siin välja, et kuidas on mujal nimetatud asju, mida siin failis kasutan.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+väide
+\series default
+ ehk: formaalne süsteem, aksiomaatiline süsteem, valem, lause, seos.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+jaatus
+\series default
+ ehk: konjutsioon.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+võitus
+\series default
+ ehk: disjuktsioon.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+üheselt vale
+\series default
+ ehk: samaselt väär, vastuoluline, samaselt vale, mitte kehtestatav.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+üheselt tõene
+\series default
+ ehk: samaselt tõene.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+eksistentsaalsuskvantor
+\series default
+ ehk: olemasolukantor.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+universaalsuskvantor
+\series default
+ ehk: üldisuskvantor.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+elementaarseos
+\series default
+ ehk: notatsiooni poolt ette antud predikaat.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+element
+\series default
+ ehk: algasi, konstantsümbol.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+kvanteeritav
+\series default
+ ehk: kvantori fiktiivmuutuja
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+haru
+\series default
+ ehk: veerg
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+DNF-vorm
+\series default
+ ehk: disjuktiivne normaalkuju.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+CNF-vorm
+\series default
+ ehk: konjuktiivne normaalkuju.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Osades käsitlustes on ka kandjahulk, aga selle faili terminoloogias on selleks
+ universaalne hulk (või seda pole) seega väited kehtivad kõigi asjade kohta.
+ Kui tahad et väide kehtiks näiteks ainult naturaalarvude kohta, siis pane
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+forall_x(f(x))$
+\end_layout
+
+\end_inset
+
+ asemele 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+forall_x(on
+\backslash
+_naturaalarv(x)
+\backslash
+to f(x))$
 \end_layout
 
 \end_inset
