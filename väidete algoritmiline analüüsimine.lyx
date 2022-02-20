@@ -14521,41 +14521,29 @@ iga
 \series bold
 tipp2
 \series default
- sees oleva omaduse 
+ sees oleva predikaatväite 
 \series bold
-omadus2
+pv2
 \series default
  kohta:
 \end_layout
 
 \begin_layout Enumerate
-: kui 
-\series bold
-omadus2
-\series default
- on predikaatväide:
-\end_layout
-
-\begin_layout Enumerate
-: : iga 
+: iga 
 \series bold
 tipp1
 \series default
- sees oleva omaduse 
+ sees oleva predikaatväite 
 \series bold
-omadus1
+pv1
 \series default
  kohta:
 \end_layout
 
 \begin_layout Enumerate
-: : : kui (
+: : kui 
 \series bold
-omadus1
-\series default
- on predikaatväide) ja 
-\series bold
-omadus1
+pv1
 \series default
 ==
 \series bold
@@ -14572,19 +14560,11 @@ neg$
 
 \end_inset
 
- omadus2:
+ pv2:
 \end_layout
 
 \begin_layout Enumerate
-: : : : läheb punkti 3 ja võtab uue 
-\series bold
-omadus2
-\series default
-'e
-\end_layout
-
-\begin_layout Enumerate
-: : tagastab False ehk, et 1.
+: : : tagastab False ehk, et 1.
  argumendiks oleva tipu 
 \series bold
 tipp1
@@ -14598,41 +14578,41 @@ tipp2
 \end_layout
 
 \begin_layout Enumerate
-: kui 
+iga 
 \series bold
-omadus2
+tipp2
 \series default
- on eitatud eksistentsiaalsuskvantor:
-\end_layout
-
-\begin_layout Enumerate
-: : iga 
+ sees oleva eitatud eksistentsiaalsuskvantori 
 \series bold
-tipp1
-\series default
- sees oleva omaduse 
-\series bold
-omadus1
+eitatud_EK2
 \series default
  kohta:
 \end_layout
 
 \begin_layout Enumerate
-: : : kui (
+: iga 
 \series bold
-omadus1
+tipp1
 \series default
- on eitamata eksistentsiaalsuskvantor) ja 
+ sees oleva jaatatud eksistentsiaalsuskvantori 
+\series bold
+EK1
+\series default
+ kohta:
+\end_layout
+
+\begin_layout Enumerate
+: : kui 
 \series bold
 sisu_täpsem_kui
 \series default
 (
 \series bold
-omadus1
+EK1
 \series default
 ,
 \series bold
-omadus2
+eitatud_EK2
 \series default
 )
 \series bold
@@ -14640,27 +14620,7 @@ omadus2
 \end_layout
 
 \begin_layout Enumerate
-: : : : iga funktsioonikutse 
-\series bold
-laienda_eitatud_EKd
-\series default
-(
-\series bold
-omadus1
-\series default
-) poolt tagastatud 
-\end_layout
-
-\begin_layout Enumerate
-: : : : : läheb punkti 3 ja võtab uue 
-\series bold
-omadus2
-\series default
-'e
-\end_layout
-
-\begin_layout Enumerate
-: : tagastab False ehk, et 1.
+: : : tagastab False ehk, et 1.
  argumendiks oleva tipu 
 \series bold
 tipp1
@@ -14671,48 +14631,45 @@ tipp1
 tipp2
 \series default
  sisud ei ole kooskõlas.
+ 
 \end_layout
 
 \begin_layout Enumerate
-: kui 
+iga 
 \series bold
-omadus2
+tipp2
 \series default
- on (jaatatud) eksistentsiaalsuskvantor:
-\end_layout
-
-\begin_layout Enumerate
-: : iga 
+ sees oleva jaatatud eksistentsiaalsuskvantori 
 \series bold
-laiendatud_EKd
-\series default
-(
-\series bold
-tipp1
-\series default
-) sees oleva omaduse 
-\series bold
-omadus1
+EK2
 \series default
  kohta:
 \end_layout
 
 \begin_layout Enumerate
-: : : kui (
+: iga 
 \series bold
-omadus1
+tipp1
 \series default
- on (jaatatud) eksistentsiaalsuskvantor) ja 
+ sees oleva eitatud eksistentsiaalsuskvantori 
+\series bold
+eitatud_EK1
+\series default
+ kohta:
+\end_layout
+
+\begin_layout Enumerate
+: : kui 
 \series bold
 sisu_täpsem_kui
 \series default
 (
 \series bold
-omadus2
+EK2
 \series default
 ,
 \series bold
-omadus1
+eitatud_EK1
 \series default
 )
 \series bold
@@ -14720,15 +14677,7 @@ omadus1
 \end_layout
 
 \begin_layout Enumerate
-: : : : läheb punkti 3 ja võtab uue 
-\series bold
-omadus2
-\series default
-'e
-\end_layout
-
-\begin_layout Enumerate
-: : tagastab False ehk, et 1.
+: : : tagastab False ehk, et 1.
  argumendiks oleva tipu 
 \series bold
 tipp1
