@@ -1,0 +1,169 @@
+Hulkade vaheliste seoste kirjeldamine
+
+Seos tähendab siin väidet_.._.
+
+Vastavate alghulkade valimise abil saab defineerida kõik matemaatilised mõisted. Minu eesmärk on leida viis seoste salvestamiseks, et arvutiprogramm saaks neid töödelda. Seda saab kasutada näiteks kõige üldisemate matemaatiliste probeemide (ka võrranditega esitatud) lihtsustamiseks, lahendamiseks ja lahendite kontrollimiseks. Kuigi Gödeli teoreemi kohaselt pole võimalik kogu täisarvude matemaatika aksiomaatiliselt kirjeldada saab arvutile etteantavasse seosesse alati uusi aksioome juurde lisada ja tõestada, et teatud arvust $K_{max}$ väiksemate K parameetritega seoste abil kirjeldatavad aksioomid on lisatud. Kasutaja ei peaks iga kord uuesti kõiki (näiteks reaalarvude kohta käivaid) aksioome sisestama, vaid saaks need moodulina “importida”(“includida”).
+
+Seoste süstematiseerimiseks defineerin 2 suurust, mis seost kirjeldavad:
+
+• N on alghulkade, mille kohta seos eraldi väiteid teeb, arv.
+
+• K näitab, et kui mitme kvantori sees üks väide maksimaalselt on, kui seos on pandud kirja sellisel kujul, et väide, mis kõige rohkemate kvanorite sees olev väide on, oleks võimalikult väheste kvantorite sees.
+
+Näiteks seose $\forall_x(\forall_y(\neg \forall_z(z \in x \iff z \in y) \wedge x \in y \to y \in A)$ ( A'sse kuuluvad kõik hulgad, mis sisaldavad mingit hulka peale iseenda) K=3 ja N=1.
+
+Hea oleks kirjeldada seost naturaalarvuna. Tähistame naturaalarvu, mis kirjeldab seost tähisega $n_S$. Selleks tuleb defineerida injektiivne vastavus võimalike seoste ja naturaalarvude vahele. On võimalik defineerida mitmeid sarnaseid vastavusi. Tähistame funktsiooni, mis seab seose S vastavusse naturaalarvuga $n_S$ F'iga. Seega $F(S)=n_S$. Selle pöördfunktsiooni tähistan f'iga. Seega $f(n_S)=S$. Järgnevalt loetlen omadusi, mis vastavusel (ja funktsioonil F) võis olla, et sellisel kujul olevat seost praktikas mugav kasutada oleks:
+
+• Hea on kui sellisel kujul estitatud seoste vahel saab rakendada sagedasti kasututatavaid operaatoreid(näiteks AND, NAND, OR, NOR ja XOR) rakendades neile vastavaid lihtsasti arvutatavaid funktsioone seost kirjeldavale arvule $n_S$.
+
+• Hea on kui tavalises notatsioonis lühidalt kirjapandav seos on ka väikese või lihtsasti kirjeldatava naturaalarvuga vastavusse pandud.
+
+• Hea on kui antud N väärtuse korral jäävad võimalikud väärtused 0 ja mingi arvu vahele(mis muide on (max $n_S$ väärtus) ) nii, et igale nende vahel olevale naturaalarvule vastab erinev seos. Seega on funktsioon F bijektiivne.
+
+Ideid funktsiooni F defineerimiseks
+
+DNF
+
+K on eraldi kirjeldatud või bijektiivse funktsiooni abil lisatud arvule $n_S$. Seose üheseks kirjeldamiseks peab kirjeldama kõigi erineva sisuga (K-1)Seoste ja alghulkade omavaheliste kuulumiste vahelisi kõiki booleankombinatsioone. Selle seose kirjeldamiseks läheb vaja _..._ bitti. Kui neid bitte tõlgnedada kahendsüsteemis arvuna saab saab seda seost üheselt kirjeldada naturaalarvuga (valem) ,mis on väiksem kui (2**(valjalike bittide arv)). Kuna erinevate sisudega kvantorid on omavahel sõltuvad, siis piisab kui kirjeldada selliste sisudega kvantorite ja alghulkade kuulumiste vahelist seost, millest saab järeldada mistahes teiste sisudega kvantorite ja alghulkade kuulumiste mistahes booleakombinatsiooni, mis pole sõltumatult kirjeldatavast seosest vale.
+
+ANF, mille osadeks parameetriteks on DNFi väärtus
+
+Kui K=1
+
+K1seos on seos hulkade vahel, mille, kirjeldamiseks (kvantorite, kuulumisväidete ja booleanide vaheliste tehete abil) ei ole kvantorite sees kvantoreid (näiteks ∀x(x∈A)↮∀x(x∈B) on K1seos, aga $\forall_x(x\in A \to \forall_y(y\in x\to y\in y))$ ei ole K1 seos). K1 on seos, mille nestedness on 1.
+
+K1seose üheseks kirjeldamiseks peab kirjeldama kõigi erineva sisuga kvantorite ja alghulkade omavaheliste kuulumiste vahelisi seoseid. Selle seose kirjeldamiseks läheb vaja _..._ bitti. Kui neid bitte tõlgnedada kahendsüsteemis arvuna saab saab seda seost üheselt kirjeldada naturaalarvuga (valem) ,mis on väiksem kui (2**(valjalike bittide arv)). Kuna erinevate sisudega kvantorid on omavahel sõltuvad, siis piisab kui kirjeldada selliste sisudega kvantorite ja alghulkade kuulumiste vahelist seost, millest saab järeldada mistahes teiste sisudega kvantorite ja alghulkade kuulumiste mistahes booleakombinatsiooni, mis pole sõltumatult kirjeldatavast K1seosest vale. Ükskõik milliste sisudega kvantorid selleks valida, on osad booleankombinatsioonid neist sõltumatult kirjeldatavast K1seosest valed. See järeldub sellest, et nende booleankombinatsioonide arv, mis ei ole kindla väärtusega, ei ole esitatav kujul 2 astmes mingi naturaalarv.
+
+Osade sisudega kvantoritest(aga mitte nende eitustest) järeldub ka väiteid alghulkade omavaheliste kuulumiste kohta(näiteks ∀x(x∈A)⇒A∈A), aga alghulkade omavahelistest kuulumistest ei järeldu väiteid kvantorite kohta. Kui mingist kvantorite ja alghulkade vaheliste seoste booleankombinatsioonist järeldub, mingi väide alghulkade kohta ja on samas eitatud, siis on see booleakombinatsioon sõltumatult kirjeldatavast K1seosest vale.
+
+Seos ei tohi teha väiteid kõikide hulkade kohta(sest muidu ei pruugi saada eeldada, et mingi seose kehtimiseks vajalik hulk õldse eksisteerib. Teine võimalus, mida siin ei kasutata oleks eeldada, et kõik hulgad ,mille eksisteerimist seos ei eita eksisteerivad.). Teisisõnu ei tohi sellest järelduda, et mingite elementidega hulki ei ole olemas. Kui mingite sisudega kvantorite booleankombinatsioon seda teeb, siis on see booleakombinatsiooni sõltumatult kirjeldatavast K1seosest vale. Näiteks väitest ∀x(A∈x) järelduks, et sellist hulka, mis ei sisalda A’d(näiteks tühi hulk) ei ole olemas, seega on see väide vale.
+
+ 
+
+Hea oleks kirjeldada K1seost naturaalarvuna. Tähistame naturaalarvu, mis kirjeldab seost $n_S$. Selleks tuleb defineerida injektiivne vastavus võimalike K1seoste ja naturaalarvude vahele. On võimalik defineerida mitmeid sarnaseid vastavusi. Tähistame funktsiooni, mis seab seose S vastavusse naturaalarvuga $n_S$ F'iga $F(S)=n_S$. Selle pöördfunktsiooni tähistan f'iga $f(n_S)=S$. Järgnevalt loetlen omadus, mis vastavusel võis olla, et sellisel kujul olevat seost praktikas mugav kasutada oleks:
+
+• Hea on kui sellisel kujul estitatud seoste vahel saab rakendada operaatoreid(AND OR NOR jne.) rakendades neid vastavaid lihtsasti arvutatavaid funktsioone seost kirjeldavale arvule $n_S$.
+
+• Hea on kui tavalises notatsioonis lühidalt kirjapandav seos on ka väikese või lihtsasti kirjeldatava naturaalarvuga vastavusse pandud.
+
+• Hea on kui antud N väärtuse korral jäävad võimalikud väärtused 0 ja mingi arvu vahele(mis muide on (max $n_S$ väärtus) ) nii, et igale nende vahel olevale naturaalarvule vastab erinev K1seos. Seega on funktsioon F bijektiivne.
+
+Eriti hea oleks kui esimese kahe vahelist seost saaks parameetrina muuta.
+
+Järgnevalt toon mõned konkretsed näited näited vastavustest (funktsioonist F).
+
+Konkreetsem näide DNF tabel, mille osad read on eemaldatud:
+
+eelised:
+
+• lihtsasti arvutatav, operande saab rakendada eraldi iga seost kirjeldava arvu bitile.
+
+puudused:
+
+• Lihtsate seoste salvestamiseks kulub palju mälu.
+
+Üks võimalus K1seose kirjeledamiseks on teha DNF tabel, mille veergudeks on erineva sisuga kvantorid ja väited alghulkade omavahelise kuuluvuse kohta. Aga kuna erineva sisuga kvantorid on omavahel sõltuvad, siis piisab kui tabeli veergudeks võtta (ükskõik kas eitatud või eitamata) kvantorid sisuga, et P(x) pole mingi kindla väärtusega. (täpsemat kirjledust vaja sh. Veergude järjekorra kohta,). Et saada k1seost kirjeldav arv tuleb tabeli lõppveergu tõlgendada kahendsüsteemis arvuna.
+
+$veergr_n=\forall_x(\not P(x)=n)$ehk $veerg_n=\not \exists_x(P(x)=n)$
+
+või $veerg_n=\not \forall_x(\not P(x)=n)$ ehk $veerg_n=\exists_x(P(x)=n)$
+
+Järgnev tabel seletab, et millised on kirjeldatava tabeli veerud:
+
+
+
+
+
+P on funktsioon, mis loob bijektiivse seose, argumendiks oleva hulga alghulkade sisaldavuse ja alghulkades sisaldumise, ning $2^{N*2+1}$ väiksemaid naturaalarve sisaldava hulga vahele. Üks võimalus P defineerimiseks on teha veel üks DNF tabel, mille veergudeks on (ükskõik kas eitatud või eitamata) väited(veergude järjekord on oluline), et kvanteeritav kuulub mingisse alghulka, et kvanteeritav on iseenda element ja, et mingi alghulk kuulub kvanteeritavasse.(täpsemat kirjeldust vaja sh. veergude järjekorra kohta.)
+
+$P=\sum_{i=0}N^2(2^i*(H_i\in r)+)$
+
+või $P=\sum_{i=0}N^2(2^i*\not())$
+
+Järgnev tabel seletab, funktsiooni P:
+
+
+
+
+
+kuna iga erineva tähendusega kvantorite booleankombinatsioon on ühe lõppreaga $R$ kirjeldatud, iga lõppridade booleankombinatsioon ühe teise lõppreaga võrdne ja kõik võimalikud erineva tähendusega kvantorite vahlised seosed on kirjeldatavad kujul $ \sum(a_i\wedge \Pi(b_j\leftrightarrow kvantor))$, siis on võimalik kirjeldada mistahes kvanotirite vahelise seose kujul $ \sum(a_i\wedge R_i)$. DNF tabeli omaduse tõttu on seos vähemalt ühega ridadest, mille on boolean on tõene, kooskõlas. Järgnev võrrand näitab milline on arvuga $n_S$ kirjeldatud seos:
+
+$f(n_S)=\exists_{n_R}(R(n_R) \wedge \left \lfloor n_S \cdot 2^{-2^{2^{2\cdot N+1}-N^2}+1+n_R}\right \rfloor mod_2)$
+
+• $R(i)$on lõpprida indeksiga i.
+
+• $\left \lfloor \frac{n_S}{2^{2^{2^{2\cdot N+1}+N^2}-1-i}}\right \rfloor mod_2$on kombinatsiooni i's boolean.
+
+Iga lõpprida väidab, et P(x)'il võivad olla mingid (need millele vastav boolean on False) kindlad väärtused ja, et vähemalt ühe x'i puhul P(x)'il ka on iga lubatav selline väärtus. DNF tabeli omaduse tõttu peab iga rida väitma, et need veerud, millel on eitav boolean on valed ja need veerud, millel on jaatav boolean on tõesed. Järgnev võrrand näitab milline on lõppreast indeksiga $n_R$ tehtav järeldus
+
+$R(n_R)=\forall_{n_v}(n_v<2^{2\cdot N+1} \to(v(n_v) \leftrightarrow \left \lfloor \frac{n_R}{2^{2^{2*N+1}+N^2-1-n_v}}\right \rfloor mod_2  ))\wedge\Pi_{i=0}^{N-1}(\Pi_{j=0}^{N-1}(H_i\in H_j \leftrightarrow \left \lfloor \frac{n_R}{2^{N^2-i*N-j}}\right \rfloor mod_2))$%(vihikus olemas)
+
+• $v(i)$on veerg indeksiga i.
+
+• $\left \lfloor \frac{n_R}{2^{2^{2*N+1}+N^2-1-i}}\right \rfloor mod_2$on lõpprea i's boolean.
+
+Iga veerg väidab, et P(x) ei ole kõigi x väärtuste korral mingi kindla väärtusega. Järgnev võrrand näitab milline on veerust indeksiga $n_v$ tehtav järeldus.
+
+$v(n_v)=\forall_x(x\in x \leftrightarrow \left \lfloor \frac{n_v}{2^{2*N}}\right \rfloor mod_2 \vee \sum_{j=0}^{N-1}((H_j\in x \leftrightarrow \left \lfloor \frac{n_v}{2^{2*N-1-j}}\right \rfloor mod_2)\vee(x\in H_j \leftrightarrow \left \lfloor \frac{n_v}{2^{N-1-j}}\right \rfloor mod_2)))$%vihikus olemas
+
+• $\left \lfloor \frac{n_v}{2^{2*N-i}}\right \rfloor mod_2$on veeru i's boolean.
+
+Tehes vastavad asendused:
+
+$f(n_S)=\sum_{n_R=0}^{2^{2^{2\cdot N+1}+N^2}-1}(\Pi_{n_v=0}^{2^{2\cdot N+1}-1}(\forall_x(x\in x \leftrightarrow \left \lfloor \frac{n_v}{2^{2*N}}\right \rfloor mod_2 \vee \sum_{j=0}^{N-1}((H_j\in x \leftrightarrow \left \lfloor \frac{n_v}{2^{2*N-1-j}}\right \rfloor mod_2)\vee(x\in H_j \leftrightarrow \left \lfloor \frac{n_v}{2^{N-1-j}}\right \rfloor mod_2))) \leftrightarrow \left \lfloor \frac{n_R}{2^{2^{2*N+1}+N^2-1-n_v}}\right \rfloor mod_2  )\wedge\Pi_{i=0}^{N-1}(\Pi_{j=0}^{N-1}(H_i\in H_j \leftrightarrow \left \lfloor \frac{n_R}{2^{N^2-i*N-j}}\right \rfloor mod_2)) \wedge \left \lfloor \frac{n_S}{2^{2^{2^{2\cdot N+1}+N^2}-1-n_R}}\right \rfloor mod_2)$%ON LIHTSUSTATAV KUI VAHETADA RIDADE JA VEERGUDE MUUTUMISE SUUND.
+
+
+
+Isegi sellise veergude valiku korral kirjeldavad need $N_s$ väärtused ,mis erinevad ainult bittide boolest, mis vastavad lõppridadele, mis on sõltumata kirjeldatavast K1seosest valed, sama seost. Seega pole K1Seos kirjeldatud minimaalsel vabadusastmel. Sõltumata kirjeldatavast K1seosest on valed need DNF tabeli read, mis väidavad et kõigil hulkadel on mingi omadus (näiteks ∀x(x∈x), ∀x(A∈x), või ∀x(x∈x∨A∈x)) või on vastuolulised, sest kvantoritega veergudest järeldub alghulkade oma vaheliste kuuluvuste kohta midagi, mis on vastuolus alghulkade omavahelisi kuulumisi kirjeldavate veergudega. Isegi kui kõigihulkade kohta tohiksväiteid teha ja kvantorid ei kehtiks alghulkadele oleks viimane lõpprida üheselt vale.
+
+ 
+
+Lõppreast tehtav järeldus alghulkade kohta on järmine:
+
+$\Pi^{2^{2\cdot N+1}-1}_{n_v=0}(\left \lfloor \frac{n_R}{2^{2^{2*N+1}+N^2-1-n_v}}\right \rfloor mod_2 \rightarrow \Pi^{N-1}_{i_x=0}((H_{i_x} \in H_{i_x} \leftrightarrow \left \lfloor \frac{n_v}{2^{2*N}}\right \rfloor mod_2)\vee \sum^{N-1}_{j=0}((H_j\in H_{i_x} \leftrightarrow \left \lfloor \frac{n_v}{2^{2*N-1-j}}\right \rfloor mod_2)\vee(H_{i_x}\in H_j\leftrightarrow \left \lfloor \frac{n_v}{2^{N-1-j}}\right \rfloor mod_2)) ))\wedge\Pi_{i=0}^{N-1}(\Pi_{j=0}^{N-1}(H_i\in H_j \leftrightarrow \left \lfloor \frac{n_R}{2^{N^2-i*N-j}}\right \rfloor mod_2))$%vihikus olemas
+
+Kui see on vastuoluline, siis järeldub kvantoritega veergudest alghulkade kohta midagi, mis on vastuolus alghulkade omavahelisi kuulumise kirjeldavate veergudega. Järgnev seos näitab, et millised read on vastuolulised, sest kvantoritega veergudest järeldub alghulkade kohta midagi, mis on vastuolus alghulkade omavahelisi kuulumise kirjeldavate veergudega (Kui on üks algmõiste siis on iga algmõistete kuulumiste võimaluse korral POOLED READ üheselt valed. Äkki onnii iga algmõistete arvu korral!!):
+
+$\sum^{2^{2\cdot N+1}-1}_{n_v=0}(\left \lfloor \frac{n_R}{2^{2^{2\cdot N+1}+N^2-1-n_v}}\right \rfloor mod_2  \wedge \sum^{N-1}_{i_x=0}((\left \lfloor \frac{n_R}{2^{N^2-1-i_x\cdot N-i_x}}\right \rfloor mod_2 \not\leftrightarrow \left \lfloor \frac{n_v}{2^{2*N}}\right \rfloor mod_2)\wedge(n_v mod_{2^N} \not = (n_R\cdot 2^{N*(1+i_x-N)})mod_{2^N})\wedge \Pi^{N-1}_{j=0}(\left \lfloor \frac{n_R}{2^{N^2-1-j*N-i_x}}\right \rfloor mod_2 \not\leftrightarrow \left \lfloor \frac{n_v}{2^{2*N-1-j}}\right \rfloor mod_2)))$%   =   \sum^{2^{2\cdot N+1}-1}_{n_v=0}(\left \lfloor \frac{n_R}{2^{2^{2*N+1}+N^2-1-n_v}} \right \rfloor mod_2  \wedge \sum^{N-1}_{i_x=0}((\left \lfloor \frac{n_R}{2^{N^2-1-i_x*N-i_x}}\right \rfloor mod_2 \not\leftrightarrow \left \lfloor \frac{n_v}{2^{2*N}}\right \rfloor mod_2)\wedge \Pi^{N-1}_{j=0}((\left \lfloor \frac{n_R}{2^{N^2-1-j*N-i_x}}\right \rfloor mod_2 \not\leftrightarrow \left \lfloor \frac{n_v}{2^{2*N-1-j}}\right \rfloor mod_2)\wedge (\left \lfloor \frac{n_R}{2^{N^2-1-i_x*N-j}}\right \rfloor mod_2 \not\leftrightarrow \left \lfloor \frac{n_v}{2^{N-1-j}}\right \rfloor mod_2))))$%vihikus olemas%(funktsioon ,mis võtab argumendiks täisarvu (lõpprea numbri) ja tagastab booleani(,et kas see on vastuoluline, sest kvantoritega veergudest järeldub alghulkade kohta midagi, mis on vastuolus alghulkade omavahelisi kuulumise kirjeldavate veergudega.))%ON LIHTSUSTATAV ÜHE PI ALL OLEV VÕITATUD AVALDIS SAA SEALT VÄLJA TUUA KUI VÕTTA MODULUS ALUSEL MINGI TEINE ARV KUI 2.
+
+Kõigi hulkade kohta teevad väite järgnevat tingimust täitvad Lõppread:
+
+$\sum_{i=0}^{2^{N+1}-1}(\left \lfloor \frac{n_R}{2^{N^2+i\cdot 2^N}}\right \rfloor mod_{2^{2^N}}=2^{2^N}-1)$%vihikus olemas
+
+Ka need read on sõltumata kirjeldatavast K1seosest valed.
+
+ 
+
+Seega sõltumata kirjeldatavast seosest on valed read, mis täidavad järgevat tingimust:
+
+$\sum^{2^{2\cdot N+1}-1}_{n_v=0}(\left \lfloor \frac{n_R}{2^{2^{2*N+1}+N^2-1-n_v}}\right \rfloor mod_2  \wedge \sum^{N-1}_{i_x=0}((\left \lfloor \frac{n_R}{2^{N^2-1-i_x*N-i_x}}\right \rfloor mod_2 \not\leftrightarrow \left \lfloor \frac{n_v}{2^{2*N}}\right \rfloor mod_2)\wedge \Pi^{N-1}_{j=0}((\left \lfloor \frac{n_R}{2^{N^2-1-j*N-i_x}}\right \rfloor mod_2 \not\leftrightarrow \left \lfloor \frac{n_v}{2^{2*N-1-j}}\right \rfloor mod_2)\wedge (\left \lfloor \frac{n_R}{2^{N^2-1-i_x*N-j}}\right \rfloor mod_2 \not\leftrightarrow \left \lfloor \frac{n_v}{2^{N-1-j}}\right \rfloor mod_2)))) \vee \sum_{i=0}^{2^{N+1}-1}(\left \lfloor \frac{n_R}{2^{N^2+i\cdot 2^N}}\right \rfloor mod_{2^{2^N}}=2^{2^N}-1)$%(funktsioon ,mis võtab argumendiks täisarvu (lõpprea numbri) ja tagastab booleani(,et kas see on vastuoluline))
+
+Üks võimalus saada minimaalsel vabadusastmel kirjeldus on teha uus numeratsioon lõppridadele, mis jätab need read, mis on sõltumata kirjeldatavast K1seosest valed, vahele. Sel juhul kirjeldab kirjeldab järgnev võrrand näitab milline on arvuga $n_S$ kirjeldatud seos.
+
+(seosest, mis on on esitatud naturaalarvuna tehtav järeldus, kus on eeldatud uut lõppveergude numeratsiooni.)
+
+Nagu näha on vastab sellise minimaalse vabadusastmega kirjelduse puhul erinevale K1 seosele iga arv, mis on väiksem kui _..._. Seega läheb K1Seose kirjeldamiseks vaja _..._ bitti. Suuremata N väärtuste korral on selline viis seoste naturaalarvudega vastavusse panemiseks praktiks kasutamatu, sest juba N=2 puhul läheb kirjeldamiseks vaja _..._ Tb.
+
+Veel konkreetsem näide kui N=1
+
+P(x)=...
+
+
+
+või
+
+P(x)=...
+
+
+
+Seega DNF tabel (selle 9 veergu on tähistatud kollasega) ühe algmõistega K1seose kirjeldamiseks ,mille osad read(need, mille kahes 1. ja 2. või 3. ja 4. või 5. ja 6. või 7. ja 8. veerus on mõlemad ühed, sest need teeksid väite kõikide hulkade kohta. Ja need, mille esimeses veerus(∀x(¬P(x)=0)) ja viimases veerus(A∈A) on 1, sest esimesest järeldub, et ¬A∈A ja viimane eitab seda. Ja need, mille eelviimases veerus(∀x(¬P(x)=7)) on üks ja viimases veerus(A∈A) 0, sest eelviimasest järeldub, et A∈A ja viimane veerg väidab, et ¬A∈A.) on sõltumata seosest valed, on:
+
+(tabel)
+
+Selles tabelis on 108 rida, mis ei ole kirjeldatavast K1seosest sõltumata valed. Seega läheb ühe algmõistega K1seose kirjeldamiseks vaja 108 bitti.
+
+ 
+
+
+
+$F_Q=\sum^{2^{2\cdot N+1}-1}_{n_v=0}(\sum^{N-1}_{i_x=0}((\left \lfloor \frac{Q}{2^{N^2-1-i_x\cdot N-i_x}}\right \rfloor mod_2 \not\leftrightarrow \left \lfloor \frac{n_v}{2^{2*N}}\right \rfloor mod_2)\wedge(n_v mod_{2^N} =~(Q \cdot 2^{N*(1+i_x-N)})mod_{2^N})\wedge \Pi^{N-1}_{j=0}(\left \lfloor \frac{Q}{2^{N^2-1-j*N-i_x}}\right \rfloor mod_2 \not\leftrightarrow \left \lfloor \frac{n_v}{2^{2*N-1-j}}\right \rfloor mod_2)))$

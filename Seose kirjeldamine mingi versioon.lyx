@@ -1,0 +1,6795 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+%\usepackage{fullpage}
+\usepackage{mathptmx} % rm & math
+\usepackage[scaled=0.1]{helvet} % ss
+\usepackage{amsmath}
+\usepackage{xcolor}
+%\flushbottom
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 0cm
+\topmargin 0cm
+\rightmargin 0cm
+\bottommargin 0cm
+\headheight 0cm
+\headsep 0cm
+\footskip 0cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle empty
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Seoste kirjeldamine
+\end_layout
+
+\begin_layout Paragraph
+DEFINITSIOON:
+\end_layout
+
+\begin_layout Standard
+
+\color yellow
+(võibolla on ka üldisem definitsioon kus kvantorid asendatakse, millegagi,
+ mis tagsatavad midagi muud kui booleane)
+\end_layout
+
+\begin_layout Subparagraph
+variant 1:
+\end_layout
+
+\begin_layout Standard
+Seos tähendab siin booleanfuntsiooni väidete, et mis asjad eksisteerivad(ja
+ mis asjad ei eksisteeri) vahel.
+ Kõik asjad on kirjeldatud seose argumendi kaudu ja nende omavaheliste suhete(mi
+s võivad sisaldada mitmeid EITUD või eitmata kvantoreid üksteise sees) kaudu.
+\end_layout
+
+\begin_layout Subparagraph
+varaiant 2:
+\end_layout
+
+\begin_layout Standard
+Seos tähendab siin booleanfuntsiooni väidete, et mis asjad eksisteerivad(ja
+ mis asjad ei eksisteeri) vahel.
+ Kõik asjad on kirjeldatud seose argumendi kaudu ja neile kehtivate seoste
+ kaudu.
+ See on rekusiivne definitsioon(?).
+ Seega kõik seosed on väljendatavad booleantehete, asjade vahelisi seoseid
+ kirjeldavate funktsioonide või operaatorite, kvantorite ja seoseargumentide
+ abil
+\end_layout
+
+\begin_layout Subparagraph
+variant 3:
+\end_layout
+
+\begin_layout Standard
+Seos tähehendab siin booleanalgebra, kvantorite ja notatsiooni, mis laseb
+ asjade ja seose argumendi vahelist suhet kirjeldada, kaudu defineeritud
+ väidet.
+\end_layout
+
+\begin_layout Paragraph
+sissejuhatus
+\end_layout
+
+\begin_layout Standard
+Seose argumente võib nimetada ka algseosteks, algväideteks, algmõisteteks
+ või algasjadeks.
+ Argumendi kuju sõltub notatsioonist, mille abil seose argumendi ja muu(kvanteer
+itavate) vahelist suhet kirjeldatakse.
+ Elementaarseose notatsioonis võib seose argumendist mõelda kui funktsioonidest,
+ mis tagastavad booleane (kas True või False).
+ Algväited võivad olla näiteks 
+\begin_inset Quotes eld
+\end_inset
+
+x on null
+\begin_inset Quotes erd
+\end_inset
+
+(x), 
+\begin_inset Quotes eld
+\end_inset
+
+x on hulk
+\begin_inset Quotes erd
+\end_inset
+
+(x) ,
+\begin_inset Quotes erd
+\end_inset
+
+x on naturaalarv
+\begin_inset Quotes erd
+\end_inset
+
+(x) 
+\begin_inset Quotes eld
+\end_inset
+
+x on funktsioon
+\begin_inset Quotes erd
+\end_inset
+
+(x) või 
+\begin_inset Quotes eld
+\end_inset
+
+x_1 on suurem kui x_2
+\begin_inset Quotes erd
+\end_inset
+
+(x_1,x_2).
+ Et seosel oleks intuitiivselt mõistetav tähendus, peab seose argument sisaldama
+ midagi intuitiivselt mõistetavat.
+ Vastavate argumentide valimise abil saab defineerida kõik matemaatilised
+ mõisted.
+\end_layout
+
+\begin_layout Paragraph
+eesmärgid
+\end_layout
+
+\begin_layout Standard
+Minu eesmärk on leida selline viis seoste salvestamiseks, et arvutiprogramm
+ saaks neid töödelda.
+ Kasutaja sisestab seosed kergesti loetavate sümbolite abil.
+ Seda saab kasutada näiteks kõige üldisemate matemaatiliste probeemide (ka
+ võrranditega esitatud) lihtsustamiseks, lahendamiseks ja lahendite kontrollimis
+eks.
+\end_layout
+
+\begin_layout Standard
+Kuna iga seos on salvestatud minimaalsel vabadusastmel, siis saab lihtsasti
+ kontrollida, et kas see on üheselt vale, üheselt tõene või mitte kumbagi,
+ sest kõigile üheselt valedele ja üheselt tõestele seostele vastab sama
+ arv.
+ Tõenäoliselt ongi praktilisel kasutamisel kõige olulisem küsimus, et kas
+ seos vormis 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$aksioomid 
+\backslash
+to väide$
+\end_layout
+
+\end_inset
+
+ on üheselt vale üheselt õige või mitte kumbagi (
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$programm(aksioomid 
+\backslash
+to väide)$
+\end_layout
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+Kui sellise programmi tegemine pole Gödeli teoreemi kohaselt võimalik, siis
+ teha programm mis seni kuni kasutaja stopp paneb kontrollimist jätkab ja
+ järjest täpsemaks läheb.
+ arv n_S peab siis sisaldama infot, et kui palju on selle poolt kirjeldatud
+ seost lihtsustatud.
+ Võimalik et ei saa ka kunagi kindel olla kas antud seoson üeselt vale,
+ üheselt tõene vüi mitte kumbagi.
+ Kuigi Gödeli teoreemi kohaselt pole võimalik kogu täisarvude matemaatika
+ aksiomaatiliselt kirjeldada(???) saab arvutile etteantavasse seosesse alati
+ uusi aksioome juurde lisada ja tõestada, et teatud arvust 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$K_{max}$
+\end_layout
+
+\end_inset
+
+ väiksemate K parameetritega seoste abil kirjeldatavad aksioomid on lisatud.
+ Kasutaja ei peaks iga kord uuesti kõiki (näiteks reaalarvude kohta käivaid)
+ aksioome sisestama, vaid saaks need moodulina 
+\begin_inset Quotes eld
+\end_inset
+
+importida
+\begin_inset Quotes erd
+\end_inset
+
+(
+\begin_inset Quotes eld
+\end_inset
+
+includida
+\begin_inset Quotes erd
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+Hea oleks kirjeldada seoseid naturaalarvudena.
+ Tähistame naturaalarvu, mis kirjeldab seost tähisega 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$n_S$
+\end_layout
+
+\end_inset
+
+.
+ Selleks tuleb defineerida injektiivne vastavus võimalike seoste ja naturaalarvu
+de vahele.
+ On võimalik defineerida mitmeid sarnaseid vastavusi.
+ Tähistame funktsiooni, mis seab seose S vastavusse naturaalarvuga 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$n_S$
+\end_layout
+
+\end_inset
+
+ F'iga.
+ Seega 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$F(S)=n_S$
+\end_layout
+
+\end_inset
+
+.
+ Selle pöördfunktsiooni tähistan f'iga.
+ Seega 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$f(n_S)=S$
+\end_layout
+
+\end_inset
+
+.
+ Järgnevalt loetlen omadusi, mis vastavusel (ja funktsioonil F) võis olla,
+ et sellisel kujul olevat seost praktikas mugav kasutada oleks:
+\end_layout
+
+\begin_layout Itemize
+Hea on kui sellisel kujul estitatud seoste vahel saab rakendada sagedasti
+ kasututatavaid operaatoreid(näiteks AND, NAND, OR, NOR ja XOR) rakendades
+ neile vastavaid lihtsasti arvutatavaid funktsioone seost kirjeldavale arvule
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$n_S$
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Hea on kui tavalises notatsioonis lühidalt kirjapandav seos on ka väikese
+ või lihtsasti kirjeldatava naturaalarvuga vastavusse pandud.
+\end_layout
+
+\begin_layout Itemize
+Hea on kui võimalikud jäävad väärtused 0 ja mingi arvu vahele(mis muide
+ on 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+(max $n_S$ väärtus)
+\end_layout
+
+\end_inset
+
+)(kui K pole määratud, siis ei ole 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$n_S$
+\end_layout
+
+\end_inset
+
+ ülmist piiri) nii, et igale nende vahel olevale naturaalarvule vastab erinev
+ seos.
+ Seega on funktsioon F bijektiivne.
+\end_layout
+
+\begin_layout Itemize
+Hea on kui Falsele(kõigile üheselt valedele seostele) vastab 0.
+\end_layout
+
+\begin_layout Itemize
+Hea on kui Truele(kõigile üheselt tõestele seostele) vastab 1.
+\end_layout
+
+\begin_layout Part
+funktsiioni F struktuur
+\end_layout
+
+\begin_layout Standard
+Kuna seos tohib koosneda ainult booleanalgebrast (taseme 1)kvantoritest
+ ja argumentidest saab F'i kirjeldada seose abil, mis nende kvantorite vahelise
+ booleanfunktsioonile naturaalarvu vastavusse paneb.
+ .
+ Kuna erinevaid kvantoreid on lõpmatult
+\end_layout
+
+\begin_layout Standard
+Seega saab vaadata iga funktsiooni F nendest osadest koosnevana 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$F(SEOS)=F_{boolean_funktsioon_naturaalarvuks}(F_{nummerda
+\backslash
+ lõplik
+\backslash
+ arv
+\backslash
+ kvantoreid}(t))=n_S$
+\end_layout
+
+\end_inset
+
+.
+ Jaotasin F'i osadeks, et selle defineerimise erinevaid võimalusioleks lihtsam
+ kirjeldada oleks.
+\end_layout
+
+\begin_layout Standard
+Seose argumente on alati lõplikult.
+ Erinevaid seoseid on loenduv lõpmatus.
+ Iga seose saab kirjeldada booleanfunktsiooni võimalikest kvantoritest kaudu.
+ Kuna võimalikke kvantoreid on lõpmatult tuleb võtta mingi lisamuutuja 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$t$
+\end_layout
+
+\end_inset
+
+, mis seab kvantoritele piirid nii, et iga 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$t$
+\end_layout
+
+\end_inset
+
+ väärtuse korral on võimalikke kvantoreid lõplik arv ja ükskõik milliseid
+ kvantoreid sisaldavad veerud saab mingi 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$t$
+\end_layout
+
+\end_inset
+
+ väärtuse korral.
+\end_layout
+
+\begin_layout Section
+filtreerida ja nummerdada veerud
+\end_layout
+
+\begin_layout Standard
+Iga seose ,kirjeldamiseks piisab veergude vahelist boolenfunktsiooni.
+ Osad veergude booleankombinatsioonid on üheselt valed.
+\end_layout
+
+\begin_layout Section
+konverteerida booleanfunktsioon naturaalarvuks
+\end_layout
+
+\begin_layout Part
+definitsiooonid
+\end_layout
+
+\begin_layout Standard
+Tasemefunktsioon 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$h_i$
+\end_layout
+
+\end_inset
+
+ on bijektiivses seoses kõigi elementaarfunktsioonide väärtustega, kui elementaa
+seoste vähemalt üheks argumendiks on taseme i kvanteeritav ja ei ole kõrgema
+ taseme kvanteeritavaid.
+ Elemndi põhisest notatsioonist sellesse notatsiooni konverteerimisel võivad
+ elementaarseoste argumentideks olla ka algasjad.
+ Tasemefunktsiooni võimalikku väärtuste arvu tähistan H(k).
+\end_layout
+
+\begin_layout Part
+Võimalusi argumentide ja kvanteeritavate vahelise suhte noteerimiseks
+\end_layout
+
+\begin_layout Standard
+Kirjeldused erinevad selle poolest, et kui mitme asja kaupa seost kirjeldatakse
+ ja, et kui palju erinevaid võimalusi on asjadel omavahel seoses olla.
+ Tähistan arvu, mille kaupa asjade vahelist seost kirjeldatakse a'ga ja
+ erinevate elementaarseoste arvu b'ga.
+\end_layout
+
+\begin_layout Standard
+
+\color yellow
+Kas iga seost saab ümber kirjutada a ja b väärtustega kirjeldatuks ilma
+ algmõisteid muutmata? a Kas iga seost saab ümber kirjutada a ja b väärtustega
+ kirjeldatuks ilma algmõisteid muutmata? a ja b väärtustega kirjeldatuks
+ ilma algmõisteid muutmata? 
+\end_layout
+
+\begin_layout Standard
+
+\color yellow
+Kas elementaarseostel peab ka intuitiivne tähendus olema, et seosel intuitiivne
+ tähendus oleks?
+\end_layout
+
+\begin_layout Standard
+Tähtsamad erinevused on:
+\end_layout
+
+\begin_layout Itemize
+Kas sõltub argumentide järjekorrast.(kas saab mitte sümmeetrilisi seoseid
+ kirjeldada.)
+\end_layout
+
+\begin_layout Itemize
+Kui palju erinevaid võimalikke väärtusi.
+\end_layout
+
+\begin_layout Itemize
+Kas võib olla mitu sama argumentide arvuga elementaarseost.
+\end_layout
+
+\begin_layout Standard
+Seose argumendi kohta vähem eeldusi tehes saab mõndasi seoseid mäluefektiivsemal
+t kirjeldada.
+ Rohkem eeldusi tehes on argumente lihtsam tõlgendada.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Seose argumendi ja muu vahelist suhet võib kirjeldada ükskõik mis notatsioonis,
+ milles saab suvalise lõpliku arvu võimalusi kirjeldada.
+ Kuna nii on kirjutatut lihtne mõista ja see on levinud notatsioon on siin
+ peamiselt kasutud hulga-põhist-notatsiooni.
+\end_layout
+
+\begin_layout Standard
+Notatsioone saab üksteiseks ümber kirjutada ilma seost muutmata.
+\end_layout
+
+\begin_layout Section
+Argumendiks on elementaarseosed
+\end_layout
+
+\begin_layout Standard
+Selles notatsioonis on seose argumentideks elementaarseosed kanteeritavate
+ vahel.
+ Miski muu peale kvanteeritavate ei tohi elementaarseoste argumendiks olla.
+\end_layout
+
+\begin_layout Subsection
+väited elementaaresote kohta?
+\end_layout
+
+\begin_layout Standard
+Osade väidete formuleeiming sõltub seoses olvatest predikaatidest.
+ Nii, et kui kasutaja sisestab uue predikaadi tuleb need väited alati ümber
+ kirjutada.
+ See teeks minu programmi kasutaminse ebamugavaks.
+\end_layout
+
+\begin_layout Standard
+Näiteks võrdususe väitmiseks tuleb lisada eraldi võrdsuse elementaarseos
+ 
+\begin_inset Quotes eld
+\end_inset
+
+x_1 ja x_2 on võrdsed
+\begin_inset Quotes erd
+\end_inset
+
+(x_1,x_2).
+ Et selle tähendus oleks kooskõlaline selle intuitiivse tähendusega, peab
+ seosele lisama väite, et kui 2 asja on võrdsed, siis pole ükski elementaarfunkt
+sioon neist asjadest erineva väärtusega(ükskõik mitu argumenti elementaarfunktsi
+oonil on ja mis elementaarfunktsioonide ülejäänud argumentideks on) (See
+ võrdusmärgi asi võib olla seotud Gödeli II teoreemiga).
+ Kõigi argumentide puhul ei pruugi kehtida vastupidine seos, et kui kõik
+ elementaarseosed 2 asjast on võrdsed, siis on need asjad ise võrdsed.
+ Peale võrusmärgi peab teisigi väiteid, mis peavad kõigi predikaatide korral
+ kehtima formulerima kõigi predikaatide valikute puhul erinevalt.
+ Kuna predikaadid ja nende argumentida arv on teada saab universaalsuskvantori,
+ mis kehtib predikaatide kohta asendada jaatusega ja eksistentsiaalsuskvantori
+ võitusega.
+ Saab lisada ka mingi syntaxi, mis automaatselt lisab, et mingi seos kehtib
+ kõigi preikaatidekohta.
+ Osade argumentide puhul võib seosele lidada veel mingeid elementaarseoseid
+ elementaarseosega 
+\begin_inset Quotes eld
+\end_inset
+
+x_1 ja x_2 on võrdsed
+\begin_inset Quotes erd
+\end_inset
+
+(x_1,x_2)
+\begin_inset Quotes erd
+\end_inset
+
+ siduvaid väiteid nagu näiteks, et kui 2 hulka sisaldavad samu asju, siis
+ on nad võrdsed.
+\end_layout
+
+\begin_layout Standard
+Näiteks funktsioonide defineerimisel tuleb väide, et leidub funktsioone,
+ mis _..._ lisada erinevate predikaatie valikute puhul erinevalt.
+ Muidu ei saaks näiteks Peano aksioomi 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+forall_{x_1}("onfunktsioon"(x_1) 
+\backslash
+to 
+\backslash
+forall_{x_2}(x_2 
+\backslash
+in N 
+\backslash
+to ("rakenda"(x_1,x_2)
+\backslash
+to"rakenda"(x_1,x_2+1))
+\backslash
+land "rakenda"(x_1,0) 
+\backslash
+to 
+\backslash
+forall_{x_2}(x_2 
+\backslash
+in N 
+\backslash
+to rakenda(x_1,x_2))))$
+\end_layout
+
+\end_inset
+
+ kasutada, sest seoses ei ole kirjas, et leidub funktsioone, mis kõiki erinevaid
+ naturaalarvusid asju eristavad.
+ Kui seoses on kirjas, et mingi predikaat on rahuldatud 0 puhul ja sellest,
+ et see mingi arvu puhul rahuldatud on järeldub, et see on sellest arvust
+ ühe võrra suurema arvu puhul rahuldatud ja, et see ei ole mingi naturaalarvu
+ puhul rahuldatud, ei saa programm seda seost Falseks lihtsustada, sest
+ seoses ei ole kirjas, et leidub funktsioon, mis on tõene ainult nende elementid
+e puhul, mis seda predikaati rahuldavad.
+\end_layout
+
+\begin_layout Standard
+Hulkade defineerimisel tekib analoogne probleem ehk, et ei ole kirjas, et
+ leidub misathes sialduvusega hulkasid.
+\end_layout
+
+\begin_layout Subsubsection
+Võimalikud lahendused
+\end_layout
+
+\begin_layout Paragraph
+kvanteerimine üle predikaatide
+\end_layout
+
+\begin_layout Standard
+igale universaalsuskvantorile lisada jaatusega, et sama seos kehtib ka predikati
+de kohta ja konstantfunktsioon 
+\begin_inset Quotes eld
+\end_inset
+
+rakenda
+\begin_inset Quotes erd
+\end_inset
+
+ asendada predikaadi rakendamisega.
+\end_layout
+
+\begin_layout Paragraph
+Syntax mis sisab seosele jaatuse üle predikaatide
+\end_layout
+
+\begin_layout Paragraph
+mingid konstantsed funktsioonid, mille abil saab kõik seose kõigi argumentide
+ korral kirjeldada, mida interpreteeitakse eeldatava väitega, mis sisaldab
+ jaatust üle kõigi kvantorite
+\end_layout
+
+\begin_layout Standard
+Äkki võrdusmärgist piisab? Näiteks hulkade puhul: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+forall(
+\backslash
+forall("onhulk"(x_1)
+\backslash
+land 
+\backslash
+neg (x_2 
+\backslash
+in x_1) 
+\backslash
+to 
+\backslash
+exists("onhulk"(x_3)
+\backslash
+land (x_2 
+\backslash
+in x_3) 
+\backslash
+land 
+\backslash
+forall(x_4!=x_2 
+\backslash
+to(x_4 
+\backslash
+in x_1 
+\backslash
+leftrightarrow x_4 
+\backslash
+in x_3)))))
+\backslash
+land 
+\backslash
+exists("onhulk"(x_1)
+\backslash
+land 
+\backslash
+forall(
+\backslash
+neg(x_2 
+\backslash
+in x_1)))$
+\end_layout
+
+\end_inset
+
+ või
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+forall(
+\backslash
+forall("onhulk"(x_1)
+\backslash
+land 
+\backslash
+exists("onhulk"(x_3) 
+\backslash
+land 
+\backslash
+forall(x_4=x_2 
+\backslash
+not 
+\backslash
+leftrightarrow (x_4 
+\backslash
+in x_1  
+\backslash
+leftrightarrow x_4 
+\backslash
+in x_3)))))
+\backslash
+land 
+\backslash
+exists("onhulk"(x_1)) 
+\backslash
+land 
+\backslash
+forall(
+\backslash
+forall("onhulk"(x_1)
+\backslash
+land "onhulk"(x_2)
+\backslash
+to (x_1=x_2 
+\backslash
+leftrightarrow 
+\backslash
+forall(x_3 
+\backslash
+in x_1 
+\backslash
+leftrightarrow x_3 
+\backslash
+in x_2))))$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Kas see loendumatude hulkade puhul kehtib? Vaja on põhjendust, et iga seose
+ puhul piisab võrdusmägist, et seose kuju ei sõltuks elementaarfunktsioonide
+ valikust.
+\end_layout
+
+\begin_layout Paragraph
+mingid konstantsed funktsioonid, mille abil saab kõi seose kõigi argumentide
+ korral kirjeldada, mida programm predikaatide lisamisel automaatselt täiendab
+\end_layout
+
+\begin_layout Standard
+Äkki võrdusmärgist piisab?
+\end_layout
+
+\begin_layout Standard
+Äkki piisab funktsioonist L, mapib kõigi predikaatide väärtused, kui nende
+ argumentideks on kõik erinevad variatsioonid ülejäänud L'i argumentidest,
+ mis sisaldavad (vähemalt 1 korra) L'i esimest argumenti, naturaalarvudele.
+ Hulkade(ja ühe argumndiliste funktsioonide, mis tagastavad booleane) puhul
+ näiteks: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+Pi_{b=0}^{2^{H(a)}}(
+\backslash
+forall_{Ax}(
+\backslash
+exists_Y(
+\backslash
+sum_{i=0}^{H(A)}(L(Y,x,x..x)=i
+\backslash
+land b[i]))
+\backslash
+to 
+\backslash
+exists_{x_h}("onhulk"(x_h)
+\backslash
+land 
+\backslash
+forall_e(
+\backslash
+sum_{i=0}^{H(A)}(L(e,x,x..x)=i
+\backslash
+land b[i])
+\backslash
+leftrightarrow(e
+\backslash
+in x_h)))))$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A on predikaadi, millel on kõige rohkem argumente, argumentide arv.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+forall_{Ax}$
+\end_layout
+
+\end_inset
+
+ tähendab A kvantorit
+\end_layout
+
+\begin_layout Standard
+või lausa:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+Pi_{b=0}^{2^{H(a)}}(
+\backslash
+forall_{Ax}(
+\backslash
+exists_{x_h}("onhulk"(x_h)
+\backslash
+land 
+\backslash
+forall_e(
+\backslash
+sum_{i=0}^{H(A)}(L(e,x,x..x)=i
+\backslash
+land b[i])
+\backslash
+leftrightarrow(e
+\backslash
+in x_h)))))$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+võrdusmärgi korral: _.._
+\end_layout
+
+\begin_layout Standard
+kõik need seosed saab teadaolevate predikaatide abil kirja panna nii, et
+ jaatus üle b'de, võitus üle i'de ja funktsioon L jäävad ära.
+\end_layout
+
+\begin_layout Subsection
+Elementaarseosed eraldi
+\end_layout
+
+\begin_layout Standard
+Sama argumentide arvuga elementaarseoseid võib olla mitu.
+\end_layout
+
+\begin_layout Subsection
+Iga argumentide arvu jaoks üks elementaarseos
+\end_layout
+
+\begin_layout Standard
+Kirjeldada kõiki võrdsete argumentidega elementaarväiteid ühe elementaarseosega
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$f_Q(kvanteeritavad)$
+\end_layout
+
+\end_inset
+
+.
+ Tuleb otsustada, et kas seosefunktsiooni väärtus sõltub argumentide järjekorras
+t.
+ Kirjeldatavast seosest sõltub, et kui paljude argumentidega seosefunktsioone
+ on ja, et kui palju on elementaarseosetel võimalikke väärtusi.
+\end_layout
+
+\begin_layout Standard
+Et konverteerida seos notatsioonist 
+\begin_inset Quotes eld
+\end_inset
+
+Elementaarseosed eraldi
+\begin_inset Quotes erd
+\end_inset
+
+ notatsiooni 
+\begin_inset Quotes eld
+\end_inset
+
+Iga argumentide arvu jaoks üks elementaarseos
+\begin_inset Quotes erd
+\end_inset
+
+ tuleb tuleb uued elementaarseosed viia bijektiivsesse sõltuvusse kõigi
+ vanade võrdsete argumentide arvuga elementaarseoste väärtustega.
+\end_layout
+
+\begin_layout Standard
+Kui selle funktsiooni tagastatavad väärtusi tõlgendada naturaalarvudena
+ ei ole probleemiks, et seoses ei ole veel naturaalarve defineeritud, sest
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$f_Q$
+\end_layout
+
+\end_inset
+
+ tagastavatele elementidele ei ole vaja rakendada naturaalarvude kohta käivaid
+ aksioome.
+\end_layout
+
+\begin_layout Subsubsection
+täpsemad stanardid
+\end_layout
+
+\begin_layout Standard
+Seosefunktsiooni väärtus ei sõltu argumentide järjekorrast.
+ Ei täpsusta et kui paljude argumentidega seosefunktsioone on ja, et kui
+ palju on seosefunktsioonidel võimalikke väärtusi.
+\end_layout
+
+\begin_layout Standard
+Kui selle funktsiooni tagastatavad väärtusi tõlgendada naturaalarvudena
+ ei ole probleemiks, et seoses ei ole veel naturaalarve defineeritud, sest
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$f_Q$
+\end_layout
+
+\end_inset
+
+ tagastavatele elementidele ei ole vaja rakendada naturaalarvude kohta käivaid
+ aksioome.
+\end_layout
+
+\begin_layout Section
+Elemendi põhine ehk argumendiks on algasjad
+\end_layout
+
+\begin_layout Standard
+
+\color green
+kõikide argumentide arvudega seosefunktsioonid saab lihtsalt panna kirja
+ kahe argumendiga seosefunktsioonidega.
+ lihtsalt võtta uus kvanteeritav ja siduda kõik algse seosefunktsiooni argumendi
+d sellega uue 2 argumendise seosefunktsiooni abil.
+ nt 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$f_{mingi}(a,b,c)=
+\backslash
+exists_x(f(x,mingi),f(x,a),f(x,b),f(x,c))$
+\end_layout
+
+\end_inset
+
+.
+ Mitmeargumendiliste seosefunktsioonide puhul see ei kehti.
+\end_layout
+
+\begin_layout Standard
+
+\color yellow
+(Kas tohib teha väiteid konstantsete elementaarseoste kohta)
+\end_layout
+
+\begin_layout LyX-Code
+Selles notatsioonis on seose argumentideks algasjad ehk algmõisted, mida
+ lisaks kvanteeritavatele elementaarseostele rakendatakse.
+ Elementaarseoste omadused ei sõltu kirjeldatavast seosest ega selle argumentide
+st.
+ 
+\color yellow
+(Kas peab olema kõigi erinevate argumentide arvudega elementaarfunktsioone?)
+\color inherit
+ Kuna kõigi asjade vahelised seosed on kindlaksmääratud omadustega elementaarseo
+ste abil defineeritud saab eeldada, et kõik asjad on mingit kindlat tüüpi
+ elmendid.
+ Elementide tüübi määrab see ,et millised omadused on neil kindlaks määratud
+ elementaarseostel.
+ 
+\color yellow
+(Mõistlik on ilmselt valida konsantsetele elementaarseostele nii karmid
+ tingimused kui võimalik, aga nii, et kõiki väiteid saaks siiski teha)
+\end_layout
+
+\begin_layout Standard
+Selle notatsiooni halvaks küljeks on, et tekib mitmeid väiteid, mida on
+ raske tõlgendada nt g(+,+,*) või g(>,>).
+\end_layout
+
+\begin_layout Standard
+Näiteks elementaarsuhte 
+\begin_inset Quotes eld
+\end_inset
+
+x on null
+\begin_inset Quotes eld
+\end_inset
+
+ konverteerimiseks elementaarseosepõhisest notatsioonist elemendipõhiseks
+ tuleb elementaarfunktsiooni on_null(x_1) asemel võtta algasi 0.
+\end_layout
+
+\begin_layout Standard
+Notatsiooni heaks küljeks on, et saab eemaldada algmõisteid seosest.
+ Näiteks kui algmõiste A4 on defineeritud algmõiste A3 kaudu, algmõiste
+ 34 on defineeritud algmõiste A2 kaudu ja algmõiste A2 on defineeritud algmõiste
+ A1 kaudu, siis saab eemaldada seosest algmõisted A3 ja A2 pannes seose
+ ümber(ette) eksistentsiaalkvantorid 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+exists_{A3}$
+\end_layout
+
+\end_inset
+
+ ja 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+exists_{A4}$
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Näiteks elementaarsuhte 
+\begin_inset Quotes eld
+\end_inset
+
+a+b=c
+\begin_inset Quotes eld
+\end_inset
+
+ konverteerimiseks elementaarseosepõhisest notatsioonist elemendipõhiseks
+ tuleb elementaarfunktsiooni 
+\begin_inset Quotes eld
+\end_inset
+
+x_1+x_2=x_3
+\begin_inset Quotes erd
+\end_inset
+
+(x_1,x_2,x_3) võtta algasi + nii, et konstantne elemetaarfunktsioon g(+,x_1,x_2,
+x_3) on kindla väärtusega siis kui x_1+x_2=x_3.
+\end_layout
+
+\begin_layout Standard
+Tähistame elemente, mille vahelistes suhetes on a elementi ja on b erinevat
+ võimalikku suhet järgnevalt: element(a,b).
+ Selles tähistuses oleks hulgad tähistatud kui element(2,4).
+ Näiteks erinevus hulkade ja elementide(2,2) vahel on, et kui kaks hulka
+ võivad omavahel olla 4 erinevas suhtes, siis 2 elementi võivad omavahel
+ olla 2´es suhtes.
+ Hulkadeks võivad olla ka kvanteeritavad.
+ Selle notatsiooni halvaks küljeks on, et see on vähem tuntud.
+ Kui a ja b pole naturaalarvud, siis on elementide vahelised suhted üksteisest
+ sõltuvad.
+ Suhe ei tähenda siin jagatist.
+\end_layout
+
+\begin_layout Standard
+Elemendi-põhises-notatsioonis võib ka muude asjade vahel olla kvantoritega
+ seoseid, kuid muuks asjaks loetakse ikkagi K´d kvanteeritavat, mille kohta
+ käib, nende omavahelisi suhteid ja nende suhteid algelementidega iseloomustav,
+ kvantoreid sisaldav booleanfunktsioon.
+ Kuna osadest asjadest(K´st kvanteeritavast, mille vahel on kvantoritega
+ seosed) järeldub väiteid teiste muude asjade kohta, siis ei pruugi 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$F_Q$
+\end_layout
+
+\end_inset
+
+´l olla naturaalarv võimalikke väärtusi.
+\end_layout
+
+\begin_layout Standard
+Sellises notatsioonis kirjutatud seoste iseloomustamiseks saab kasutada
+ arv K ja N.
+ K ja N on üheselt seotud asjade arvuga, mille eksisteerimise vahelist boolean
+ funktsiooni seos kirjeldab.
+\end_layout
+
+\begin_layout Itemize
+N on algelementide arv.
+\end_layout
+
+\begin_layout Itemize
+K näitab, et kui mitme kvantori sees üks väide maksimaalselt on, kui seos
+ on pandud kirja sellisel kujul, et väide, mis kõige rohkemate kvanorite
+ sees olev väide on, oleks võimalikult väheste kvantorite sees.
+\end_layout
+
+\begin_layout Standard
+Osade seoste konverteerimisel elemendipõhiseks ei pruugi K ja N olla naturaalarv
+ud.
+\end_layout
+
+\begin_layout Subsection
+element(2,4)´e-põhine-notatsioon ehk hulga-põhine-notatsioon (Pole kindel
+ kas toimib)
+\end_layout
+
+\begin_layout Standard
+Hulga-põhises-notatsioonis on seose argument on noteeritud argument-hulkade(algh
+ulkade) abil ja muid asju hulkade abil, mida iseloomustab nende omavahelised
+ kuuluvus-sisaldumis suhted ning kuulumis-sisaldumissuhted nende ja alghulkade
+ vahel.
+ Et hulk A kuulub hulka B tähitatakse 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$A
+\backslash
+in B$
+\end_layout
+
+\end_inset
+
+.
+ Selle hulga-põhise notatsiooni saab teisenda funktsioonipõhiseks teades,
+ et ühe hulga kuuluvusuhteks n hulgaga on 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$2^{n*4}$
+\end_layout
+
+\end_inset
+
+ võimalust.
+ Selleks tuleb viia iga hulkade vahelise kuuluvuse booleankombinatsioon
+ vastavusse ühe funktsiooni 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$f_Q$
+\end_layout
+
+\end_inset
+
+ väärtusega saades funktsiooni, millel on 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$2^{n*4}$
+\end_layout
+
+\end_inset
+
+ erinevat väärtust.
+ 
+\end_layout
+
+\begin_layout Standard
+Selle notatsiooni eeliseks hulga-põhise-notatsiooni ees on, et seoste kirjeldami
+sel DNF tabelina tekib vähem mõtetuid ridu.
+\end_layout
+
+\begin_layout Standard
+Näiteks hulga-põhises-notatsioonis kirjeldatud seose 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+forall_x(
+\backslash
+forall_y(
+\backslash
+neg 
+\backslash
+forall_z(z 
+\backslash
+in x 
+\backslash
+iff z 
+\backslash
+in y) 
+\backslash
+wedge x 
+\backslash
+in y 
+\backslash
+to y 
+\backslash
+in A)$
+\end_layout
+
+\end_inset
+
+ ( A'sse kuuluvad kõik hulgad, mis sisaldavad mingit hulka peale iseenda)
+ K=3 ja N=1.
+\end_layout
+
+\begin_layout Subsubsection
+konstantväide
+\end_layout
+
+\begin_layout Standard
+Hulgad, mille elemendid on samad on ise samade asjade elemendid.
+ ehk sama sisaldavusega hulgad on ka sama sisaldamisega ja, et hulgad, mis
+ sisaldavad samu elemente on võrdsed.
+\end_layout
+
+\begin_layout Subsection
+element(2,2)´e-põhine-notatsioon (Pole kindel kas toimib)
+\end_layout
+
+\begin_layout Standard
+Elementidest(2,2) või mõelda kui 
+\begin_inset Quotes eld
+\end_inset
+
+asjadest
+\begin_inset Quotes erd
+\end_inset
+
+, mis ei saa midagi sisaldada, kuid saavad omavahel 
+\begin_inset Quotes eld
+\end_inset
+
+ühendatud
+\begin_inset Quotes erd
+\end_inset
+
+ olla.
+\end_layout
+
+\begin_layout Standard
+Üks võimalus konvertida hulkade vaheline seos nende element(2,2)ede vaheliseks
+ seoseks, on asendada iga hulk kahe element(2,2)´ ga.
+ Nimetame neid kahte element(2,2)´esid kuulumis ja sisaldumis elementideks.
+ Kui hulga-põhises-notatsioonis sisaldab mingi hulk mingit teist hulka,
+ siis elemendi-põhisesse-notatsiooni on esimese hulga sisaldamiselement
+ ühenduses teise hulga kuulumiselemendiga.
+ Kui hulgapõhises-notatsioonis sisaldab mingi hulk iseenneast, siis elemendipõhi
+ses notatsioonis on sellele hulgale vastav kuulumiselement ja sisaldumiselement
+ omavahel ühenduses.
+ Veel tuleb elemendi-põhisesse-notatsiooni lidada väide, et ükski kuuluvus-eleme
+nt ei ole ühegi kuuluvus-elemendiga ühenduses ja ükski sisalduvus-element
+ ei ole ühegi sisalduvus-elemendiga ühenduses.
+ Selline konvertimine ei ole kõige efektiivsem, sest saaks konvertida ka
+ nii, et tekiks vähem elemente.
+\end_layout
+
+\begin_layout Subsection
+element(e,e)-põhine-notatsioon(Pole kindel kas toimib)
+\end_layout
+
+\begin_layout Subsection
+algmõisteteks predikaadi
+\end_layout
+
+\begin_layout Standard
+kasutaja saab algmõistetena ainult predikaate lisada.
+ Selle eeliseks on, et ei pea ühtegi seost kirjeldama erinevalt sõltuvalt
+ seoses olevate predikaatide valikust.
+\end_layout
+
+\begin_layout Standard
+konstantseteks elementaarfunktsioonideks on:
+\end_layout
+
+\begin_layout Itemize
+rakenda(predikaat,järjend) tagastab kas predikaat on True/False kui selle
+ argumendiks on järjendis olevad asjad.
+\end_layout
+
+\begin_layout Itemize
+järjekord(järjend,x1,x2) tagastab, et kas x1 on x2'est järjendis eespool
+ või tagapool.
+\end_layout
+
+\begin_layout Standard
+Eriti stiili lisab, et kvantor oleks justkui 1 argumendiline elementaarseos
+ ja kui rakenda argumendid on väited, siis võib neid tõlgendada NAND'ina,
+ mis annavad kvantorifunktsionaalselt täieliku hulga.
+\end_layout
+
+\begin_layout Standard
+Kvanteeritavad peavad saama olla predikaadid, sest muidu sõltuks ikkagi
+ osade seoste kuju predikaatide valikust.
+ p(x) asemele tuleb p([x]).
+\begin_inset Newline newline
+\end_inset
+
+Lõppridade üheselt valesuse kontroll peaks samasugune tulema, sest kõigi
+ platode predikaatide osa saab lihtsalt asenada rakenda(P,x)'iga.
+\end_layout
+
+\begin_layout Standard
+Tuleb lisada konstantne väide.
+\end_layout
+
+\begin_layout Subsubsection
+konstantne väide
+\end_layout
+
+\begin_layout Standard
+järjekord on transitiivne.
+ kui x1 või x2 ei kuulu järejendisse on tagastab elementaarseos järjekord
+ False.
+ Ükski järjen ei kuulu ühegisse järjendisse.
+ iga järjendi plato eelaste järjekord ja kuulumine sellesse järjendisse
+ on määratud selles platos.
+\end_layout
+
+\begin_layout Standard
+kui rakena esimene argument ei ole predikaat, siis on rakenda alati False.
+\end_layout
+
+\begin_layout Subsection
+eeldused seosefunktsioonidele
+\end_layout
+
+\begin_layout Standard
+2 võimalikku väärtust (kas True või False).
+ Algmõisted pannakse ainult esimeseks argumendiks (See ei ole sama, mis
+ eeldus, et kui algmõiste ei ole ei ole esimene argument, siis on elementaarseos
+ üheselt vale, sest kuna kvantorid peavad kõigi asjade kohta kehtima peavad
+ need ka algmõistete kohta kehtima.
+ Ka kvanteeritavad võivad almõistetega võrdsed olla.)
+\end_layout
+
+\begin_layout Section
+näiteid notatsiooni konverteerimisest.
+\end_layout
+
+\begin_layout Subsection
+elemendi põhisest elementaarseose põhiseks
+\end_layout
+
+\begin_layout Standard
+Niipidi saab alati konverteerida.
+\end_layout
+
+\begin_layout Standard
+algasi A asemel võta elementaarseos 
+\begin_inset Quotes eld
+\end_inset
+
+x_on_A
+\begin_inset Quotes erd
+\end_inset
+
+ ja lisa seosele väide, et ainult 1 asi rahuldab seda (kui kaks kvanteeritavat
+ seda rahuldavad, siis on nad vürdsed.).
+\end_layout
+
+\begin_layout Standard
+Luua uuued prediakaadid, mis tähistavad predikaadi väärtust, kui nende argumenti
+deks on algasjad.
+ Näiteks: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+forall_{x_1}(
+\backslash
+forall_{x_2}(F(a,x_1,x_2)=F_1(x_1,x_2) 
+\backslash
+land F(x_1,a,x_2)=F_2(x_1,x_2) 
+\backslash
+land F(x_1,x_2,a)=F_3(x_1,x_2)))$
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+elementaarseose põhisest elemendi põhiseks
+\end_layout
+
+\begin_layout Standard
+Iga elemendipõhiseks ei saa elementaarseoses põhises notatsioonis kirjeldatud
+ seoseid konverteerida.
+ Näiteks ei saa 3 argumendilise predikaadiga seoseid konverteerida element(2,2)
+ põhiseks konverteerida.
+ Uurida, et millise elemendipõhiseks saab iga elemetaarseosepõhist seost
+ konverteerida.
+\end_layout
+
+\begin_layout Standard
+n argumendise elementaarseose f_1 asemele pane algasi, millega mingis elementaar
+seoses olevad asjad on ainult n'i teise asjaga elementaarseoses.
+\end_layout
+
+\begin_layout Standard
+
+\color red
+Vist ei saa alati, sest konstantse elementaarsesest argumentide arvust suurema
+ argumentide arvuga predikaate konverteerida hulgapõhiseks.
+\end_layout
+
+\begin_layout Standard
+Vist ikka saab: pannes argumendidjärjendisse ja kirjeldada järjendi elementide
+ arv võrreldes elementide järjekorda järjendis elementide järjekorraga paarides.
+ Selleks on vaja kahte 2 argumendilist seosefunktsiooni f1 ja f2.
+ näiteks:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$F(a,b,c,d)
+\backslash
+iff 
+\backslash
+exists_{x_1}(f_1(a,x_1)
+\backslash
+land f_1(b,x_1)
+\backslash
+land f_1(c,x_1)
+\backslash
+land f_1(d,x_2)
+\backslash
+land
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+exists_{x_2} (f_1(a,x_2) 
+\backslash
+land f_2(b,x_2) 
+\backslash
+land samajarjekord(x_1,x_2))
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+exists_{x_2} (f_1(b,x_2) 
+\backslash
+land f_2(c,x_2) 
+\backslash
+land samajarjekord(x_1,x_2))
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+exists_{x_2} (f_1(c,x_2) 
+\backslash
+land f_2(d,x_2) 
+\backslash
+land samajarjekord(x_1,x_2))
+\end_layout
+
+\begin_layout Plain Layout
+
+)$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Ideid funktsiooni F defineerimiseks
+\end_layout
+
+\begin_layout Section
+Funktsioonide F tüüp a
+\end_layout
+
+\begin_layout Paragraph
+definitsioon:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$F(S)=P(S,K(S)) 
+\backslash
+land 
+\backslash
+forall_s(
+\backslash
+forall_k(P(s,k)=
+\backslash
+sum_{i=0}(2^i*(False 
+\backslash
+not =(S 
+\backslash
+land P(i))))$
+\end_layout
+
+\end_inset
+
+pole valmis
+\end_layout
+
+\begin_layout Paragraph
+pöördfunktsioon:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+forall_{n_S}(f(n_S) 
+\backslash
+leftrightarrow 
+\backslash
+exists_i(plato(i,0) 
+\backslash
+land lopprea
+\backslash
+_mark(n_S,i))) 
+\backslash
+land 
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+forall_n(
+\backslash
+forall_k (
+\backslash
+forall_{kv}(plato(n_s,k,kv) 
+\backslash
+leftrightarrow
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+(h(n,kv) 
+\backslash
+land 
+\backslash
+forall_i((i 
+\backslash
+in N 
+\backslash
+land(i<veerge(k)))
+\backslash
+to(
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+saa
+\backslash
+_haru
+\backslash
+_märk(n,i) 
+\backslash
+leftrightarrow 
+\backslash
+exists_x(plato(i,k+1,kv+x)))))$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Lühikirjeldus:
+\end_layout
+
+\begin_layout Standard
+Saa_h kirjeldab anud taseme kvanteeritava elementaarseoseid madalamate tasemete
+ kvanteeritavatega.
+\end_layout
+
+\begin_layout Standard
+Seda tüüpi funktsioond on kõik funktsioonid, mis eeltoodud kujul on.
+ Ükskõik millised saa_h ja saa_haru_märk täpselt on, on sellises vormis
+ funktsioon a tüüpi funktsioon.
+ 
+\color yellow
+(kas kõik võimalikud F funktsioonid, mille abil saab kõiki seoseid töödelda
+ mitte a-tüüpi ei ole? vt section struktuur.
+ Vist ei ole, kuid iga funktsioon, mis seab lõppreale arvu vastavusse on
+ a- tüüpi funktsioon)
+\end_layout
+
+\begin_layout Standard
+See, et kas läheb vaja tingimst 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$(i 
+\backslash
+in N 
+\backslash
+land(i<veerge(k)))$
+\end_layout
+
+\end_inset
+
+ sõltub funktsioonide h ja saahrumärk valikust.
+\end_layout
+
+\begin_layout Subsection
+K ja predikaadide nimetuste n_S'i panemine
+\end_layout
+
+\begin_layout Paragraph
+idee1
+\end_layout
+
+\begin_layout Standard
+n_S binaarvormi alguses on nii palju 1esid järjest kui on K väärtus.
+ peale neid ühtesid tuleb 0 ja siis ülejäänud osa n_S'ist.
+ See poleks enam min vabadusastme(F pole bijektiivne), sest täheduseta on
+ need n_Sid kus 0ile järnev arv on suurem kui antud K ja prdikaatie korral
+ ülejäänud n_S osa olla saab.
+ predikaadide kirjeldused peavad olema seosega koos mingi muus vorms(tõenäolisel
+t stringina).
+\end_layout
+
+\begin_layout Standard
+Panna alati 1 seose ette.
+ Siis on järelolevate bittide arvu järgi K teada kui predikaatide argumentide
+ arv on teada.
+ Binaarsalvetuses piisab ees olevate nullide arvu teadmisest.
+\end_layout
+
+\begin_layout Subsection
+Lihtne DNF
+\end_layout
+
+\begin_layout Paragraph
+definitsioon:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$F(S)=$
+\end_layout
+
+\end_inset
+
+pole valmis
+\end_layout
+
+\begin_layout Paragraph
+pöördfunktsioon:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+forall_{n_S}(f(n_S) 
+\backslash
+leftrightarrow 
+\backslash
+exists_i(plato(i,0) 
+\backslash
+land lopprea
+\backslash
+_mark(n_S,i))) 
+\backslash
+land 
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+forall_n(
+\backslash
+forall_k (
+\backslash
+forall_{kv}(plato(n,k,kv) 
+\backslash
+leftrightarrow
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+(h(n,kv) 
+\backslash
+land 
+\backslash
+forall_i((i 
+\backslash
+in N 
+\backslash
+land(i<veerge(k)))
+\backslash
+to(
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+( 
+\backslash
+lfloor n*2^{-i} 
+\backslash
+rfloor 
+\backslash
+%2=1) 
+\backslash
+leftrightarrow 
+\backslash
+exists_x(plato(i,k+1,kv+x)))))
+\backslash
+land 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+forall_k(veerge(k)=H(k+1)*2^{veerge(k+1)})
+\backslash
+land 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+veerge(K)=0$
+\end_layout
+
+\end_inset
+
+pole valmis
+\end_layout
+
+\begin_layout Paragraph
+omadused:
+\end_layout
+
+\begin_layout Itemize
+osadele väärtustele 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$n_S$
+\end_layout
+
+\end_inset
+
+ vastavad samad seosed.
+\end_layout
+
+\begin_layout Itemize
+Raske loetavasse vormi panna, sest üheselt samaväärsete lõppridade tuvastamine
+ on raske.
+\end_layout
+
+\begin_layout Paragraph
+Lühikirjeldus:
+\end_layout
+
+\begin_layout Standard
+a tüüpi, funktsioon, kus 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$harummärk(x,k)$
+\end_layout
+
+\end_inset
+
+ ja 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$ saa
+\backslash
+_h(x,k)$
+\end_layout
+
+\end_inset
+
+ on sellised, et:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+begin{cases}
+\end_layout
+
+\begin_layout Plain Layout
+
+harummark(n,i)=(
+\backslash
+lfloor n*2^{-i} 
+\backslash
+rfloor 
+\backslash
+%2=1)
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+saah(k)=
+\backslash
+lfloor n_s*2^{-veerge(k)} 
+\backslash
+rfloor 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+veerge(k)=H(k+1)*2^{veerge(k+1)}
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+veerge(K)=0
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{cases}$
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+H(k) näitab , et kui mitmes erinevas seoses saab k'nda taseme kvanteeritav
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$x_k$
+\end_layout
+
+\end_inset
+
+ enda ja endast madalamate kvanteeritavatega olla.
+\end_layout
+
+\begin_layout Standard
+veerge(k) näitab, et mitu haru on k'ndal tasemel.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+funktsiooni harumärk saab kirja panna ka järgnevatel kujudel 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$harummark(n,i)=((n-n 
+\backslash
+%2^{i})*2^{-i} 
+\backslash
+%2 =1)$
+\end_layout
+
+\end_inset
+
+ ; 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$harummark(n,i)=((n-n 
+\backslash
+%2^{i}) 
+\backslash
+%2^{i+1} 
+\backslash
+not =0)$
+\end_layout
+
+\end_inset
+
+ ; 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$harummark(n,i)=
+\backslash
+exists_{x_1}(x_1
+\backslash
+in N 
+\backslash
+land 
+\backslash
+exists_{x_2}(x_2
+\backslash
+in N 
+\backslash
+land x_2<2^i
+\backslash
+land n=x_1*2^{i+1}+2^{i}+x_2))$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Taseme K sees olevad harud võib tähelepanuta jätta, sest need(koos märgiga)
+ on üheselt tõesed 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+neg 
+\backslash
+exists_x(False)$
+\end_layout
+
+\end_inset
+
+, sest harumärk(x,K)=0, kui x>0 ja saaH(K+1)=lõpmatus.
+\end_layout
+
+\begin_layout Standard
+Idee põhineb tähelepanekul, et kui
+\end_layout
+
+\begin_layout Enumerate
+kõik universaalsuskvantorid asendada eksistentsaalsuskvantoritega vastavalt
+ reeglile 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+forall_x(f(x))=
+\backslash
+neg 
+\backslash
+exists_x(
+\backslash
+neg f(x))$
+\end_layout
+
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Enumerate
+viia kõik seosefunktsioonide väited kõige välimiste võimalike kvantorite
+ sisse (Ehk võimalikest madalaimale tasemele)(ehk selle kõrgeima taseme
+ argumendi tasemele)(sest muidu tekiks mitu samaväärst rida.
+ nt.
+ _..._ .)
+\end_layout
+
+\begin_layout Enumerate
+viia kõik kvantorite sisud ja kvantorite välised väited DNF-vormi (kus on
+ alati jaatatud kõikide erinevate argumentidega seosefunktsioonid(näiteks
+ kui K=2 ja seosefunktsiooni argumentide järjekord pole oluline, kõigil
+ elementaarseostel on 2 argumenti ja 3 võimalikku väärtust tuleb 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$f(x_1,x_1)=0 
+\backslash
+wedge f(x_1,x_2)=0$
+\end_layout
+
+\end_inset
+
+ asendada 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$f(x_1,x_1)=0 
+\backslash
+wedge f(x_1,x_2)=0 
+\backslash
+wedge f(x_2,x_2)=0 
+\backslash
+lor f(x_1,x_1)=0 
+\backslash
+wedge f(x_1,x_2)=0 
+\backslash
+wedge f(x_2,x_2)=1$
+\end_layout
+
+\end_inset
+
+))
+\begin_inset Newline newline
+\end_inset
+
+ja _.._(täpsemat seletus vaja)
+\end_layout
+
+\begin_layout Enumerate
+kõik võitused vastavalt reeglile 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+exists(f_1(x) 
+\backslash
+lor f_2(x))=
+\backslash
+exists(f_1(x)) 
+\backslash
+lor 
+\backslash
+exists(f_2(x))$
+\end_layout
+
+\end_inset
+
+ kvantorite seest välja tuua.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \space{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+saab mistahes seose vormis, mis sisaldab mingi sisuga omavahel võitatud
+ üksteist välistavaid väiteid(lõppridu)(mille sees on ainult seosefunktsioonid,
+ jaatused ja eitused), millele saab vastvusse panna naturaalarvu.
+ Nimetame neid väiteid edaspidi lõppridadeks.
+ Osad lõppread on üheselt valed ehk seose argumendst sõltumatult valed.
+ Kõik lõppread, mis pole seose argumendst sõltumatult valed on omavahel
+ erinevad.
+\end_layout
+
+\begin_layout Standard
+Võib jääda ekslik arvamus, et kui defineerida kõik elementaarseosed olema
+ K argumendiga ja jaatatada seosega väide, et osade elementaarseoste väärtus
+ ei sõltu osadel posotsioonidel olevatest argumentidest, siis vastaks ka
+ järjestuses igale naturaalarvule vahemikus 0 kuni N_max erinev lõpprida,
+ kuid see ei ole võimalik, sest väide et osade elementaarseoste väärtus
+ ei sõltu osadel posotsioonidel olevatest argumentidest sisaldab rohkem
+ kui K'd kvanteeritavat üksteise sees.
+\end_layout
+
+\begin_layout Standard
+Millisele lõppreale milline naturaalarv vastab sõltub ainult K'st, elementaarseo
+ste argumentide arvudest ja seosefunktsiooni võimalike väärtuste arvust.
+ Seega saab seose üheselt kirjeldada kirjeldades, et millistele naturaalarvudele
+ vastavad lõppread on kirjeldatava seosega kooskõlas.
+ Kirjeldamaks, et millised lõppread on kirjeldatava seosega kooskõlas moodustan
+ jada(ehk lõppveeru), mille liikmeteks on (boolean), et kas liikme indeksile(nat
+uraalarvule) vastav lõpprida on seosega kooskõlas.
+ Lõppveerg tõlgendatult kahendsüsteemis arvuna ongi arv 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$n_s$
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \space{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+K ja elementaarseoste argumentide ja võimalike väärtuste arv ning muud omadused
+ on eraldi kirjeldatud või bijektiivse funktsiooni abil lisatud arvule 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$n_S$
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Seletan siin mitmes lõigus sama ideed.
+ Kõikides lõikudes on sama ideed erinevalt kirjeldatud.
+\end_layout
+
+\begin_layout Subsubsection
+Seletus 1
+\end_layout
+
+\begin_layout Standard
+Iga taseme jaoks teha eraldi DNFtabel, mille veergudeks on selle taseme
+ veerge moodustava tabeli read.
+ Taseme-veerge moodustava tabeli veergudeks on selle taseme kvanteeritava
+ ja madlamata kvanteeritavate ning selle taseme kvanteeritava ja algasjade
+ vahelisel seosefunktsiooni väärtused.
+ Taseme-veerge moodustavat tabelit loetakse jaatades väiteid, et veeru seosefunk
+tsioonil on vastav väärtus.
+\end_layout
+
+\begin_layout Standard
+Iga taseme tabeli igas reas on iga veeru jaoks lahter arvuga, mis kirjeldab,
+ et milliseid järgmise taseme ridu sisaldavad selle taseme kvantorid on
+ omavahelises jaatuses eitatud ja millised mitte(so.
+ DNF vorm).
+ Iga erinevate arvudega täidetud ridu on täpselt üks.
+ Kõrgeima taseme tabeli(mille number=K) ridades on iga veeru kohta ainult
+ üks arv(boolen), mis kirjeldab ainult, et kas veerg on eitatud või mitte,
+ sest pole järgmist taset, ega järgmise taseme ridu.
+ Madalaima taseme tabeli(mille number=0) veergudeks on algasjade vaheliste
+ seosefunktsioonide väärtused.
+ Madalaima taseme tabel on lõppDNF-tabel, mille read on lõppread, tabeli
+ lõppveerg on töödeldud DNF vormis seose lõppveerg.
+\end_layout
+
+\begin_layout Subsubsection
+Seletus hargnemisega
+\end_layout
+
+\begin_layout Standard
+Iga taseme jaoks teha eraldi DNFtabel, mille veerutüvedeks on selle taseme-veerg
+e moodustava tabeli read.
+ Iga taseme tabeli iga veerutüvi hargneb veergudeks, mis erinevad selle
+ poolest, et millist järgmise(ühe võrra suurema) taseme tabeli rida selle
+ taseme kvantor sisaldab.
+ Iga veeru(haru) ümber on eraldi selle taseme eksistentsiaalkvantor.
+\end_layout
+
+\begin_layout Standard
+Taseme-veerge moodustava tabeli veergudeks on selle taseme kvanteeritava
+ ja madalamata kvanteeritavate ning selle taseme kvanteeritava ja algasjade
+ vahelise seosefunktsiooni väärtus.
+ Kui palju erinevaid vääruseid ühel seosefunktsioonil võib olla sõltub kirjeldat
+avast seosest.
+ Seosefunktsiooni argumentideks võivad olla ainult kvanteeritavad ja algasjad.
+ Seosefunktsioonil võib olla ükskõik kui palju argumente.
+ Taseme-veerge moodustavat tabeli ridu loetakse jaatades väiteid, et veergude
+ seosefunktsioonidel on vastavad väärtused.
+ Kui seosefunktsiooni argumentide järjekord on oluline tuleb igas tasemes
+ panna argumendid kõigis järjekordades.
+\end_layout
+
+\begin_layout Standard
+Kõik veergude vahelised seosed võib arvesse võtta arvestades, et osade tasemete
+ tabelite osad read on seose argumendst sõltumatult valed.
+ DNF tabeli olemuse tõttu lõppridade vahelisi seoseid ei ole.
+ Kas rida on seose argumendst sõltumatult vale kontrollimiseks tuleb kõrgema
+ taseme kvanteeritava asemele asendada madalama taseme kvanteeritavad.
+\end_layout
+
+\begin_layout Standard
+Kõrgeima taseme tabeli(mille number=K) veerud ei hargne, sest pole järgmist
+ taset, ega järgmise taseme ridu.
+ Madalaima taseme tabeli(mille number=0) veergudeks on algasjade vaheliste
+ seosefunktsioonide väärtused.
+ Madalaima taseme tabel on lõppDNF-tabel, mille read on lõppread, tabeli
+ lõppveerg on töödeldud DNF vormis seose lõppveerg.
+ 
+\end_layout
+
+\begin_layout Standard
+Kuna kõik tabelid on DNF tabelid, siis:(VALE)
+\end_layout
+
+\begin_layout Itemize
+Iga taseme tabeli igas reas on iga veeru kohta üks bitt, mis kirjeldab,
+ et kas veerg (mille sees on selle taseme kvantor) on rea siseses jaatuses
+ eitatud ja või mitte(so.
+ DNF vorm).
+\end_layout
+
+\begin_layout Itemize
+Iga erinevate bittidega täidetud ridu on täpselt üks.
+\end_layout
+
+\begin_layout Itemize
+read on üksteist välistavad ehk omavahel vastuolus.
+\end_layout
+
+\begin_layout Subsubsection
+Seletus Ühe tabelina.
+\end_layout
+
+\begin_layout Standard
+Tabelis on kõik esimese taseme veerud.
+ Iga taseme kõik read lähevad iga ühe võrra madalama taseme iga veeru juurde
+ alaveergudeks.
+\end_layout
+
+\begin_layout Subsubsection
+Seletus ühe tabelina(ei toimi)
+\end_layout
+
+\begin_layout Standard
+Veergudeks on eksistentsiaalkvantorid.
+ Iga veeru, mille kvanteeritava tase ei ole K, sees on ühe võrra kõrgema
+ taseme eksistentsiaalkvantorid.
+ Iga ühe võrra madalama taseme kvantori sees on 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$a(k)$
+\end_layout
+
+\end_inset
+
+ k'nda taseme kvantorit.
+ Esimese taseme kvantorid ei ole ühegi kvantori sees neid on a(k)'st tükki.
+\end_layout
+
+\begin_layout Subsubsection
+Seletus ühe tabelina pöördveergudega alustades seletamist 0-tasemest.
+\end_layout
+
+\begin_layout Standard
+0 taseme seosefunktsioon(seosefunktsioonid, mille argumentideks on ainult
+ algasjad) on tabeli veerg.
+ Iga taseme, mille number pole K, veergudeks on seosefunktsioonid, mille
+ argumentideks on selle ja madalama taseme kvanteeritavad ja algasjad, ja
+ kõrgema taseme read.
+ Knda taseme veergudeks on ainult taseme K seosefunktsioon.
+ Kuna iga taseme read ristuvad kõrgema taseme ridadega (on 90 kraadi pöördes)
+ ja iga taseme veerud ristuvad kõrgema taseme veergudega (on 90 kraadi pöördes)
+ nimetan seda seletust pöördveergudega seletuseks.
+\end_layout
+
+\begin_layout Subsubsection
+Seletus ühe tabelina pöördveergudega alustades seletamist K-tasemest.
+\end_layout
+
+\begin_layout Standard
+K taseme seosefunktsioon(seosefunktsioonid, mille argumentideks on ainult
+ algasjad) on Knda taseme tabeli veerg.
+ Iga taseme, mille number pole 0, read on, koos ühe võrra madalama taseme
+ seosefunktsiooniga, veergudeks ühe võrra madalamale tasemele.
+ 0taseme seosefunktsioon on (lõpp)tabeli veerg.
+ Kuna iga taseme read ristuvad kõrgema taseme ridadega (on 90 kraadi pöördes)
+ ja iga taseme veerud ristuvad kõrgema taseme veergudega (on 90 kraadi pöördes)
+ nimetan seda seletust pöördveergudega seletuseks.
+\end_layout
+
+\begin_layout Subsubsection
+seletus
+\end_layout
+
+\begin_layout Standard
+iga plato iga bitt näitab, et et kas selle biti indeksiga haru on eitatud
+ või jaatatud.
+\end_layout
+
+\begin_layout Subsection
+DNF, mille osad read on eemaldatud
+\end_layout
+
+\begin_layout Paragraph
+definitsioon:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$F(S)=P(S,K(S)) 
+\backslash
+land 
+\backslash
+forall_s(
+\backslash
+forall_k(P(s,k)=
+\backslash
+sum_{i=0}(2^{i-
+\backslash
+sum_{j=0}^i(neg
+\backslash
+ 
+\backslash
+exists_S(False 
+\backslash
+not =(S 
+\backslash
+land P(j))))}*(False 
+\backslash
+not =(S 
+\backslash
+land P(i))))$
+\end_layout
+
+\end_inset
+
+pole valmis
+\end_layout
+
+\begin_layout Paragraph
+pöördfunktsioon:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$f(n_S)=$
+\end_layout
+
+\end_inset
+
+pole valmis
+\end_layout
+
+\begin_layout Paragraph
+omadused:
+\end_layout
+
+\begin_layout Itemize
+Raske käsitsi loetavast vormist arvutiloetavsse panna, sest üheselt samaväärsete
+ lõppridade tuvastamine on raske.
+\end_layout
+
+\begin_layout Paragraph
+Lühikirjeldus:
+\end_layout
+
+\begin_layout Standard
+Muidu sama nagu lihtne DNF tabel ainult, et üheselt valed lõppridadele vastavad
+ arvud on vahele jäätud.
+ 
+\color yellow
+(Kas jätab iga plato üheselt valed harud vahele või ainult lõpprea üheselt
+ valed harud?)
+\color inherit
+ Ja seosed, mida saab väiksema K'ga on ka vahele jäätud numeratsioonist.
+ Seoste, mida saab ka väiksema K'ga kirjeldada kõikide lubatud lõppridade
+ taseme K-1 platode kõik harud on sama märgiga (ei ole kindel, et kõik seosed,
+ mida saab ka väiksema K'ga kirjeldada seda tingimust täidavad).
+\end_layout
+
+\begin_layout Standard
+Numeratsioon jätab vahele need naturaalarvud, milellele vastav väide on
+ sõltumatult kirjeldatavast seosest valed, kuid ei muuda seda, et millisele
+ lõppreale vastab suurem arv ja millisele väiksem arv.
+\end_layout
+
+\begin_layout Standard
+Lõpprida on üheselt vale kui see on kõigi seose argumentide puhul vale ehk
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+neg 
+\backslash
+exists_Q(LR(Q))$
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+seose argumendst sõltumatult valedele väidetele vastavate arvude leidmine
+ ehk veergude vahelise seose arvestamine
+\end_layout
+
+\begin_layout Enumerate
+eitatud harud asendatavad universaalsuskvantoritega.
+ võttes harumärgi funktsiooni kujul 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+forall_n(
+\backslash
+forall_k (
+\backslash
+forall_{kv}(plato(n,k,kv) 
+\backslash
+leftrightarrow
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+(h(n,kv) 
+\backslash
+land 
+\backslash
+forall_i((i 
+\backslash
+in N 
+\backslash
+land(i<veerge(k)))
+\backslash
+to(
+\backslash
+
+\backslash
+( 
+\backslash
+lfloor n*2^{-i} 
+\backslash
+rfloor 
+\backslash
+%2=1) 
+\backslash
+to
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+exists_x(plato(i,k+1,kv+x)))) 
+\backslash
+land
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+forall_x(plato(i,k+1,kx+x)
+\backslash
+to
+\backslash
+exists_i(i 
+\backslash
+in N 
+\backslash
+land(i<veerge(k))
+\backslash
+land 
+\backslash
+lfloor n*2^{-i} 
+\backslash
+rfloor 
+\backslash
+%2=1)))))$
+\end_layout
+
+\end_inset
+
+.
+ Sellel kujul on ilmselege, et tagumisest osast ei järeldu midagi, peal
+ selle, et ei eksisteeri asju, mis ei rahuldaksid tingimusi, mida rahuldavad
+ asjad mis esimese osa kohaselt peavad eksisteerima.
+ Kui eeldada, et kvantorist saab välja tuua ainult selle info,mis on ülejäänuga
+ jaatatud, siis saab seda eeldust põhjendada sellega, et see mida saab jaatuse
+ ette tuua peab kõigi harude platofunktsioonidel ühine olema, aga see info
+ on ka seose esimeses eksistentsiaalkvantori-osas olemas.
+ Arusaamist lihtsustab kitsam näide selest kujust 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+exists_{x_1}(p_1(x_1))
+\backslash
+land 
+\backslash
+exists_{x_1}(p_2(x_1)) 
+\backslash
+land 
+\backslash
+forall_{x_1}(p_1(x_1)
+\backslash
+lor p_2(x_1))$
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+piisab kui kontrollida, et kõik asjad, mis peavad eksisteerima täidaksid
+ kõiki tingimusi, mida kõik asjad peavad täitma.
+ Kõik asjad, mis eksisteerima peavad on eksistentsiaalsuskvantorites.
+ Kõik tingimused, mida asjad täitma peavad on universaalsuskvatorites.
+\end_layout
+
+\begin_layout Enumerate
+Iga plato universaalsus kvantori sees on võitatud need tingimused, mis on
+ selle haru eksistensaalsuskvantorite sees.
+\begin_inset Newline newline
+\end_inset
+
+Plato kvanteeritava kirjeldamiseks tehtud väited kehtivad kõikjal, selle
+ kvantori plato sees(sh selle kvantori sees olevate eitamata kvantorite
+ sees).
+ Seega kui mingi plato p haru teeb väite, mis on kvantorite, mille sees
+ plato p on kvanteeritavatele seatud tingimusega vatuolus on see plato p
+ seose argumendst sõltumatult vale.
+ Kuna seos on sellises vormis, et kõikide võimalike tingimuste kohta on
+ öeldud, et nad on kas tõesed või valed peab nende kohta olema jaatatud
+ haru.
+\end_layout
+
+\begin_layout Enumerate
+piisab kui kontrollida, et iga plato kvanteeritav täidab samu tingimusi
+ kui iga teise plato vähemalt 1 haru.
+ VIGA PARANDADA KOPEERIDA JUPPE 27.
+ JUUNI JA 30.
+ JUULI VERSIOONIST.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Lõpprida ei ole üheselt vale parajasti siis kui mistahes plato(mille ükski
+ haru ei ole juba võrdsustatud ja), kuhu pääseb ilma eitusi läbimata, (vähemalt)
+ ühe haru(p2) saab võrdsustada, mistahes teise plato(p1), kuhu pääseb ilma
+ eitusi läbimata, kvanteeritavaga nii, et eelnevad võrdsustused jäävad kehtima.
+\series default
+\color red
+
+\begin_inset Newline newline
+\end_inset
+
+Efektiivselt säilivad p1'ede vahelised ja p2'ede vahelised elementaarseosed
+ ja elementaarseosed px'i ja madalamate eelastega.
+ Tegelikult säilivad kõik elemantaarseosed, aga kui universaalsuskvantor,
+ mille kvanteeritavat (p2) võrdsustatakse ise on teise universaalsuskvantori(px)
+ sees, siis ei saa olla kirjeldatud elemetaarseosed tema kvanteeritavate,
+ mille tase on kõrgem kui kõrgeima tasemga eksistentsaailuskvantor, mille
+ sees ta on(ehk madalaima tasemega universaalsuskvantor(px), mille sees
+ ta on) vahel.
+ Kahe argumendiliste predikaatide korral: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+forall_{i_1}(
+\backslash
+forall_{i_2}(g(P1(i_1),P1(i_2))=g(P2(i_1),P1(i_2))))$
+\end_layout
+
+\end_inset
+
+.
+ sama indeksiga p1 ja p2'e vahelinelised elementaarseosed ei pruugi olla
+ samad, mis mitme selle indeksiga p1'e vaheline elementaarseos ,sest isegi
+ kui mõnel p1'el ja p2'el on tavalises puugraafi visualiseeringus ühiseid
+ eelasi või järglasi, on p2'ed universaalsuskvantorite kvanteeritavad ja
+ p1'ed eksistentsiaalsuskvantorite kvanteeritavad ehk tegu ei ole siiski
+ samade kanteeritavatega.
+ Kuna p1'esid valitakse ainult platodest kuhu pääseb ilma eitusi läbimata,
+ siis ei saa universallsuskvantorite seest p1'esid valida (see on selgem
+ r'i vormis kus universaalsuskvantori asemel on eitatud eksistentsiaalsuskvantor
+id).
+ Sama p1'e(eksistentsiaalkvantori kvanteeritavat) peab saama võrdsustada
+ ka mitme plato vähemalt ühe haruga.
+ Võrdusustada mingit plato p2 kvateeritavat haruga ei saa kui plato p2 mingi
+ haru kvanteeritava elementaarfunktsioonid on erinevad selle haru kvanteeritava
+ elementaarfunktsioonidest(elementaarfunktsioonide argumentideks võivad
+ olla ka madalama taseme kvanteeritavad, mis on mingi muu plato kanteeritavaga
+ võrdsustatud.
+ Kas ka kõrgema taseme kvanteeritavad?).
+\begin_inset Newline newline
+\end_inset
+
+
+\color inherit
+NB: kui mingid P1'ed ja neile vastavad P2'ed o juba valitud ei tohi P1'ede
+ lisamine P2'esid muuta, sest muidu ei saaks kontrollid, et on olemas haru,
+ millel on mitu nõutud haru.
+\color red
+
+\begin_inset Newline newline
+\end_inset
+
+Teisisõnu lõpprida on üheselt vale parajasti siis kui mingite platode (korraga),
+ kuhu pääseb ilma eitusi läbimata, ühtegi haru ei saa võrdsustada, mingite
+ teiste platode, kuhu pääseb ilma eitusi läbimata, kvanteeritavatega.
+\begin_inset Newline newline
+\end_inset
+
+Selles meetodis võrdsustakse universaalsuskvantorite kvanteeritad teiste
+ platode eksistentiaalkvantorite kvanteeritavatega.
+\end_layout
+
+\begin_layout Enumerate
+
+\color red
+Platode, millest kumbgi pole teisele eelaseks ega järglaseks kvanteeritavate
+ vahelisi elementaarseoseid ei ole kirjeldatud, seega saab need korraga
+ võrdsustada mingite teiste kvanteeritavatega parajasti siis kui neid saab
+ eraldi võrdsustada nende teiste kvanteeritavatega.
+ Et kontrollida kas mingi plato tasemega k vähemalt ühe haru kvanteeritav
+ võib mitmete asjadega mitmes erinvas elementaarseoses olla (ehk, et kas
+ sellel on mitu haru olemas) nii, et ka nende asjade vahelised elementarseosed
+ on määratud, saab kõigepealt P1[k+1:K]'ks valida need asjad ja siis võtta
+ eelmise sammu P2(k+1) selle sammu P1(k+1)'ks (vastavalt postulaadile sobib
+ selle sammu P2(k+1)'ks siis ainult P1(k+1)) P1[k+1:K]'ks samuti need asjad,
+ ga teistesjärjekordades.
+ See toimib, sest kõik esimese sammu P2'ede vahelised elementaarseosed peavad
+ olema samad kui nende asjade vahelised.
+ Seega võib ÜV'd kontrollida tehes asendused(p2'ed) ühte suuatud lihtahelasse
+ korraga.
+ Ühe suunatud lihtahela maksimaalne pikkus on K.
+\begin_inset Newline newline
+\end_inset
+
+Seega 
+\series bold
+lõpprida ei ole üheselt vale parajasti siis kui kõikide hulkade, kuhu kuuluvad
+ platod millest igaüks on teisele kas eelaseks või järglaseks ja kuhu pääseb
+ ilma eitusi läbimata, iga elemendi (vähemalt) ühe haru kvanteeritava saab
+ võrdsustada, mistahes teise plato p1, kuhu pääseb ilma eitusi läbimata,
+ kvanteeritavaga(nii ,et platode, mille kvanteeritavatega need võrdsustati,
+ kvanteeritavate vahelised elementaarseosed jäävad samaks.).
+\end_layout
+
+\begin_layout Enumerate
+
+\color red
+Kui mingi vormis on vähem kui K kvanteeritavate paari, mille elemendid on
+ omavahel võrdsutatud, ja see on ÜV, siis on ÜV ka vorm kus samade kvanteeritava
+te paarid omavahel võrdsustatud, kuid kokku on K paari.
+ Seega piisab K asja vaja korraga 
+\begin_inset Quotes eld
+\end_inset
+
+asendada
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Seega kontrollida saab järjendite kaupa, kus on K p1'e ja K p2'e.
+ või kahe järjendite 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$J_e$
+\end_layout
+
+\end_inset
+
+ ja 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$J_u$
+\end_layout
+
+\end_inset
+
+, millest mõlemas on K elementi järjetatud paaride kaupa.
+\begin_inset Newline newline
+\end_inset
+
+Seega 
+\series bold
+lõpprida ei ole üheselt vale parajasti siis kui kõikide hulkade, kuhu kuuluvad
+ platod millest igaüks on teisele kas eelaseks või järglaseks, mis sisaldavad
+ platot tasemega 0(lõpprida ise), ja kuhu pääseb ilma eitusi läbimata, iga
+ elemendi (vähemalt) ühe haru kvanteeritava saab võrdsustada, mistahes teise
+ plato p1, kuhu pääseb ilma eitusi läbimata, kvanteeritavaga(nii, et platode,
+ mille kvanteeritavatega need võrdsustati, kvanteeritavate vahelised elementaars
+eosed jäävad samaks.).
+\begin_inset Newline newline
+\end_inset
+
+
+\series default
+Seega vaja kontrollida K kaupa kõigis järjekordades.
+ VIGANE
+\end_layout
+
+\begin_layout Enumerate
+
+\color red
+_.._ ,sest nii saab mistahes suunatud ahelaid(P2'esid) kontrollida ja kui
+ mingi plato(P2(i)), mille puhul ma kontrollin, et kas selle mingi haru
+ kvanteeritava saab mingi muu kvanteeritavaga võrdsustada, eelase teine
+ haru on millegagi võrdsustatud saab seda eraldi kontrollida(teise P1'ega),
+ sest see pole samas suunatud ahelas.
+ 
+\begin_inset Newline newline
+\end_inset
+
+Seega lõpprida ei ole üheselt vale parajasti siis kui mistahes K plato kvanteeri
+tavad saab mistahes järjekorras võrdsustada mingite teiste platodega, millest
+ igaüks on teisele kas eelaseks või järglaseks kvanteeritavatega nii, et
+ esimene neist on mistahes plato haru.
+\begin_inset Newline newline
+\end_inset
+
+ehk
+\begin_inset Newline newline
+\end_inset
+
+
+\series bold
+lõpprida ei ole üheselt vale parajasti siis kui mistahes platode vahelised
+ elementaarseosed ja seosed ühiste eelastega on samad kui mistahes plato
+ (px) mingite järglaste, millest üks on selle plato otsene järglane, ühe
+ tase on K ja millest igaüks on igale teisele ka eelaseks või järglaseks,
+ vahelised elementaarseosed
+\series default
+.
+\begin_inset Newline newline
+\end_inset
+
+ehk
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$UV(LR)=
+\backslash
+forall_{px}(
+\backslash
+forall_{P1}(
+\backslash
+exists_{P2}(
+\backslash
+exists_i(k(P2(i))=K) 
+\backslash
+land "vastavate
+\backslash
+ elementide
+\backslash
+ vahelised
+\backslash
+ seosed
+\backslash
+ on
+\backslash
+ samad
+\backslash
+ voi
+\backslash
+ on
+\backslash
+ uhel
+\backslash
+ neist
+\backslash
+ tapsustamata
+\backslash
+ ja
+\backslash
+ eelnevatega
+\backslash
+ seosed
+\backslash
+ samad"(P1,P2) 
+\backslash
+land 
+\backslash
+forall_i("on
+\backslash
+ haru"(P2(i),P2(i+1))
+\backslash
+land "paaseb
+\backslash
+ ilma eitus labimata"(P1(i)))))$
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+kui px kasutamise asemel nõuda, et kui esimesed P1'ed on alates õppreast
+ taseme järjekorras peavad vastavad P2 nende P1'edega võrduma, siis on tingimus
+ järgnev 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$UV(LR)=
+\backslash
+forall_{P1}(
+\backslash
+forall_i("paaseb
+\backslash
+ ilma eitus labimata"(P1(i)))
+\backslash
+to 
+\backslash
+exists_{P2}(
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+forall_{p0}(
+\backslash
+forall_i(i<p0 
+\backslash
+to k(P1(i))=i)
+\backslash
+to 
+\backslash
+forall_i(P1(i)=P2(i))) 
+\backslash
+land
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+len(P1)=K
+\backslash
+land len(P2)=K 
+\backslash
+land "vastavate
+\backslash
+ elementide
+\backslash
+ vahelised
+\backslash
+ seosed
+\backslash
+ on
+\backslash
+ samad
+\backslash
+ voi
+\backslash
+ on
+\backslash
+ uhel
+\backslash
+ neist
+\backslash
+ tapsustamata"(P1,P2) 
+\backslash
+land 
+\backslash
+forall_i("on
+\backslash
+ haru"(P2(i),P2(i+1)))))$
+\end_layout
+
+\end_inset
+
+VIGANE
+\end_layout
+
+\begin_layout Enumerate
+
+\color red
+Piisab kui valida ainult 3 tüüpi P1'esid:
+\begin_inset Newline newline
+\end_inset
+
+valik1: mis algavad platost px eelasest, on tasemejärjekorras ja millest
+ igaüks on teistele kas eelaseks või järglasteks
+\begin_inset Newline newline
+\end_inset
+
+valik2: mis algavad plato px järglasest, on tasemejärjekorras ja millest
+ igaüks on teistele kas eelaseks või järglasteks
+\begin_inset Newline newline
+\end_inset
+
+valik3: Mis algavad platost px, on suvalises järjekorras ja millest igaüks
+ on teistele kas eelaseks või järglasteksm
+\begin_inset Newline newline
+\end_inset
+
+Kui nende P1 vailkutega ei saa ÜV'd, ei saa ühegi teise valikua ÜV'd, sest:
+\begin_inset Newline newline
+\end_inset
+
+olulised on ainult K-k(px) esimest P1'e elementi;
+\begin_inset Newline newline
+\end_inset
+
+kuna valik2 ei anna ÜV saab iga p1'e, mi
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+sest kui mingi plato pa harusid ei saa taseme järjekorras teise plato pb
+ harudega võrdsustada, siis saab ka nende asendustega üv kui valida platode
+ ,mis jäävad pa ning pb ja pb kõrgeima ühise eelase vahele asendus 1 ja
+ platode, mis jäävad plaode pb ning pb ja pb kõrgeima ühise eelase vahele
+ asendus 2.
+ Kui selline kontroll ei andnud ÜV'd, siis on platos px kõik vüimalikud
+ p2'ed tasemejärjekorras olemas.
+ Seega tehes P1 valiku3 saab kontrollida, et kõik P1'ed saab kõigis järjekordade
+s sinna asendada.
+ Pole üõhjendust juhukohta kui P1'ed pole samas lihtahelas, aga kehtib ka
+ siis.
+\begin_inset Newline newline
+\end_inset
+
+Samuti on ÜV'd need platod, mille üks aatatud harudest on üheselt vale.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Ilma px'ita variandis on eed tingimused järgnevad:
+\begin_inset Newline newline
+\end_inset
+
+valik1:
+\begin_inset Newline newline
+\end_inset
+
+valik2: tasemejärjekooras ahel(pikkusega k), mille esimene element on tasemel
+ 0 + taseme tasemejärjekooras ahel(pikkusega K-k), mille esimene element
+ on tasemel eelmise lüli eelviimase elemendi aru.
+\begin_inset Newline newline
+\end_inset
+
+valik3: p1'ed on suunatud lihtahel P1, aga ei pruugi olla tasemeärjekorras.
+ Sama platod võib mitu korda olla P1'es.
+\end_layout
+
+\begin_layout Enumerate
+
+\color red
+Seda kas valik P1 valik1 või valik2 annavad vatuseks ÜV saab kontrollida:
+\begin_inset Newline newline
+\end_inset
+
+Võitades kokku px järglase need harud, mis erinevad ainult selle poolest,
+ et millised on predikaatide väärtused, kui üheks nende argumendiks on järglase
+ kvanteeritav (x_{k+1}).
+ Ehk eemaldab järglase harudest(rekusiivselt) predikatide väärtused kui
+ predikaatide argumendiks on ka x_{k+1} harud, mis sisaldavad x_k'd, saab
+ sama tulemuse kui võitades kokku kõik need x_k harud, mis erinevad ainult
+ K-1 taseme haru märkide poolest(ehk eemaldades x_k'st kõrgeima taseme harud.)
+\end_layout
+
+\begin_layout Enumerate
+valiku3 kotrollimiseks üpiisab kontrollid, et igad px'i järglased(tasemejärjekor
+ras) saab igas järjekorras px'i tagasi asendada.
+ Sest kui seda kõigepealt ktrollida ja o1'ega kõik vastavad vahesamud kpntrollid
+a saab kontrollitud ka, et vajalikud harud olemas oleks.
+ _..._ POLE KINDEL ET ÕIGE
+\end_layout
+
+\begin_layout Enumerate
+
+\color red
+seda kas valik3 annab ÜV saab kontrollida kontrollides et kas kõigile jnumbritel
+, mis on px'ist alates tasemejärjekorras platodel eelneva harunumbriks,
+ leiduvad ka numbrid , mis on samuti tasemejärjekorras harunumbriks px'ist
+ alates, aga elementaarseoste järjekord on ära vahetatud.
+\end_layout
+
+\begin_layout Enumerate
+mõlemad tingimused koos on: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+neg UV(LR,0) 
+\backslash
+land
+\backslash
+forall_n(
+\backslash
+forall_k(
+\backslash
+neg UV(n,k) 
+\backslash
+leftrightarrow
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+(
+\backslash
+forall_i(hm(n,i)
+\backslash
+to (r_{meemalda sisemised}(n)
+\backslash
+leftrightarrow r_{eemalda viimane kvaneritav}(i)
+\backslash
+land 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+neg UV(i,k+1)))
+\backslash
+land
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+%o2 nuud
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+forall_{j1}(j1[0]=n 
+\backslash
+land 
+\backslash
+forall_i(harumark(j1[i],j1[i+1],k))
+\backslash
+to 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+forall_{w_{jarjekord}}(w_{jarjekord}<
+\backslash
+Gamma(K-k-i) 
+\backslash
+to
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+exists_{j2}(j2[0]=n 
+\backslash
+land 
+\backslash
+forall_i(harumark(j2[i],j2[i+1],k)
+\backslash
+land "h-osa
+\backslash
+ nagu
+\backslash
+ j1el
+\backslash
+ aga
+\backslash
+ teies jarjekorras"(j2[i],j1,i,w_{jarjekord})))))))$
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\color red
+eeldab punkti 11!
+\end_layout
+
+\begin_layout Enumerate
+Asendan funktsiooni harumärk(
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$harumark(n_1,n_2)=(
+\backslash
+lfloor n_1*2^{-n_2} 
+\backslash
+rfloor 
+\backslash
+%2=1)$
+\end_layout
+
+\end_inset
+
+=
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+exists_{x_1}(x_1
+\backslash
+in N 
+\backslash
+land 
+\backslash
+exists_{x_2}(x_2
+\backslash
+in N 
+\backslash
+land x_2<2^{n_2}
+\backslash
+land n_1=x_1*2^{n_2+1}+2^{n_2}+x_2))$
+\end_layout
+
+\end_inset
+
+) tingimusse
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+forall_n(
+\backslash
+forall_k(
+\backslash
+neg UV(n,k) 
+\backslash
+leftrightarrow
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+(
+\backslash
+forall_i(hm(n,i)
+\backslash
+to (r_{eemalda
+\backslash
+ sisemised}(n)
+\backslash
+leftrightarrow r_{eemalda
+\backslash
+ viimane
+\backslash
+ kvaneritav}(i)
+\backslash
+land 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+neg UV(i,k+1))
+\backslash
+land
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+%edasi o2
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+forall_{j1}(j1[0]=n 
+\backslash
+land 
+\backslash
+forall_i(i  
+\backslash
+in N 
+\backslash
+land i<K-k 
+\backslash
+to j1[i]<veerge(k+i-1) 
+\backslash
+land 
+\backslash
+exists_{x_1}(x_1
+\backslash
+in N 
+\backslash
+land 
+\backslash
+exists_{x_2}(x_2
+\backslash
+in N 
+\backslash
+land x_2<2^{j1[i+1]}
+\backslash
+land j1[i]=x_1*2^{j1[i+1]+1}+2^{j1[i+1]}+x_2)))
+\backslash
+to 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+forall_{w_{jarjekord}}(w_{jarjekord}<
+\backslash
+Gamma(K-k-i) 
+\backslash
+to
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+exists_{j2}(j2[0]=n 
+\backslash
+land 
+\backslash
+forall_i(i  
+\backslash
+in N 
+\backslash
+land i<K-k 
+\backslash
+to j1[i]<veerge(k+i-1) 
+\backslash
+land 
+\backslash
+exists_{x_1}(x_1
+\backslash
+in N 
+\backslash
+land 
+\backslash
+exists_{x_2}(x_2
+\backslash
+in N 
+\backslash
+land x_2<2^{j2[i+1]}
+\backslash
+land j2[i]=x_1*2^{j2[i+1]+1}+2^{j2[i+1]}+x_2))
+\backslash
+land "h-osa
+\backslash
+ nagu
+\backslash
+ j1el
+\backslash
+ aga
+\backslash
+ teies jarjekorras"(j2[i],j1,i,w_{jarjekord})))))))$
+\end_layout
+
+\end_inset
+
+
+\color red
+
+\begin_inset Newline newline
+\end_inset
+
+eeldab punkti 11!
+\end_layout
+
+\begin_layout Enumerate
+panen 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$r_{eemalda
+\backslash
+ sisemised}(n)
+\backslash
+leftrightarrow r_{eemalda viimane kvaneritav}(i)$
+\end_layout
+
+\end_inset
+
+ asemele tingimuse mis seda kontrollib.
+ Tingimus on siis:
+\begin_inset Newline newline
+\end_inset
+
+
+\color red
+ 
+\color inherit
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+forall_n(
+\backslash
+forall_k(
+\backslash
+neg UV(n,k) 
+\backslash
+leftrightarrow
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+(
+\backslash
+forall_i(hm(n,i)
+\backslash
+to (samavaarseedharud(n,i,k)
+\backslash
+land 
+\backslash
+neg UV(i,k+1))
+\backslash
+land
+\backslash
+
+\backslash
+%o2 edasi
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+forall_{j1}(j1[0]=n 
+\backslash
+land 
+\backslash
+forall_i(i  
+\backslash
+in N 
+\backslash
+land i<K-k 
+\backslash
+to j1[i]<veerge(k+i-1) 
+\backslash
+land 
+\backslash
+exists_{x_1}(x_1
+\backslash
+in N 
+\backslash
+land 
+\backslash
+exists_{x_2}(x_2
+\backslash
+in N 
+\backslash
+land x_2<2^{j1[i+1]}
+\backslash
+land j1[i]=x_1*2^{j1[i+1]+1}+2^{j1[i+1]}+x_2)))
+\backslash
+to 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+forall_{w_{jarjekord}}(w_{jarjekord}<
+\backslash
+Gamma(K-k-i) 
+\backslash
+to
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+exists_{j2}(j2[0]=n 
+\backslash
+land 
+\backslash
+forall_i(i  
+\backslash
+in N 
+\backslash
+land i<K-k 
+\backslash
+to j1[i]<veerge(k+i-1) 
+\backslash
+land 
+\backslash
+exists_{x_1}(x_1
+\backslash
+in N 
+\backslash
+land 
+\backslash
+exists_{x_2}(x_2
+\backslash
+in N 
+\backslash
+land x_2<2^{j2[i+1]}
+\backslash
+land j2[i]=x_1*2^{j2[i+1]+1}+2^{j2[i+1]}+x_2))
+\backslash
+land "h-osa
+\backslash
+ nagu
+\backslash
+ j1el
+\backslash
+ aga
+\backslash
+ teies jarjekorras"(j2[i],j1,i,w_{jarjekord})))))))
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+land 
+\backslash
+forall_{n_1}(
+\backslash
+forall_{n_2}(
+\backslash
+forall_k(samavaarseedharud(n,i,k)
+\backslash
+leftrightarrow 
+\backslash
+forall_{i_1}(
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+i_1
+\backslash
+in N
+\backslash
+land i_1<veerge(k)
+\backslash
+land k<K-1
+\backslash
+land hm(n_1,i_1)
+\backslash
+to
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+exists_{i_2}(hm(n_2,i_2)
+\backslash
+land(f(h(i_2)=h(i_1)))
+\backslash
+land samavaarsed(i_1,i_2,k+1))
+\backslash
+land
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+i_1
+\backslash
+in N
+\backslash
+land i_1<veerge(k+1)
+\backslash
+land 
+\backslash
+land hm(n_2,i_1)
+\backslash
+to
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+exists_{i_2}(hm(n_2,i_2)
+\backslash
+land(f(h(i_1)=h(i_2)))
+\backslash
+land samavaarsed(i_2,i_1,k+1))))))$
+\end_layout
+
+\end_inset
+
+
+\color red
+
+\begin_inset Newline newline
+\end_inset
+
+ehk 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+neg UV(LR)=
+\backslash
+forall_{P1}(
+\backslash
+forall_{p1}(p1 
+\backslash
+in P1 
+\backslash
+to "paaseb
+\backslash
+ ilma
+\backslash
+ eitusi
+\backslash
+ labimata"(p1))
+\backslash
+to 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+exists_{I2}(I2(0)=LR 
+\backslash
+land 
+\backslash
+forall_i(i 
+\backslash
+in N 
+\backslash
+land i 
+\backslash
+leq K-1 
+\backslash
+to (f(P1,I2(i+1))
+\backslash
+land 
+\backslash
+exists_{x_1}(x_1
+\backslash
+in N 
+\backslash
+land 
+\backslash
+exists_{x_2}(x_2
+\backslash
+in N 
+\backslash
+land (x_2
+\backslash
+leq 2^{I2(i+1)}-1)
+\backslash
+land I2(i)=x_1*2^{I2(i+1)+1}+2^{I2(i+1)}+x_2))))))$
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+VIGANE
+\end_layout
+
+\begin_layout Enumerate
+
+\color red
+sama mis järgmise punktis()järgmine kustutada.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+forall_n(
+\backslash
+forall_k(
+\backslash
+neg UV(n,k) 
+\backslash
+leftrightarrow
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+forall_{j1}
+\backslash
+color{blue}(
+\backslash
+color{black}j1[0]=n 
+\backslash
+land 
+\backslash
+forall_i(i  
+\backslash
+in N 
+\backslash
+land i<K-k 
+\backslash
+to j1[i]<veerge(k+i-1) 
+\backslash
+land 
+\backslash
+exists_{x_1}(x_1
+\backslash
+in N 
+\backslash
+land 
+\backslash
+exists_{x_2}(x_2
+\backslash
+in N 
+\backslash
+land x_2<2^{j1[i+1]}
+\backslash
+land j1[i]=x_1*2^{j1[i+1]+1}+2^{j1[i+1]}+x_2)))
+\backslash
+to 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+forall_{w_{jarjekord}}(w_{jarjekord}<
+\backslash
+Gamma(K-k-i) 
+\backslash
+to
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+exists_{j2}
+\backslash
+color{red}(
+\backslash
+color{black}j2[0]=n 
+\backslash
+land 
+\backslash
+forall_i(i  
+\backslash
+in N 
+\backslash
+land i<K-k 
+\backslash
+to j1[i]<veerge(k+i-1) 
+\backslash
+land 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+exists_{x_h}("h-osa
+\backslash
+ nagu
+\backslash
+ j1el
+\backslash
+ aga
+\backslash
+ teies jarjekorras"(j1,w,i,x_h) 
+\backslash
+land 
+\backslash
+exists_{x_1}(x_1
+\backslash
+in N 
+\backslash
+land x1<2^{veerge(i)-j2(i+1)-1} 
+\backslash
+land 
+\backslash
+exists_{x_2}(x_2
+\backslash
+in N 
+\backslash
+land (x_2
+\backslash
+leq 2^{j2(i+1)}-1)
+\backslash
+land
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+j2(i)=x_h*2^{veerge(i)}+x_1*2^{j2(i+1)+1}+2^{j2(i+1)}+x_2))))
+\backslash
+color{red})
+\backslash
+color{black})
+\backslash
+land
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+r_{eemalda
+\backslash
+ sisemised}(n)
+\backslash
+leftrightarrow r_{eemalda viimane kvaneritav}(j1[1])
+\backslash
+land
+\backslash
+neg UV(j1[1],k+1)
+\backslash
+color{blue})
+\backslash
+color{black}))$
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+VIGANE
+\end_layout
+
+\begin_layout Enumerate
+
+\color red
+Kuna on teada, et igal tasemel (k) on 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$veerge(k)$
+\end_layout
+
+\end_inset
+
+ veergu ja selle taseme kvanteeritava seosed eelmiste tasemete kvanteeritavatega
+ on kirjeldatud bittidega, mis tulevad peale selle taseme haru märke (more
+ significant), siis saan eelnevat tingimust lihtsudtada pannes 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$x_1$
+\end_layout
+
+\end_inset
+
+'e max värtuseks 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$2^{veerge(i)-I2(i+1)-1}$
+\end_layout
+
+\end_inset
+
+ ja lisades uue kvanteeritava, mis kirjeldab vastava p2'e elementaarseoseid
+ madalama taseme p2'edega.
+ Seega:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+neg UV(LR)=
+\backslash
+forall_{P1}(
+\backslash
+forall_{p1}(p1 
+\backslash
+in P1 
+\backslash
+to "paaseb
+\backslash
+ ilma
+\backslash
+ eitusi
+\backslash
+ labimata"(p1))
+\backslash
+to 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+exists_{I2}(postulaat 
+\backslash
+land I2(0)=LR 
+\backslash
+land 
+\backslash
+forall_i(i 
+\backslash
+in N 
+\backslash
+land i 
+\backslash
+leq K-1 
+\backslash
+to (
+\backslash
+exists_{x_3}(f(I(i+1)(voi x_3),P1,i) 
+\backslash
+land
+\backslash
+exists_{x_1}(x_1
+\backslash
+in N 
+\backslash
+land x1<2^{veerge(i)-I2(i+1)-1} 
+\backslash
+land 
+\backslash
+exists_{x_2}(x_2
+\backslash
+in N 
+\backslash
+land (x_2
+\backslash
+leq 2^{I2(i+1)}-1)
+\backslash
+land
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+I2(i)=x_3*2^{veerge(i)}+x_1*2^{I2(i+1)+1}+2^{I2(i+1)}+x_2))))))$
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$x_3<2^{H(i)}$
+\end_layout
+
+\end_inset
+
+ kas f tingimus x_3'el või I(i+1)'el?
+\end_layout
+
+\begin_layout Enumerate
+
+\color red
+Kasutades tähelepanekut, et kui otsitav plato peab jaatama ühte mitmetest
+ harudest, siis topelt sobivuse vältmiseks saab otsida platosid, mis jaatab
+ neist harudest ühte h_1 ja ei jaata ühtegi nendest harudest, mille indeks
+ on selle indeksist väiksem.
+\end_layout
+
+\begin_layout Enumerate
+
+\color red
+Kuna P1 määrab iga P2 elemendi vaelised nõutud elementeerseosed selle P2
+ elemendi eelastega, siis saab kasutada P1, ega bijektiivses seoses olevat
+ järjendit I1, mille iga element määrab, et tingimused P2, et elementide
+ h osale.
+ Seega võib
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$f(P1,i,I2(i))$
+\end_layout
+
+\end_inset
+
+ asemel kasutada 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$f(I1(i),I2(i))$
+\end_layout
+
+\end_inset
+
+.
+ Kui kõik P1 elemendid on ülejäänudele kas eelaseks või järglaseks, siis
+ on iga P2 alemendi h osa kindlalt määratud.
+ Selliste P1'ede puhul võib 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$f(P1,i,I2(i))$
+\end_layout
+
+\end_inset
+
+ asemele panna 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+lfloor I2(i)*2^{-veerge(i)}
+\backslash
+rfloor=I1(i)$
+\end_layout
+
+\end_inset
+
+.
+ (EI TOIMI, sest ka platode, mis on p2'e järglased elementaarseosed peavad
+ samad olema kui p1'ega).
+ Kuigi VÕIBOLLA saab valida alati kõrvalharu niie et p1'e ja p2'el pole
+ ühiseid järglasi.
+\end_layout
+
+\begin_layout Enumerate
+
+\color red
+Algoritm, mis kontrollib selle tingimuse põhjal üheselt valesust võib alustada
+ P2'e platode numbrite (i'de väärtuste) proovimist nii kõrgeima taseme harudest
+ kui madalaima taseme platodest.
+ tundub, et kasulikum on alutada kõrgeimast tasemest.
+\begin_inset Newline newline
+\end_inset
+
+Algoritm, mis kontrollib selle tingimuse põhjal üheselt valesust võib proovida
+ järjest P2 patode võimalike haru numbreid või salvestadajörjest iga taseme
+ võimalikud harue numbrid.
+\end_layout
+
+\begin_layout Enumerate
+
+\color red
+Iga valitud 
+\begin_inset Quotes eld
+\end_inset
+
+asendatav
+\begin_inset Quotes erd
+\end_inset
+
+ plato määrab ise ühe kindla haru kuhu see sobib ja isegi kui sobib mitmesse,
+ siis piisab ainult selle kotrollimisest, kuhu see sobib.
+ ehk et p2'e saab kontrolli käigus kindalt määrata.
+ Kontrollitakse, et kas p1'ed võivad vähemalt ühe p2'e haruga võrdsed olla.
+\begin_inset Newline newline
+\end_inset
+
+Ehk kui mingi on kontrollitud et mingi plato p2 kvanteeritav mingi teise
+ plato p1 mingi haru p_h kvanteeritavaga võrdne olla ei saa isegi ilma p_h
+ järglasi võrdustamata(sest p_h kvanteeritaval on enda eelastega nõutud
+ teistsugused seosefunktsioonide väärtused kui p2'el nendega on), siis pole
+ mõtet platot kontrollida, et plato p_h ega selle järglaste vähemalt üks
+ haru mingi kvanteeritavaga võrdsustav on, sest _.._.
+\begin_inset Newline newline
+\end_inset
+
+ehk kuidas valida nii, et jääks p1'ed jääksid samasse harusid on piiratud
+ ja võimaldab optimeerimist.
+ (HOOPIS SIIN VIGA)
+\end_layout
+
+\begin_layout Enumerate
+
+\color red
+Osad harud saab välistada teades ainult p1'e numbrit, p1'e taset, p2'e numbrit
+ ja p2'e taset, selle põhjal, et iga p1'e haru peab saama asendada p2'e
+ ja iga p2'e haru peab saama asendada p1'e ja p'el ja p2'el peavad eelatega
+ samad elementaarseosed olema.
+ Tähistan funktsiooni kas, mis kontrollib, et mingi haru sobib selle tingimusega
+ o'ga.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$o(n_1,n_2,k_1,k_2)$
+\end_layout
+
+\end_inset
+
+ on tõene siis kui plato numbriga n2 ja tasemega k2 harud saab korraga asendada
+ taseme järjekorras plato numbriga n1 tasemega k1 mistahes harudega.
+ 
+\begin_inset Newline newline
+\end_inset
+
+Ainult platode p1 ja p2 taset ja numbrit teades saab kontrollida, et kas
+ p2'e saab võrdsustada p1'ega ja p1'e kõik järgalsed(samas järjekorras!)
+ p2'e järglastega.
+ Kuna võrdsustusi peab saama teha iga P1'e korral, siis juhul kui p2'e ei
+ saa võrdsustada sellise haruga, kuhu saab ka p1'e kõik järglased asendada,
+ siis on see LR ÜV.
+ Seega võib nende harude kontrollimise ära jätta.
+ See on tarvilik tingimus haru numbritele, mitte piisav tingimus.
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+\color red
+Kui P2(i-1)'el leidub haru, mille puhul 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$o(n_2,n_1,k_2,k_1)$
+\end_layout
+
+\end_inset
+
+ pole rahuldatud, siis on LR ÜV, sest selle haru kvanteeritavat ei saaks
+ võrdsustada _.._ .Siis järeldub o'st ka, et kui P2(i) on P1(i+1) eelane, siis
+ P2(i+1)=P1(i+1), mida on 8.
+ punktis vaja.
+\end_layout
+
+\begin_layout Standard
+See ei eelda, et ühe plato eitatud kavtireid saab korraga kotrollida, sest
+ kui võrdsustada sama p1 mitme plato universaalsuskvantori kvanteeritavaga,
+ siis see kotrollibgi neid koos.
+\end_layout
+
+\begin_layout Standard
+Kontrollida vaja olevate järjendite arv on: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+Pi_{k=0}^K(veerge(k))(/2^K)*(sobivatep1'ede arv)^K$
+\end_layout
+
+\end_inset
+
+(või 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+Pi(veerge(k))(/2^K)$
+\end_layout
+
+\end_inset
+
+ pole, sest punkt 8?)
+\end_layout
+
+\begin_layout Standard
+hüpotees: piisab kontollimiseks kui sama indeksiga J_u ja J_e on omavahel
+ kas järglased või eelased.
+\end_layout
+
+\begin_layout Standard
+Kui kõik kvantorid (koos plato eelastega) on koos nende eelastega määratud
+ piisab kui kontrollida, et kõik elementaarseosed( ka need mis on p1 ja
+ p2 vahel või p1 ja p2 ühistes järglastes) nendega on võrdsed.
+\end_layout
+
+\begin_layout Paragraph
+funktsioonist o
+\end_layout
+
+\begin_layout Standard
+O funktsiooni on võimalik ka teisisiti seletada nii, et pisab kui ainult
+ p_k otsestest jäglastest eemaldatakse predikaatide väärtusi.
+ Loob igast platost ja selle eelasest o-grupid ja kontrollib, et kas need
+ on võrdsed.
+\end_layout
+
+\begin_layout Subparagraph
+platost p_k tasemega k o-grupide loomine
+\end_layout
+
+\begin_layout Standard
+Võitab kokku need harud, mis erinevad ainult selle poolest, et millised
+ on predikaatide väärtused, kui üheks nende argumendiks on x_k.
+ Ehk eemaldab harudest(rekusiivselt) predikatide väärtused kui predikaatide
+ argumendiks on ka x_k harud, mis sisaldavad x_k'd.
+\end_layout
+
+\begin_layout Subparagraph
+selle plato eelsest o-gruppide loomine
+\end_layout
+
+\begin_layout Standard
+võitab kokku kõik need harud, mis erinevad ainult K taseme haru märkide
+ poolest.
+ Ehk eemaldab harudest kõrgeima taseme harud.
+\end_layout
+
+\begin_layout Paragraph
+funktsioonist o2
+\end_layout
+
+\begin_layout Standard
+kõigis tasemtes on seosefunktsioonide väärtused kõrgemad kui madalamates(POLE
+ NII LIHTNE)?
+\end_layout
+
+\begin_layout Paragraph
+funktsioon o3
+\end_layout
+
+\begin_layout Standard
+pole vaja, P2'ed on universaalsus kvantorites.
+\end_layout
+
+\begin_layout Subsection
+tüübi a F, mille ridade üheselt valesust on lihtne kontrollida
+\end_layout
+
+\begin_layout Standard
+eemaldab, sosed, mis: saab madalama K'ga irjeldada, on mitu sama tähendusega
+ lõppveergu(sest osad lõppreadon üheselt valed), või osade predikaatide
+ kohta pole midagi öeldud.
+ 
+\end_layout
+
+\begin_layout Standard
+a tüüpi, funktsioon, kus 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$harummark(x,k)=[n_s*2^{t}]
+\backslash
+%(2^(-H_{max}(k)-t)$
+\end_layout
+
+\end_inset
+
+ ja 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$ saa h(x)=
+\backslash
+lfloor x 
+\backslash
+rfloor$
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+saa_h ja saa_haru_märk on valitud nii, et ridade üheselt valesust oleks
+ kerge kontrollida.
+\end_layout
+
+\begin_layout Standard
+harumärk peaks olema midagi foriee pöörde laadset, kus iga element määrab,
+ et kas lisadaperioodiline ,ärkide vaheldumine.
+ Negatiivsete (või keskmisest väiksemate) indeksitega bitid määravad negatiivset
+est märkidest alavad võnkumised.
+ Võnkumiste peroood on võrdne biti indeksi absoluutvärtusega.
+ Haru märkide määramiseks lainete väärtused kas liidetakse ja siis määratkse
+ märk või lainete äärtustega tehakse vastavas järjekorras võituseid ja jaatuseid.
+\end_layout
+
+\begin_layout Standard
+Või mingi polünoomi laadne, kus polünoomi nullkohad tähistavad 0-bitti.
+\end_layout
+
+\begin_layout Standard
+vahet pole, et kas i sagedus muudab iga i'indat või i kaupa.
+\end_layout
+
+\begin_layout Standard
+lainevärgi valikud:
+\end_layout
+
+\begin_layout Itemize
+viimane kirjutab oma märgiga üle(sama mis tavaline hm)
+\end_layout
+
+\begin_layout Itemize
+või kõik flipivad bitte kui oma märk on 1
+\end_layout
+
+\begin_layout Itemize
+või kõik kirjutavad üle 1'ega kui oma märk on 1.
+\end_layout
+
+\begin_layout Standard
+ja
+\end_layout
+
+\begin_layout Itemize
+sagedusbiti indeks määrab ka, et kas algab poolperioodist
+\end_layout
+
+\begin_layout Itemize
+või mitte
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+harumärk nii, et kõigis platodes oleksid alati funktsioon o täidetud
+\end_layout
+
+\begin_layout Standard
+hm näitab iga ja ainult selliste harude hulkade, mis sobivad mingite ühe
+ võrra madalma taseme harude hulkadega kokku (kas neil hulkadel ühiseid
+ elemente ei ole?), et milliste selle taseme kvanteeritava seosefunktsiooniväärt
+ustega(vähemalt ühega) on nende hulkade elemendid (selle taseme harud) jaatatud.
+ Kui on , siis peab see seda küigi tasemejärjekoraes korraga olema.
+\end_layout
+
+\begin_layout Standard
+hm ja h on nii valitud, etkõigi platode puhul, mis on jaatatud on täidetud
+ tingimus 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+forall_n(
+\backslash
+forall_i(hm(n,i)
+\backslash
+to (r_{meemalda sisemised}(n)
+\backslash
+leftrightarrow r_{eemalda viimane kvaneritav}(i))))
+\backslash
+land
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+forall_{j1}(j1[0]=px 
+\backslash
+land 
+\backslash
+forall_i(harumark(j1[i],j1[i+1]))
+\backslash
+to 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+exists_{j2}(j2[0]=px 
+\backslash
+land 
+\backslash
+forall_i(harumark(j2[i],j2[i+1])
+\backslash
+land "h-osa nagu j1el aga teies jarjekorras"(j2[i],j1,i)))))$
+\end_layout
+
+\end_inset
+
+.
+ Oluline, et ükski plato ei jaataks harusid, mis seda tingimust ei täida.
+\end_layout
+
+\begin_layout Subsubsection
+harumärk nii, et kõigis platodes oleks funktsioon o2 täidetud
+\end_layout
+
+\begin_layout Paragraph
+definitsioon:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$F(S)=$
+\end_layout
+
+\end_inset
+
+pole valmis
+\end_layout
+
+\begin_layout Paragraph
+pöördfunktsioon:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$f(n_S)=$
+\end_layout
+
+\end_inset
+
+pole valmis
+\end_layout
+
+\begin_layout Paragraph
+omadused:
+\end_layout
+
+\begin_layout Paragraph
+Lühikirjeldus:
+\end_layout
+
+\begin_layout Standard
+ilmselt mingi fourie pöörde sarnane asi.
+ iga bait ei näita enam, et kas vastava indeksiga lõpprida on eitatud.
+\end_layout
+
+\begin_layout Section
+uus idee CNFiga
+\end_layout
+
+\begin_layout Standard
+Muidu sama, aga eksistentsaalsus kvantorid tuleb asendada universaalsuskvantorit
+ega; seos viia lõpuks CNF vormi ja võitused välja tuua kvantoritest.
+\end_layout
+
+\begin_layout Section
+grupeeritud veeergudega
+\end_layout
+
+\begin_layout Standard
+Jaotada iga taseme harud gruppidesse.
+ Lisaks DNFlõppveerule n_S ka seda, et millised veerud on IGAS tasemes kokku
+ pandud ja, et kas grupp on kokku võitatud või jaatatud.
+ Gruppi kirjeldab madalamas tasemes 1 bitt.
+ Kui grupp on kokku võitatud, siis kirjeldab 1 bitt, et kas nad kõik on
+ ei ole eitatud(1) või on(0).
+ Kui grupp on kokku jaatatud, siis kirjeldab 1 bitt madalamas tasemes, et
+ kas nad kõik on ei ole jaatatud(1) või on mitte(0).
+ Võitusi saab viia kvatoritest välja, kui nii tekiks rohkem bitte(kombinatsioone
+) madalamasse tasemesse.
+ See on ka a tüüpi funktsioon, kus lihtsalt saa_h ja saa_haru_märk on grupidest
+ sõltuvad(?! (võitused)).
+\end_layout
+
+\begin_layout Standard
+Teise ideena võiks gruppide asemel olla funktsioon harude märkidest.
+ Iga tasemel iseloomustavad saa_harumärk ja saa_h, et milline 
+\end_layout
+
+\begin_layout Standard
+Gruppide vahel DNF vorm.
+\end_layout
+
+\begin_layout Itemize
+N_s pole bijektiivne, kuid kui nõuda, et kõik, mida saab kokku panna on
+ kokku pandud, siis on n_S injektiivne.
+\end_layout
+
+\begin_layout Section
+Hea mõte
+\end_layout
+
+\begin_layout Standard
+funktsioonil c(h,harude_märgid,k) on nii palju võimalikke väärtusi kui seose
+ kirjeldamiseks vaja.
+ Millisele harumärkide kombinatsioonile milline funktsiooni c väärtus vastab
+ on lõppveerust eraldi n_S'is kirjas.
+ Igale harumärkide kombinatsioonile vastab mingi funktsiooni c väärtus.
+ saa_haru_märk(plato) kirjeldab, et milliste c(h,harude_märgid,k+1) väärtustega
+ harud selles platos on eitatud ja milliste c(h,harude_märgi,k+1) väärtustega
+ harud on eitatud.
+\end_layout
+
+\begin_layout Standard
+Mitu taset allpool on c väärtustele vastavad bitid kirjeldatud võibki olla
+ pakituse parameetriks.
+\end_layout
+
+\begin_layout Section
+ANF, mille osadeks parameetriteks on DNFi väärtus
+\end_layout
+
+\begin_layout Section
+DNF, mille veerud, mida seosed omavahel ainult jaatatud on, on kokku pandud
+\end_layout
+
+\begin_layout Standard
+Lisaks DNFlõppveerule sisaldab seos ka seda, et millised veerud on IGAS
+ tasemes kokku pandud.
+ Kui on kokku pandud, siis kirjeldab 1 bitt, et kas nad kõik on jaatatud
+ või, et ükski neist ei ole jaatatud.
+\end_layout
+
+\begin_layout Itemize
+N_s pole bijektiivne, kuid kui nõuda, et kõik, mida saab kokku panna on
+ kokku pandud, siis on n_S injektiivne.
+\end_layout
+
+\begin_layout Section
+Tasemetega
+\end_layout
+
+\begin_layout Standard
+Vaatab et eelmise taseme järgi ,et millised veerud on korras 
+\begin_inset Quotes eld
+\end_inset
+
+mitte seose argumendst sõltumatult vale olemise
+\begin_inset Quotes erd
+\end_inset
+
+ reegli järgi.
+\end_layout
+
+\begin_layout Standard
+eraldi biitidega(mitte harumärgi funktsiooniga) on kirjeldatud, et millisel
+ platol on millised harud võimalikest.
+ Biti indeks määrab haru omadused.
+ iga plato p harude omadused on kirjeldatud näidates ,et: milline on plato
+ p variplatode haru on milliste selle taseme seosefunktsioonide puhul rahuldatud.
+\end_layout
+
+\begin_layout Section
+CNF mille need veerud ,mida on seoses ainult võitatud, on kokku pandud
+\end_layout
+
+\begin_layout Section
+NNF
+\end_layout
+
+\begin_layout Section
+prefixkuju
+\end_layout
+
+\begin_layout Standard
+alguses olevad bitid nöitavad, et milline on univeersallsuskvantor ja milline
+ on eksistentsiaalsukvantor.
+\end_layout
+
+\begin_layout Section
+näitevorm
+\end_layout
+
+\begin_layout Part
+Seose kasutamine
+\end_layout
+
+\begin_layout Section
+algoritmi või arvutiprogrammi analüüsimiseks
+\end_layout
+
+\begin_layout Standard
+igal pool asendada käsk x=:y väitega 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$x(t+1)=y(t)$
+\end_layout
+
+\end_inset
+
+, kus t on prgrammi samm.
+\end_layout
+
+\begin_layout Section
+Füüsikalise mudeli kirjeldamiseks
+\end_layout
+
+\begin_layout Standard
+Oluline on ka näidaya, et milliste erinevate väärtuste korral on süsteemid
+ füüsikaliselt identsed.
+ Näiteks ei ole oluline potentsiaali 0-nivoo ja koordinaatide alguspunkt.
+\end_layout
+
+\begin_layout Standard
+Oluliseks pointiks nii tõenäosuste kui gemeetrilise ruumi(intuitiivsetst
+ vektoritest) on, et intuitiivse tähendusega aja korrutis arvuga on samuti
+ intuitiivne.
+ See on vist kuidagi taustsüsteemiga seotud.
+ taust spsteemi, mille algus on kohas 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+vec{a}$
+\end_layout
+
+\end_inset
+
+ olev vektor 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+vec{b}$
+\end_layout
+
+\end_inset
+
+ asub kohas 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+vec{a}+
+\backslash
+vec{b}$
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+mudeli lihtsus
+\end_layout
+
+\begin_layout Standard
+Katseadnmetega paremini kokku sobiv mudel on tõenäolisem.
+ Lihtsam mudel tõenäolisem.
+ Mudelite lihtsuse võrdelmiseks peavad neil olema samad elementaarseosed.
+ Kui ühel mudelil on rohkem predikaate või algasju kui teisel tuleb need
+ eksistentsiaalsuskvantori abil eemaldada(näiteks ühes on ainult punktkehad
+ ja teises ka väli, mille väärtus määra, et kui suure tõenäosusega punktkeha
+ igas punktis asub).
+ Keerukus arvutatakse juba töödeldud seosest.
+ võibolla on see keerukus Gödeli keerukus?
+\end_layout
+
+\begin_layout Standard
+Lisaks tavalisele keerukusele defineerida teine mõiste keerukus2 nii , et
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$(
+\backslash
+frac{sobivus andmetega(mudel1)}{keerukus2(mudel1)}>
+\backslash
+frac{sobivus andmetega(mudel2)}{keerukus2(mudel2)}) 
+\backslash
+to (mudel1 "on parem mudel kui" mudel2)$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+idee1 keerukuse hindamiseks
+\end_layout
+
+\begin_layout Standard
+Üks võimalus mudeli lihtsuse kirjeldamiseks on hulga, mis sisaldab kõiki
+ selle mudeliga sobivaid erinevaid füüsikalisi süsteeme võimsus.
+ Kõik PML süsteemid saab kirjeldada ühe reaalarvuga (järjend, mis sisaldab
+ kõiki PML üht reaalarvu)
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+idee2 keerukuse hindamiseks
+\end_layout
+
+\begin_layout Standard
+Veel 1 võimalus keerukue hindamiseks: reaalarvude arv, mida onvaja mistahes
+ mudeliga sobituva süsteemi kirjeldamiseks nii, et mistahes diferentsiaalse
+ muutuse süsteemis saab teha mingi nendest reaalarvudest diferentsiaalselt
+ väiksel määral muutes.
+\end_layout
+
+\begin_layout Section
+näiteid selles syntaxis definitsioonides
+\end_layout
+
+\begin_layout Subsection
+piirväärtuse definitsioon
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$(lim_{x
+\backslash
+to x_0}(f(x))=L) 
+\backslash
+leftrightarrow 
+\backslash
+forall_{x_1}(x_1 
+\backslash
+not = x_2 
+\backslash
+land 
+\backslash
+to 
+\backslash
+exists_{x_2}(|x_2-x_0|<|x_1-x_0|
+\backslash
+land|f(x_2)-L|<|f(x_1)-L|))$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Programm
+\end_layout
+
+\begin_layout Section
+süntax
+\end_layout
+
+\begin_layout Standard
+predikaadid on tähistatud kas operaatori-syntaxis või funktsiooni-syntaxis.
+\end_layout
+
+\begin_layout Paragraph
+operaatorisyntax
+\end_layout
+
+\begin_layout Standard
+eraldi lõigud, mille vahel on sulgude sees argumendid.
+ näiteks 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$aaa(x_1)(x_2)bbb(x_3)ccc$
+\end_layout
+
+\end_inset
+
+ tähendab 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$aaa()()bbb()ccc(x_1,x_2,x_3)$
+\end_layout
+
+\end_inset
+
+.
+ näiteks 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$x_1<x_2$
+\end_layout
+
+\end_inset
+
+ tähendab 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$()<()(x_1,x_2)$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+funktsioonisyntax
+\end_layout
+
+\begin_layout Standard
+kohtadesse kus operaatori syntaxis oli vahekoht argumendi jaoks on tühjad
+ sulud.
+ juhul kui see predikaat on jutumärkides on tühjade sulgude asemel argumendikoht
+ades kahekordsd jutumärid.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sama predikaat võib samas seose lähtekoodis nii operaatori kui funktsioonisyntax
+is tähistatud olla.
+ Kui predikaadi nimi sisaldab sulge peab see predikaat olema jutumärkide
+ sees.
+ jutumärgid predikaadi nime alguses lõpus või argumendi kohtade kõrval tähistada
+ tagurpidi kaldkriipsuga(nagu pythoni syntaxis.).
+\end_layout
+
+\begin_layout Standard
+Kõik mis pole loogikatehted, sulud ega kvantorid tõlgendada predikaatidena(2
+ argumendilise puhul nagu operaatori syntax.).
+ Kui pole eraldi pole kvatorile kvanteeritava nime antud, siis eeldada,
+ et see on x_{k+1} kus k näitab, et mitme kvantori sees antud kvanteeritava
+ kvantor on või ei saagi nime anda.
+\end_layout
+
+\begin_layout Standard
+Kõik 16(10) funktsiooni 2 booleanist ühte booleani sisseehitatud operaatoritena
+ või olemas mingi funktsionaalselt täielik hulk neid ja kasutaja saab ise
+ ülejäänud defineerida.
+ Samuti oleks siis 1 kvantor a kasutaja ise saaaks teis defineerida.
+\end_layout
+
+\begin_layout Standard
+peale iga võitust uus rida.
+\end_layout
+
+\begin_layout Standard
+Peale iga kvantorit taane.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Eraldi võimalik märkida alad kus kehtib mingi syntaxsugar (tavaliste sulgudega)
+ nt., et 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$a=b=c$
+\end_layout
+
+\end_inset
+
+tähendab
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$a=b 
+\backslash
+land b=c$
+\end_layout
+
+\end_inset
+
+ nt.
+ operaatorite rakendamise järjekord.
+ syntax nt 
+\backslash
+enable_syntaxsugar(kommunitiivsed_võdusmärgid)
+\end_layout
+
+\begin_layout Standard
+kui predikaat sisaldab mingit sümbolit, millel on ka muu tähendus, siis
+ on seee kas keelatud või tuleb tagurpidi kaldkriipuga tähistada.
+\end_layout
+
+\begin_layout Standard
+Küsimärkidel eraldi tähendus.
+ Kahekordse kriipsuga järeldusmärkidlja ekvivalentsusmärkidel eraldi tähendus.
+\end_layout
+
+\begin_layout Standard
+Kantsulgudel sulgudel selline tähendus, et 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$[a OP1 b OP1 c OP1 d] OP2 e = (a OP2 e) OP1 (b OP2 e) OP1 (c OP2 e) OP1
+ (d OP2 e)$
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Eraldi funktsooni sees saab sisestada käske.
+\end_layout
+
+\begin_layout Standard
+[] optimeerimis tingimused.
+\end_layout
+
+\begin_layout Subsection
+importimine
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+uri
+\begin_inset Quotes erd
+\end_inset
+
+...
+\begin_inset Quotes erd
+\end_inset
+
+ on uril ...
+ olev seos.
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+standarlibari
+\begin_inset Quotes erd
+\end_inset
+
+...
+\begin_inset Quotes erd
+\end_inset
+
+ on stadardses kohas kus palju kasulikke seoseid on olev seos.
+\end_layout
+
+\begin_layout Standard
+imporditud seostel on võivad olla viimased sulud puudu, sest need ütleva,
+ et midagi eksisteerib, aga lasevad kasutajal sama kvantori (mille lähtekood
+ on teises failis) väiteid juurde kirjutada.
+\begin_inset Newline newline
+\end_inset
+
+Moodulid on eelnevalt 
+\begin_inset Quotes eld
+\end_inset
+
+kompileeritud
+\begin_inset Quotes eld
+\end_inset
+
+.
+ Imortimisel nende seosenumbrit muudetakse nii , et see sobiks kokku ülejäänud
+ predikaatide ja K'ga.
+ Nii on efektiivsus suurem.
+ Moodulite lähtekood ei pea kõigi moodulite puhul avalik olema.
+\end_layout
+
+\begin_layout Subsection
+seosed predikaatide argumentidena
+\end_layout
+
+\begin_layout Standard
+Elementaarseoste argumentideks saavad olla väited kui eelenvalt on defineeritud
+ True ja False.
+ Et nende tähendus olks sama, mis intuitiivne tähendus peab lisama ka nendega
+ seotud väited 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+forall(
+\backslash
+forall(("onTrue"(x_1)
+\backslash
+land "onTrue"(x_2)
+\backslash
+to "="(x_1,x_2)) 
+\backslash
+land ("onTrue"(x_1)
+\backslash
+land "onFalse"(x_2)
+\backslash
+to 
+\backslash
+neg "="(x_1,x_2))))$
+\end_layout
+
+\end_inset
+
+.
+ Elementeersesos(väide) tähendab: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$(väide 
+\backslash
+to 
+\backslash
+exists("onTrue(x_1) 
+\backslash
+land "elementaatseos"(x_1)) 
+\backslash
+land (
+\backslash
+neg väide 
+\backslash
+to 
+\backslash
+exists("onFalse"(x_1) 
+\backslash
+land "elementaatseos"(x_1)))$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+lisa funktsioonid
+\end_layout
+
+\begin_layout Subsection
+lähtekoodi värvimine
+\end_layout
+
+\begin_layout Itemize
+sulud mustad ja vahelduvate suurustega või vahelduvate värvidega.
+\end_layout
+
+\begin_layout Itemize
+loogikatehted tumesinised
+\end_layout
+
+\begin_layout Itemize
+kvatorid helesinised
+\end_layout
+
+\begin_layout Itemize
+predikaadid oranžid
+\end_layout
+
+\begin_layout Standard
+Ebaolulised kohad, mis midagi ei mõjuta muudab lähtekoodis halliks.
+ Kuvab igast predikaadist ainult nii mitu esimest sümbolit, et viimane sümbol
+ pole sama mis mõnel teisel predikaadil.
+\end_layout
+
+\begin_layout Subsection
+tagastab ka lähtekoodi latexis ja lähtekoodu latexi lähtekoodi ja sama lihtsusta
+tud seose kohta
+\end_layout
+
+\begin_layout Subsection
+kuvab puugraafina ka valitud plato
+\end_layout
+
+\begin_layout Standard
+alguses ainult juure.
+ Kui klikkida, siis kuvab plato, millele klikiti harud.
+\end_layout
+
+\begin_layout Section
+Gödeli teoreemid
+\end_layout
+
+\begin_layout Standard
+Antud süntaksis on Gödeli teoreemid ilmselged.
+ Need on üsna mõtetud.
+\end_layout
+
+\begin_layout Standard
+kui sain gödeli teoreemidest õieti aru, siis 
+\end_layout
+
+\begin_layout Paragraph
+
+\series bold
+esimene teoreem
+\end_layout
+
+\begin_layout Standard
+väidab, et: Iga seose S1 jaoks leidub mingi teine seos S2, mille jaatamisel
+ esimesega (S1'ga) ei saa ei üheselt vale ega üheselt õiget tulemust(ei
+ ole lihtsustatav Trueks ega Falseks).
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+forall_{x_1}(
+\backslash
+exists_{x_2}(on
+\backslash
+_piisavalt
+\backslash
+ aritmeetikat(x_1)
+\backslash
+to ()))$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Gödeli lause on kõige väiksema Kga ja väikseima numbriga seos, mille tõesus
+ ega valesus antud seosest ei järeldu.
+\end_layout
+
+\begin_layout Standard
+See originallsõnastuses, et need samas keeles peavad olema, tähendab minu
+ süntaksis, et need peavad sisaldama samu predikaate.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+teine Gödeli teoreem
+\end_layout
+
+\begin_layout Standard
+originaal sõnastus on:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Quotes eld
+\end_inset
+
+ühegist kooskõlalisest süsteemist,milles on piisavalt aritmeetikat, ei järeldu
+ selle kooskõlalisus.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+antud süntaxis on sõnastus:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Quotes eld
+\end_inset
+
+ühegi seose, mille mitte-üheseltvalesus(kooskõlisust) ei saa näidata lõpliku
+ arvu näidete abil, mitte-üheseltvalesus ei saa tõestada.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Naturaalarvude aksioomide kooskõlalisust ei saa selle näiteseosega jaatamise
+ abil näidata, sest iga igakord naturaalarvu kohta eitatud kvantorite mitterahud
+amiseks luua uus näide(ja tüübiunktsiooniväärtus) ja sellele omakorda uus.
+ Piisavalt aritmeetikat sisaldab süsteem siis kui see nõuab lõpmatult paljude
+ asjade, millest ühegi pole teiste asjadega täpselt ientsed kuulumised.
+ piisavalt palju aritmeetikat sisaaldab süsteem kui selle mitteüheseltvalesust
+ ei saa tõetada selle jaatamisel näiteseosega.
+\begin_inset Newline newline
+\end_inset
+
+Teine hüpotees on, et piisava aritmeetika peano aksioomiele toob hoopif
+ f-aksioom.
+\end_layout
+
+\begin_layout Standard
+Võimalik, et Gödeli II teoreem väidab ,et osade seoste mitteüheseltvalesust
+ ei saagi tõestada.
+ Kui saab tõestada et mingi seose mitteüheseltvalesust ei saa tõestada,
+ siis tõestab ,see pole üheselt vale?
+\end_layout
+
+\begin_layout Section
+sünonüümidest
+\end_layout
+
+\begin_layout Standard
+kuna eri allikates kasutatakse samade asjade kohta eri nimetusi, siis seletan
+ siin lahti, et mida need mõisted seles failis kasutatavas terminologias
+ tähendavad.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Seos
+\series default
+ ehk: formaalne süsteem, aksiomaatiline süsteem, valem, lause, väide.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+jaatus
+\series default
+ ehk: konjutsioon.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+võitus
+\series default
+ ehk: disjuktsioon.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+üheselt vale
+\series default
+ ehk: samaselt väär, üheselt vale, samaselt vale, mitte kehtestatav.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+üheselt tõene
+\series default
+ ehk: samaselt tõene.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+eksistentsaalsuskvantor
+\series default
+ ehk: olemasolukantor.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+universaalsuskvantor
+\series default
+ ehk: üldisuskvantor.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+elementaarfunktsioon
+\series default
+ ehk: predikaat.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+element
+\series default
+ ehk: algasi, konstantsümbol.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+kvanteeritav
+\series default
+ ehk: kvantori fiktiivmuutuja
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+haru
+\series default
+ ehk: veerg
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Osades käsitlustes on ka kandjahulk, aga selle faili terminoloogias on selleks
+ universaalne hulk (või seda pole) seega väited kehtivad kõigi asjade kohta.
+ Kui tahad et väide kehtiks näiteks ainult naturaalarvude kohta, siis pane
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$forall_x(f(x))$
+\end_layout
+
+\end_inset
+
+ asemele 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$forall_x(on
+\backslash
+_naturaalarv(x)
+\backslash
+to f(x))$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Sorteerimata
+\end_layout
+
+\begin_layout Standard
+o1'e sarnast funktsiooni lõppreale rakendades saab võibolla kontrollida,
+ et kas seos on minimaalse K ja predikaadidega kirjeldatud.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Need lõppveerud, mis ei tee osade predikaatide koha mingeid väiteid tuleb
+ ka eemaldada nagu needgi, mida saab madalma K'ga esitada ja need, mis jaatavad
+ ÜV lR'e.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Seose parssimisel: alustades kõige sisemisemast platost iga kvantori puhul
+ määrata, et mis numbrid saavad olla tema platonumbrid.
+ Selle arvestamiseks teha vastavad loogikatehted tema elementaarseostega
+ eelastega ja tema sees olevate kvantorite võimalike platoniumbritega.
+ See on võtuste välja viimeseks efektiivsem võimalus kui asja täis DNF vormi
+ viimine.
+ Et määrata kas seos on ÜV vaadata, et kas mõni lõppveerg rahuldab talle
+ seatud tingimust.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Kui asendada kvantorid tõenäosus funktsiooniga(
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+forall_x(f(x))$
+\end_layout
+
+\end_inset
+
+ asendada 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+forall_x(P(x))$
+\end_layout
+
+\end_inset
+
+ ja 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+exists_x(f(x))$
+\end_layout
+
+\end_inset
+
+ asendada 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$1-
+\backslash
+forall_x(1-P(x))$
+\end_layout
+
+\end_inset
+
+) ja võitamine liitmisega ja jaatamine korrutamisega(sest kõik harud sh.
+ lõppread on omavahel sõltumatud.) siis saab tõenäosusi arvutada.
+ Kui asendada need kompleksarvuliste lainefunktsioonidega saab kvantarvutusi
+ teha?forall< Panna eelnevad 2 mõtet seosevormis kirja.
+ Nii saabgi vist tõenäosuste kirjeldamiseks vajalikud aksioomid.
+\begin_inset Newline newline
+\end_inset
+
+vähem üldises mõttes on univrsaalus kvantor(
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+Pi(f(x))$
+\end_layout
+
+\end_inset
+
+) jaatus ja eksistentsiaalsuskvantor võitus.
+\begin_inset Newline newline
+\end_inset
+
+lõplik:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+lor$
+\end_layout
+
+\end_inset
+
+;
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+land$
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+loenduv:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+sum_{i=0}()$
+\end_layout
+
+\end_inset
+
+;
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+Pi_{i=0}()$
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+üldine:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+exists_x()$
+\end_layout
+
+\end_inset
+
+;
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+forall_x()$
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+:tõenäosus:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$1-P(
+\backslash
+neg )$
+\end_layout
+
+\end_inset
+
+;
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$P()$
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+kvant?:lainefunktsioon?
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+P1 ja P2 
+\begin_inset Quotes eld
+\end_inset
+
+sümmeetrilised
+\begin_inset Quotes erd
+\end_inset
+
+? Seeega mõlemad ahelas?
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Asenada plato p1 platosse p2.
+ Ehk võrdsustada plato p1 kvanteeritav plato p2 kvanteeritavaga.
+ Ehk võrdsustada plato kvanteeritava p1 elementaarseosed plato p2 kavnteeritava
+ elementaarseostega?
+\begin_inset Newline newline
+\end_inset
+
+Iga plato kvanteeritava elementaarseosed(ka need mis on selle plato järglastes
+ kirjeldatud) mistahes teise plato kvanteeritavaga peavad olema samad kui
+ mistahes teise plato vähemalt ühe haru kvanteeritava elementaarseosed?
+\begin_inset Newline newline
+\end_inset
+
+Iga kvanteeritava elementaarseosed(ka need mis on selle plato järglastes
+ kirjeldatud) mistahes teise kvanteeritavaga peavad olema samad kui mistahes
+ teise plato vähemalt ühe haru kvanteeritava elementaarseosed?
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+plato p_i kirjeldab ka eelasi, aga plato harunumber n_i ei kirjelda, et
+ mis on selle haru eelased.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ks P2(i)'ga võrdsustatakse P1(i) või P2(i) haruga?
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Kui ÜV jaoks vaja ainult jaatatud harusid kontrollid, siis on vaja 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$2^K$
+\end_layout
+
+\end_inset
+
+ korda vähem harusid kotrollida, sest keskmiselt on igal tasemel 2 korda
+ vähem jaatatud harusid kui harusid kokku.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+onhulk(x) aseme panna eestikeelne_nimetus_on(UTFencoodingus(
+\begin_inset Quotes eld
+\end_inset
+
+hulk
+\begin_inset Quotes erd
+\end_inset
+
+),x) kui seda teisendada tavakeelde, siis lihtsalt need abipredikaadid vahele
+ jätta.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Kui võtta konstantsed predikaadid ja defineerida kasutaja predikatide asemel
+ booleantagastusega funktsioonid, siis saab piirata predikaatide aru ja
+ predikaatide argumentide arvu(vähemalt 3 on iga seose kirjeldamiseks vajalik),
+ aga mitte K'd.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Vist on paremini sõnastud sama tähendusega lõik olemas, aga jätan ka selle
+ lõigu siia: 
+\begin_inset Quotes eld
+\end_inset
+
+piisab kui kontrollida et ükski vorm, kus igale platole p1, kuhu pääseb
+ ilma eitusi läbimata, on kooskõlisuse kontrollimiseks pandud vastavusse(elemten
+taarsetosed võrdsustatud), mistahes teine plato p2, kuhu pääseb ilma eitusi
+ läbimata, ja kotrollitud, et see sobiks võiks täita selle haruga sama tingimust
+, ei oleks üheselt vale.
+ Samale p1'e võib asendada mitmele p2'ele vastavusse.
+ p1 ja p2 on kooskülas kui need on kõigi asjadega samas elementaarseostes.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+panna minu AR(automated reasoning) algoritm kokku AI algoritmidega nii et
+ AI leiab optimeerimiseks häid tingimusi ja hüpoteese mida AR saab kontrollida
+ näiteks korrapärade tõttu kastaja sisendis.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Seoe mitte üheselt valesuse(kehtestavuse) tõestamiseks piisab kontollimises,
+ et üks lubatud lõpprida ei ole pheselt vale.
+ Seose mitte üheselt tõesuse tõestamiseks piisab kontrollimisest, et seose
+ eituse vähemalt üks lubatud lõpprida ei ole pheselt vale.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Et kontrolida kas seos on kirjeldatav väiksema K'g ei tule kontrolida mitee
+ lõppridu erldi vaid lõppveergu.
+ Siis(kuid vist mitte ainult siis) kui seos on kirjeldatav väiksema K'ga
+ kui kõrgeima taseme kvantori sisu ei sõltu osadest kvateeritavatest.
+ Vahest üheselt valede ja madlama K'ga esitatavate koos kontrollimine on
+ matemaatiliselt ilus.
+\end_layout
+
+\begin_layout Standard
+Vahest on kasulikum jätta lõppridade asemel hoopis Lõõpveerge vahele, mis
+ jaatavad üheselt valesid ridu?
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Gödeli teoreemide kohaselt ei saa tõestada, et peano aksioomid on kooskõlalised,
+ aga ometi on selge, et need on kooskõlalised.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Huvitav on väide, et 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+forall_x(False)$
+\end_layout
+
+\end_inset
+
+, ehk 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+neg 
+\backslash
+exists_x(True)$
+\end_layout
+
+\end_inset
+
+ ehk ei eksisteeri midagi.
+ Ma pole kindel, et kas see on üheselt vale või mitte.
+ Sellise võimaluse lubatust kirjeldab DNF vormis kõige viimane lõpprida.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+võibolla selliste seoste lihtsustamist(sh.
+ üheselt valede ridade otsimist) ei saagi algorimilselt teha ja see tekitab
+ teadvust.
+\end_layout
+
+\begin_layout Standard
+defineerida ka loogiliste tehete omavahelised seosed nt
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+forall_{x_1}(
+\backslash
+forall_{x_2}(VOI(x,y)
+\backslash
+iff 
+\backslash
+neg JA(
+\backslash
+neg x,
+\backslash
+neg y)))$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Rakendada mingit algoritmi, mis on mõeldud suvalise 
+\begin_inset Quotes eld
+\end_inset
+
+madala entroopiaga
+\begin_inset Quotes erd
+\end_inset
+
+ data kokku pakkimiseks.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="3">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+kõigi hulkade kohta ei või väiteid teha
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+kõigi hulkade kohta võib väiteid teha
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+kvatorid kehtivad ka alghulkade kohta
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+kvatorid ei kehti ka alghulkade kohta
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$2^{N^2}
+\backslash
+cdot(2^{2^N}-1)^{2^{N+1}}$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$2^{2^{2
+\backslash
+cdot N+1}+N^2}$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$F_Q=
+\backslash
+sum^{2^{2
+\backslash
+cdot N+1}-1}_{n_v=0}(
+\backslash
+sum^{N-1}_{i_x=0}((
+\backslash
+left 
+\backslash
+lfloor 
+\backslash
+frac{Q}{2^{N^2-1-i_x
+\backslash
+cdot N-i_x}}
+\backslash
+right 
+\backslash
+rfloor mod_2 
+\backslash
+not
+\backslash
+leftrightarrow 
+\backslash
+left 
+\backslash
+lfloor 
+\backslash
+frac{n_v}{2^{2*N}}
+\backslash
+right 
+\backslash
+rfloor mod_2)
+\backslash
+wedge(n_v mod_{2^N} =~(Q 
+\backslash
+cdot 2^{N*(1+i_x-N)})mod_{2^N})
+\backslash
+wedge 
+\backslash
+Pi^{N-1}_{j=0}(
+\backslash
+left 
+\backslash
+lfloor 
+\backslash
+frac{Q}{2^{N^2-1-j*N-i_x}}
+\backslash
+right 
+\backslash
+rfloor mod_2 
+\backslash
+not
+\backslash
+leftrightarrow 
+\backslash
+left 
+\backslash
+lfloor 
+\backslash
+frac{n_v}{2^{2*N-1-j}}
+\backslash
+right 
+\backslash
+rfloor mod_2)))$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \space{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \space{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="3">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+kõigi hulkade kohta ei või väiteid teha
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+kõigi hulkade kohta võib väiteid teha
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+kvatorid kehtivad ka alghulkade kohta
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+kvatorid ei kehti ka alghulkade kohta
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<$2^{2^{K(K+N
+\backslash
+cdot2)}+N^2}$
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Sisemisest funktsioonist
+\end_layout
+
+\begin_layout Subsection*
+mõte1
+\end_layout
+
+\begin_layout Paragraph*
+mõte: 
+\color yellow
+Tundub edukas JÄTKATA
+\end_layout
+
+\begin_layout Standard
+1.
+ kirjeldada meetod kuidas reabooleanid sisendist määratakse
+\end_layout
+
+\begin_layout Standard
+2.
+ Millised read on sellest järelduvalt seose argumendst sõltumatult valed.
+\end_layout
+
+\begin_layout Paragraph*
+teostus:
+\end_layout
+
+\begin_layout Standard
+1.
+ kvantorite sisud alates kõige sisemisest seosfunktsioonide väärtuste vahelistek
+s booleanfunktsioonideks.
+\end_layout
+
+\begin_layout Standard
+2.rekusiivselt (alates kõige sisemisest kvantorist) asendab kõik kvantorid
+ veergude vahelise booleanfunktsiooniga.
+ Selleks asendatakse kvantori sisusse veerule vastavad kvanteeritavate vaheliste
+ seoste väärtused, et määrata tingimus, mil antud veerg on jaatatud/eitatud.
+ iga veeru jaoks asendatakse kvantori sisusse veerus olevad seosed kõigis
+ erinevates järjekordades.(st.
+ kõik võimalused kus sisu kvanteeritavate asemele pannakse veerus olevad
+ kvanteeritavad.
+ Ühte veeru kvanteeritavat võib ka mitme asja asemele panna.).
+\end_layout
+
+\begin_layout Standard
+3.
+ Kui mingi välimiste kvanteeritavate väärtuste puhul teeb kvantor madalama
+ taseme väite, siis...
+\end_layout
+
+\begin_layout Subsection*
+mõte2
+\end_layout
+
+\begin_layout Paragraph*
+mõte:
+\end_layout
+
+\begin_layout Standard
+Millised täpselt on veergude vahelised seosed tasemetga variandis?
+\end_layout
+
+\begin_layout Paragraph*
+teostus:
+\end_layout
+
+\begin_layout Standard
+veerg on seose argumendst sõltumatult vale kui see sisaldab seos-funktsioonide
+ väärtuste booleankombinatsiooni, mis on eelmises tasemes keelatud.
+\end_layout
+
+\begin_layout Section*
+programmi töö
+\end_layout
+
+\begin_layout Enumerate
+Kvantorite sisud alates kõige sisemisest seosfunktsioonide väärtuste vahelisteks
+ booleanfunktsioonideks.
+\end_layout
+
+\begin_layout Enumerate
+Kui vaja lisada elementidele omased seosed.
+ Näiteks hulkade puhul, et kuuluvus ja sisalduvus on üksüheses seoses.
+\end_layout
+
+\begin_layout Enumerate
+asendab kõik eksistentsiaalsuskvantorid universaalsuskvantoritega kasutades
+ seost: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$h$
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+viib kõik kvantorite sisud ja kvantori välise boolenfunktsiooni DNF vormi.
+\end_layout
+
+\begin_layout Enumerate
+toob kõik kvantorite sisesed võitused kvantorite seest välja.
+\end_layout
+
+\begin_layout Enumerate
+viib kõik seose funktsioonide väited kõige välimiste võimalike kvantorite
+ sisse.
+ Ehk võimalikest madalamiale tasemele.
+\end_layout
+
+\begin_layout Enumerate
+kordab punkte 4 ja 5.
+\end_layout
+
+\begin_layout Standard
+v2:
+\end_layout
+
+\begin_layout Enumerate
+leiab millisei predikaate on seoses kasutatud ja nummerdab need.
+\end_layout
+
+\begin_layout Enumerate
+leiab kui mitme kvantori see on kõige rohkemate kvantorite sees olev väide
+ (maksimaalne K väärtus).
+\end_layout
+
+\begin_layout Enumerate
+rekusiivselt: asendab iga eksistentsiaalkvantori funktsiooniga f, mis iga
+ arvu puhul tagastab, et kas see arv võib olla plato numbriks.
+ f(n) parajasti siis kui n võib olla plato number.
+ Funktsioooni f loob programm kasutades kvantori kvanteeritava elementaarseoste
+ madalama taseme kvanteeritavatega(tingimus plato numbri h osale) ja kvantori
+ sees olevate platode(tingimus harumärkidele) vahelist booleanfunktsiooni.
+ Kui kasutada on ainult NAND ja eksistensiaalkvantor (universaalsuskvantori
+ ja teised loogikatehted on predikaatidena esitatud) võib funktsiooni f
+ leidmise algritm üsna lihtne olla.
+\begin_inset Newline newline
+\end_inset
+
+Osad lihtsustused(ÜV plato numbrite leidmine, mitte loogika lihtsustused)
+ võib juba funktsiooni f leidmisel teha.
+\end_layout
+
+\begin_layout Enumerate
+lõpuks saadud funktsioon f lõpprea kohta võimaldabgi lõppveeru määrata.
+\end_layout
+
+\begin_layout Enumerate
+Muutes funktsioone h ja harumärk konvertida seos kujule, milles ühegi numbriga
+ lõpprida ei jaata ühselt valesid lõppridu, ükski seos ei ole esitatav malama
+ K'ga ja pole ühtki predikaati, mille kohta ei ole mingeid väiteid tehtud.
+\end_layout
+
+\end_body
+\end_document

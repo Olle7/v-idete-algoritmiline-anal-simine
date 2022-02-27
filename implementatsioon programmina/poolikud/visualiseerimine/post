@@ -1,0 +1,5 @@
+Lets say that for "Something" class it is:
+"
+----def __lt__(self, other):
+--------return self.s<other.s
+"
