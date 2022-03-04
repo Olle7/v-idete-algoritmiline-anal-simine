@@ -105,7 +105,15 @@ Sissejuhatus
 \end_layout
 
 \begin_layout Paragraph
-mõiste väide lahtiseletus:
+mõiste 
+\begin_inset Quotes eld
+\end_inset
+
+väide
+\begin_inset Quotes erd
+\end_inset
+
+ lahtiseletus:
 \end_layout
 
 \begin_layout Standard
@@ -120,8 +128,8 @@ Sõna väide on selles failis formaalloogika tähenduses, aga see on väga sarna
  selle sõna tavakeelsele tähendusele, ehk see on miski, mille tõele vastamisest
  järeldub mingi tõsiasi.
  Selles failis kasutan väidete kirja panemiseks kindlat syntaxit, kus väiteid
- kirjeldavad tekstilõigud, võivad sisaldada booleanalgebra, kvantoreid ja
- predikaate(või elementaarseoseid või algasju predikaatide asemel).
+ kirjeldavad tekstilõigud võivad sisaldada boolean-operaatoreid, kvantoreid
+ ja predikaate(või elementaarseoseid või algasju predikaatide asemel).
 \end_layout
 
 \begin_layout Paragraph
@@ -147,8 +155,7 @@ noprefix "false"
  Seda saaks kasutada näiteks kõige üldisemate matemaatiliste probeemide
  (mis võivad olla võrranditena esitatud) lihtsustamiseks, lahendamiseks
  ja lahendite kontrollimiseks.
- Näiteks Wolfram ei suuda sarnaseid ja väga lihtsaid ülesandeid lahendada:
- https://community.wolfram.com/groups/-/m/t/2416379 .
+ 
 \end_layout
 
 \begin_layout Standard
@@ -165,7 +172,7 @@ status open
 
 $aksioomid 
 \backslash
-to väide$
+to vaide$
 \end_layout
 
 \end_inset
@@ -178,7 +185,7 @@ status open
 
 $programm(aksioomid 
 \backslash
-to väide)$
+to vaide)$
 \end_layout
 
 \end_inset
@@ -187,10 +194,13 @@ to väide)$
 \end_layout
 
 \begin_layout Standard
-Kui minimaalsel vabadusastmel salvestamine on liiga raskesti implementeeritav,
- liiga keerukas või liiga palju mälu nõudev, siis on alternatiivseks eesmärgiks
- teha algoritmi, mis väiteid analüüsib ilma neid minimaalsel vabadusastmel
- salvestamata.
+Kui väidete minimaalsel vabadusastmel salvestamine on võimatu, sellise algoritmi
+ koostamine liiga raske, algoritm ajaliselt liiga keerukas et seda praktiliselt
+ kasutada saaks või algoritm liiga palju mälu nõudev et seda praktiliselt
+ kasutada saaks, siis on alternatiivseks eesmärgiks teha algoritmi, mis
+ määrab, et kas sisendiks antud väide on vastuoluline või mitte ilma seda
+ väidet minimaalsel vabadusastmel salvestamata ning implementeerida see
+ algoritm arvutiprogrammina.
 \end_layout
 
 \begin_layout Standard
@@ -198,11 +208,12 @@ Kui ka sellise programmi tegemine pole võimalik (mõned inimesed on väitnus,
  et see pole kas Gödeli 2.
  ebatäielikkuse teoreemi või predikaatarvutuse mittelahenduvuse teoreemi
  kohaselt võimalik), siis on järgmiseks alternatiivseks eesmärgiks teha
- programm mis seni kuni kasutaja stopp paneb kontrollimist jätkab ja järjest
- täpsemaks läheb.
- Kuigi see programm ei pruugiks tagastada, et väide on kindlalt vastuoluline
- või mitte, võiks see tagastada, et peale kui mitut tsüklit ei leidnud see
- algoritm, et väide on vastuoliline.
+ programm, mis piiramatult jätkab kontrollimist, et kas mingi väide on vastuolul
+ine või mitte.
+ Kuigi see programm ei pruugiks iga sisendi puhul tagastada, et kas sisendiks
+ antud väide on kindlasti vastuoluline või see kindalsti ei ole vastuoluline(on
+ kooskõlaline), tagastaks see, et peale kui mitut tsüklit ei leidnud see
+ algoritm, et väide on vastuoluline.
 \end_layout
 
 \begin_layout Standard
@@ -378,19 +389,64 @@ ooni (kui see on binaarkujul esitatud) tähistavad erinevaid loogikalisi
 \end_layout
 
 \begin_layout Enumerate
-lisada programmile funktsionaalsus esitada väiteid standartsel ja kergesti
- käsitsi loetaval kujul.
+lisada programmile funktsionaalsus esitada väiteid standardsel ja kergesti
+ loetaval kujul.
 \end_layout
 
 \begin_layout Enumerate
-lidsada programmile funktsionaalsus hinnata väite keerukust mingi paameetriga.
+lisada programmile funktsionaalsus hinnata väite keerukust mingi parameetriga.
 \end_layout
 
 \begin_layout Enumerate
 lisada programmile funktsionaalsus määrata väite parameeter K, ehk ,et kui
  mitme kvantori sees kõige rohkemate kvantorite sees asuv kvantor on ,kui
- esitada väide vormis, kus kõige rohkemate kvantorite sees asuv kvantor
+ väide on esitatud vormis, kus kõige rohkemate kvantorite sees asuv kvantor
  on võimalikult väheste kvantorite sees.
+\end_layout
+
+\begin_layout Quote
+Minu teada sama asja tegevat programmi ei ole veel tehtud.
+ Sarnasemad programmid on Prolog ja Julog.jl , aga ned ei suuda nii üldiseid
+ ja keerukaid ülesandeid lahendada kui programm, mida mina teha tahan suudaks,
+ ning nende syntax on ebamugavam.
+ Näiteks Wolfram ei oska lahendada lihtsamaidki sarnaseid ülesanded.
+ Sisend 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+exists_x(
+\backslash
+exists_y(A(x,y)))
+\backslash
+land 
+\backslash
+neg 
+\backslash
+exists_x(
+\backslash
+exists_y(A(y,x)))$
+\end_layout
+
+\end_inset
+
+, mille peale minu programm peaks tagastama, et see on vastuoluline on Wolframi
+ syntaxis 
+\begin_inset Quotes eld
+\end_inset
+
+Exists[x,Exists[y,A[x,y]]]&& !Exists[x,Exists[y,A[y,x]]]
+\begin_inset Quotes erd
+\end_inset
+
+, aga wolfram ei saa aru, et see on vastuoluline.
+ Olen teinud isegi ühe foorumi postituse Wolframi foorumisee, kus inimesed
+ kinnitasid, et Wolfram ei suuda selliseid ülesandeid lahendada.
+ Selle postituse URL on https://community.wolfram.com/groups/-/m/t/2416379
+ .
 \end_layout
 
 \begin_layout Section
